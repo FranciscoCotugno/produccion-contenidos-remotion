@@ -1,0 +1,303 @@
+{
+  "title": "SI SALE EL SOL",
+  "artists": "FMK, Kchiporros",
+  "cover": "",
+  "fragment": {
+    "src": "media/Si_sale_el_sol/si-sale-el-sol-1080.mp4",
+    "start": 26.9,
+    "end": 55.5
+  },
+  "track": {
+    "displayStart": 27,
+    "duration": 149
+  },
+  "lyrics": [
+    {
+      "end": 2.68,
+      "words": [
+        {
+          "t": 0.1,
+          "text": "estando"
+        },
+        {
+          "t": 0.98,
+          "text": "cerca"
+        },
+        {
+          "t": 1.42,
+          "text": "o"
+        },
+        {
+          "t": 1.56,
+          "text": "a"
+        },
+        {
+          "t": 1.88,
+          "text": "distancia"
+        }
+      ]
+    },
+    {
+      "end": 4.3,
+      "words": [
+        {
+          "t": 2.68,
+          "text": "igual"
+        },
+        {
+          "t": 3.06,
+          "text": "te"
+        },
+        {
+          "t": 3.52,
+          "text": "quiero"
+        }
+      ]
+    },
+    {
+      "end": 7.32,
+      "words": [
+        {
+          "t": 5.22,
+          "text": "si"
+        },
+        {
+          "t": 5.7,
+          "text": "sale"
+        },
+        {
+          "t": 5.94,
+          "text": "el"
+        },
+        {
+          "t": 6.42,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 10.2,
+      "words": [
+        {
+          "t": 7.48,
+          "text": "contigo"
+        },
+        {
+          "t": 8.1,
+          "text": "quiero"
+        },
+        {
+          "t": 8.58,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 11.2,
+      "words": [
+        {
+          "t": 10.2,
+          "text": "bajo"
+        },
+        {
+          "t": 10.48,
+          "text": "la"
+        },
+        {
+          "t": 10.7,
+          "text": "luz"
+        },
+        {
+          "t": 10.86,
+          "text": "que"
+        }
+      ]
+    },
+    {
+      "end": 14.02,
+      "words": [
+        {
+          "t": 11.2,
+          "text": "nos"
+        },
+        {
+          "t": 11.42,
+          "text": "domina"
+        },
+        {
+          "t": 12.54,
+          "text": "cada"
+        },
+        {
+          "t": 13.34,
+          "text": "día"
+        }
+      ]
+    },
+    {
+      "end": 14.94,
+      "words": [
+        {
+          "t": 14.26,
+          "text": "no"
+        },
+        {
+          "t": 14.4,
+          "text": "sé"
+        },
+        {
+          "t": 14.62,
+          "text": "por"
+        },
+        {
+          "t": 14.72,
+          "text": "qué"
+        }
+      ]
+    },
+    {
+      "end": 16.16,
+      "words": [
+        {
+          "t": 14.94,
+          "text": "no"
+        },
+        {
+          "t": 15.18,
+          "text": "te"
+        },
+        {
+          "t": 15.52,
+          "text": "animas"
+        }
+      ]
+    },
+    {
+      "end": 18.3,
+      "words": [
+        {
+          "t": 16.16,
+          "text": "si"
+        },
+        {
+          "t": 16.6,
+          "text": "sale"
+        },
+        {
+          "t": 16.9,
+          "text": "el"
+        },
+        {
+          "t": 17.38,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 20.96,
+      "words": [
+        {
+          "t": 18.44,
+          "text": "contigo"
+        },
+        {
+          "t": 19,
+          "text": "quiero"
+        },
+        {
+          "t": 19.48,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 21.72,
+      "words": [
+        {
+          "t": 21.06,
+          "text": "hay"
+        },
+        {
+          "t": 21.32,
+          "text": "tanta"
+        },
+        {
+          "t": 21.56,
+          "text": "piel"
+        }
+      ]
+    },
+    {
+      "end": 23.2,
+      "words": [
+        {
+          "t": 21.72,
+          "text": "que"
+        },
+        {
+          "t": 22.08,
+          "text": "nos"
+        },
+        {
+          "t": 22.4,
+          "text": "domina"
+        }
+      ]
+    },
+    {
+      "end": 24.94,
+      "words": [
+        {
+          "t": 23.2,
+          "text": "y"
+        },
+        {
+          "t": 23.3,
+          "text": "a"
+        },
+        {
+          "t": 23.54,
+          "text": "esta"
+        },
+        {
+          "t": 24.24,
+          "text": "vida"
+        }
+      ]
+    },
+    {
+      "end": 26.14,
+      "words": [
+        {
+          "t": 25.14,
+          "text": "yo"
+        },
+        {
+          "t": 25.32,
+          "text": "no"
+        },
+        {
+          "t": 25.48,
+          "text": "la"
+        },
+        {
+          "t": 25.8,
+          "text": "quiero"
+        }
+      ]
+    },
+    {
+      "end": 28.6,
+      "words": [
+        {
+          "t": 26.14,
+          "text": "malgastar"
+        }
+      ]
+    }
+  ],
+  "beats": {
+    "first": 0.039,
+    "period": 0.3367
+  }
+}

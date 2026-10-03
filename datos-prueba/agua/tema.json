@@ -1,0 +1,345 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "fragment": {
+    "src": "media/Maluma, Shakira - AGUA (Official Video) - MalumaVEVO (1080p, h264).mp4",
+    "start": 30,
+    "end": 59
+  },
+  "track": {
+    "displayStart": 30,
+    "duration": 192
+  },
+  "lyrics": [
+    {
+      "end": 1.78,
+      "words": [
+        {
+          "t": 0.32,
+          "text": "porque"
+        },
+        {
+          "t": 0.76,
+          "text": "cuando"
+        },
+        {
+          "t": 1,
+          "text": "me"
+        },
+        {
+          "t": 1.4,
+          "text": "miras,"
+        }
+      ]
+    },
+    {
+      "end": 4.24,
+      "words": [
+        {
+          "t": 1.78,
+          "text": "se"
+        },
+        {
+          "t": 1.92,
+          "text": "hace"
+        },
+        {
+          "t": 2.14,
+          "text": "agua"
+        },
+        {
+          "t": 2.42,
+          "text": "la"
+        },
+        {
+          "t": 3.26,
+          "text": "boca"
+        }
+      ]
+    },
+    {
+      "end": 5.3,
+      "words": [
+        {
+          "t": 4.24,
+          "text": "calma'"
+        },
+        {
+          "t": 4.7,
+          "text": "mi"
+        },
+        {
+          "t": 4.9,
+          "text": "sed"
+        }
+      ]
+    },
+    {
+      "end": 6.96,
+      "words": [
+        {
+          "t": 5.3,
+          "text": "desde"
+        },
+        {
+          "t": 5.5,
+          "text": "que"
+        },
+        {
+          "t": 5.78,
+          "text": "estás"
+        },
+        {
+          "t": 6.38,
+          "text": "aquí"
+        }
+      ]
+    },
+    {
+      "end": 7.9,
+      "words": [
+        {
+          "t": 6.96,
+          "text": "ay,"
+        },
+        {
+          "t": 7.14,
+          "text": "de"
+        },
+        {
+          "t": 7.3,
+          "text": "ti"
+        },
+        {
+          "t": 7.7,
+          "text": "todo"
+        }
+      ]
+    },
+    {
+      "end": 9.1,
+      "words": [
+        {
+          "t": 7.9,
+          "text": "es"
+        },
+        {
+          "t": 8.62,
+          "text": "necesario,"
+        }
+      ]
+    },
+    {
+      "end": 11.16,
+      "words": [
+        {
+          "t": 9.1,
+          "text": "todo"
+        },
+        {
+          "t": 9.36,
+          "text": "me"
+        },
+        {
+          "t": 9.78,
+          "text": "provoca",
+          "stretch": {
+            "char": "a",
+            "max": 3
+          }
+        }
+      ]
+    },
+    {
+      "end": 12.52,
+      "words": [
+        {
+          "t": 11.42,
+          "text": "deja"
+        },
+        {
+          "t": 11.9,
+          "text": "los"
+        },
+        {
+          "t": 12.08,
+          "text": "miedos"
+        }
+      ]
+    },
+    {
+      "end": 14.34,
+      "words": [
+        {
+          "t": 12.52,
+          "text": "y"
+        },
+        {
+          "t": 12.7,
+          "text": "empieza"
+        },
+        {
+          "t": 13.06,
+          "text": "a"
+        },
+        {
+          "t": 13.5,
+          "text": "sentir"
+        }
+      ]
+    },
+    {
+      "end": 16,
+      "words": [
+        {
+          "t": 14.6,
+          "text": "nos"
+        },
+        {
+          "t": 15.14,
+          "text": "podemos"
+        },
+        {
+          "t": 15.58,
+          "text": "quedar"
+        }
+      ]
+    },
+    {
+      "end": 18.16,
+      "words": [
+        {
+          "t": 16,
+          "text": "con"
+        },
+        {
+          "t": 16.18,
+          "text": "el"
+        },
+        {
+          "t": 16.34,
+          "text": "¿qué"
+        },
+        {
+          "t": 16.58,
+          "text": "hubiera"
+        },
+        {
+          "t": 17.52,
+          "text": "sido?"
+        }
+      ]
+    },
+    {
+      "end": 19.46,
+      "words": [
+        {
+          "t": 18.32,
+          "text": "pero"
+        },
+        {
+          "t": 18.88,
+          "text": "mañana"
+        }
+      ]
+    },
+    {
+      "end": 21.96,
+      "words": [
+        {
+          "t": 19.46,
+          "text": "vamo"
+        },
+        {
+          "t": 19.76,
+          "text": "a"
+        },
+        {
+          "t": 19.9,
+          "text": "estar"
+        },
+        {
+          "t": 20.18,
+          "text": "arrepentido'"
+        }
+      ]
+    },
+    {
+      "end": 23.5,
+      "words": [
+        {
+          "t": 21.96,
+          "text": "mira"
+        },
+        {
+          "t": 22.2,
+          "text": "que"
+        },
+        {
+          "t": 22.58,
+          "text": "nuestros"
+        },
+        {
+          "t": 22.96,
+          "text": "cuerpos"
+        }
+      ]
+    },
+    {
+      "end": 25.76,
+      "words": [
+        {
+          "t": 23.5,
+          "text": "poco"
+        },
+        {
+          "t": 23.7,
+          "text": "a"
+        },
+        {
+          "t": 23.98,
+          "text": "poco"
+        },
+        {
+          "t": 24.3,
+          "text": "chocan"
+        }
+      ]
+    },
+    {
+      "end": 27,
+      "words": [
+        {
+          "t": 25.76,
+          "text": "nuestra"
+        },
+        {
+          "t": 26.26,
+          "text": "química"
+        }
+      ]
+    },
+    {
+      "end": 28.7,
+      "words": [
+        {
+          "t": 27,
+          "text": "no"
+        },
+        {
+          "t": 27.38,
+          "text": "sabe"
+        },
+        {
+          "t": 27.9,
+          "text": "mentir"
+        }
+      ]
+    }
+  ],
+  "beats": {
+    "first": 0.02,
+    "period": 0.4528
+  }
+}

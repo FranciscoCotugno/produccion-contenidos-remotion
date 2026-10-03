@@ -1,0 +1,208 @@
+{
+  "title": "A QUIEN LE IMPORTA",
+  "artists": "Luck Ra, Thalia",
+  "cover": "",
+  "fragment": {
+    "src": "media/a-quien-le-importa.mp4",
+    "start": 113.6,
+    "end": 139.133
+  },
+  "track": {
+    "displayStart": 39,
+    "duration": 178
+  },
+  "lyrics": [
+    {
+      "end": 5.9,
+      "words": [
+        {
+          "t": 0.3,
+          "text": "mi",
+          "stretch": {
+            "char": "i",
+            "max": 3
+          }
+        },
+        {
+          "t": 1.4,
+          "text": "destino"
+        },
+        {
+          "t": 2.7,
+          "text": "es"
+        },
+        {
+          "t": 2.75,
+          "text": "el"
+        },
+        {
+          "t": 3.2,
+          "text": "que"
+        },
+        {
+          "t": 3.4,
+          "text": "yo",
+          "stretch": {
+            "char": "o",
+            "max": 5
+          }
+        },
+        {
+          "t": 4.7,
+          "text": "decido"
+        }
+      ]
+    },
+    {
+      "end": 12.1,
+      "words": [
+        {
+          "t": 6,
+          "text": "el"
+        },
+        {
+          "t": 6.3,
+          "text": "que"
+        },
+        {
+          "t": 6.8,
+          "text": "yo"
+        },
+        {
+          "t": 8,
+          "text": "elijo"
+        },
+        {
+          "t": 9.2,
+          "text": "para"
+        },
+        {
+          "t": 9.35,
+          "text": "mí"
+        }
+      ]
+    },
+    {
+      "end": 14,
+      "words": [
+        {
+          "t": 12.2,
+          "text": "¿a"
+        },
+        {
+          "t": 12.5,
+          "text": "quién"
+        },
+        {
+          "t": 13.1,
+          "text": "le"
+        },
+        {
+          "t": 13.4,
+          "text": "importa"
+        }
+      ]
+    },
+    {
+      "end": 16.1,
+      "words": [
+        {
+          "t": 14,
+          "text": "lo"
+        },
+        {
+          "t": 14.4,
+          "text": "que"
+        },
+        {
+          "t": 14.8,
+          "text": "yo"
+        },
+        {
+          "t": 15.1,
+          "text": "haga?"
+        }
+      ]
+    },
+    {
+      "end": 17.4,
+      "words": [
+        {
+          "t": 16.4,
+          "text": "¿a"
+        },
+        {
+          "t": 16.5,
+          "text": "quién"
+        },
+        {
+          "t": 16.6,
+          "text": "le"
+        },
+        {
+          "t": 16.8,
+          "text": "importa"
+        }
+      ]
+    },
+    {
+      "end": 19.2,
+      "words": [
+        {
+          "t": 17.4,
+          "text": "lo"
+        },
+        {
+          "t": 17.7,
+          "text": "que"
+        },
+        {
+          "t": 18.1,
+          "text": "yo"
+        },
+        {
+          "t": 18.4,
+          "text": "diga?"
+        }
+      ]
+    },
+    {
+      "end": 22.3,
+      "words": [
+        {
+          "t": 19.2,
+          "text": "yo"
+        },
+        {
+          "t": 19.6,
+          "text": "soy"
+        },
+        {
+          "t": 20,
+          "text": "así,"
+        },
+        {
+          "t": 20.7,
+          "text": "así"
+        },
+        {
+          "t": 21.4,
+          "text": "seguiré"
+        }
+      ]
+    },
+    {
+      "end": 25.6,
+      "words": [
+        {
+          "t": 22.3,
+          "text": "nunca"
+        },
+        {
+          "t": 23,
+          "text": "cambiaré"
+        }
+      ]
+    }
+  ]
+}

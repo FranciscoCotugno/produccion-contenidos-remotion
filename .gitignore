@@ -1,0 +1,12 @@
+node_modules
+out
+.DS_Store
+
+# Medios de prueba: pesan y tienen copyright, viven en una carpeta compartida
+assets/media/
+*.mp4
+*.mov
+*.wav
+*.mp3
+*.m4a
+*.aac
