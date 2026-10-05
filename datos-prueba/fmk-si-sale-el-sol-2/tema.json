@@ -1,0 +1,249 @@
+{
+  "title": "Si sale el sol",
+  "artists": "FMK",
+  "cover": "media/fmk-si-sale-el-sol/portada.jpg",
+  "colors": {
+    "primary": "#8a3a2a",
+    "secondary": "#d9a066",
+    "text": "#ffffff"
+  },
+  "fragment": {
+    "src": "media/fmk-si-sale-el-sol/videocompleto-fmk-si-sale-el-sol.mp4",
+    "start": 65.75,
+    "end": 86.65
+  },
+  "track": {
+    "displayStart": 65.1,
+    "duration": 147.25
+  },
+  "lyrics": [
+    {
+      "end": 1.5,
+      "words": [
+        {
+          "t": 0.44,
+          "text": "flaca"
+        }
+      ]
+    },
+    {
+      "end": 4.36,
+      "words": [
+        {
+          "t": 1.6,
+          "text": "te"
+        },
+        {
+          "t": 1.78,
+          "text": "invito"
+        },
+        {
+          "t": 2.06,
+          "text": "a"
+        },
+        {
+          "t": 2.28,
+          "text": "disfrutar"
+        },
+        {
+          "t": 2.82,
+          "text": "este"
+        },
+        {
+          "t": 3.44,
+          "text": "momento"
+        }
+      ]
+    },
+    {
+      "end": 7.1,
+      "words": [
+        {
+          "t": 4.36,
+          "text": "que"
+        },
+        {
+          "t": 4.58,
+          "text": "las"
+        },
+        {
+          "t": 4.8,
+          "text": "penas"
+        },
+        {
+          "t": 5.1,
+          "text": "se"
+        },
+        {
+          "t": 5.2,
+          "text": "vayan"
+        },
+        {
+          "t": 5.62,
+          "text": "con"
+        },
+        {
+          "t": 5.78,
+          "text": "el"
+        },
+        {
+          "t": 5.92,
+          "text": "viento"
+        }
+      ]
+    },
+    {
+      "end": 10.48,
+      "words": [
+        {
+          "t": 7.1,
+          "text": "que"
+        },
+        {
+          "t": 7.3,
+          "text": "salga"
+        },
+        {
+          "t": 7.52,
+          "text": "a"
+        },
+        {
+          "t": 7.62,
+          "text": "flor"
+        },
+        {
+          "t": 7.78,
+          "text": "de"
+        },
+        {
+          "t": 8,
+          "text": "piel"
+        },
+        {
+          "t": 8.16,
+          "text": "el"
+        },
+        {
+          "t": 8.38,
+          "text": "sentimiento"
+        }
+      ]
+    },
+    {
+      "end": 12.24,
+      "words": [
+        {
+          "t": 10.48,
+          "text": "de"
+        },
+        {
+          "t": 10.74,
+          "text": "nada"
+        },
+        {
+          "t": 11.04,
+          "text": "me"
+        },
+        {
+          "t": 11.14,
+          "text": "arrepiento"
+        }
+      ]
+    },
+    {
+      "end": 14.92,
+      "words": [
+        {
+          "t": 12.56,
+          "text": "que"
+        },
+        {
+          "t": 12.8,
+          "text": "los"
+        },
+        {
+          "t": 13.06,
+          "text": "días"
+        },
+        {
+          "t": 13.28,
+          "text": "se"
+        },
+        {
+          "t": 13.42,
+          "text": "me"
+        },
+        {
+          "t": 13.66,
+          "text": "pasen"
+        },
+        {
+          "t": 14,
+          "text": "más"
+        },
+        {
+          "t": 14.3,
+          "text": "lentos"
+        }
+      ]
+    },
+    {
+      "end": 17.64,
+      "words": [
+        {
+          "t": 15.54,
+          "text": "camino"
+        },
+        {
+          "t": 15.9,
+          "text": "con"
+        },
+        {
+          "t": 16.04,
+          "text": "el"
+        },
+        {
+          "t": 16.38,
+          "text": "corazón"
+        },
+        {
+          "t": 17.04,
+          "text": "contento"
+        }
+      ]
+    },
+    {
+      "end": 20.9,
+      "words": [
+        {
+          "t": 18.08,
+          "text": "cantando"
+        },
+        {
+          "t": 18.48,
+          "text": "hasta"
+        },
+        {
+          "t": 18.66,
+          "text": "que"
+        },
+        {
+          "t": 18.86,
+          "text": "llegue"
+        },
+        {
+          "t": 19.4,
+          "text": "nuestro"
+        },
+        {
+          "t": 19.96,
+          "text": "encuentro"
+        }
+      ]
+    }
+  ],
+  "beats": {
+    "first": 0.036,
+    "period": 0.3485
+  }
+}

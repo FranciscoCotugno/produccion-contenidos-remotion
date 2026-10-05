@@ -1,0 +1,362 @@
+{
+  "title": "instinto luv",
+  "artists": "Santy P",
+  "cover": "media/santy-p-insintoluv/santy-p-instintoluv.jpg",
+  "colors": {
+    "primary": "#8e44a8",
+    "secondary": "#d68ad8",
+    "text": "#ffffff"
+  },
+  "fragment": {
+    "src": "media/santy-p-insintoluv/santy-p-instintoluv.mp4",
+    "start": 0,
+    "end": 20
+  },
+  "track": {
+    "displayStart": 11.33,
+    "duration": 132.89
+  },
+  "lyrics": [
+    {
+      "end": 2.34,
+      "words": [
+        {
+          "t": 0.3,
+          "text": "Es"
+        },
+        {
+          "t": 0.48,
+          "text": "una"
+        },
+        {
+          "t": 0.66,
+          "text": "adicción"
+        },
+        {
+          "t": 0.94,
+          "text": "que"
+        },
+        {
+          "t": 1.06,
+          "text": "me"
+        },
+        {
+          "t": 1.28,
+          "text": "tiene"
+        },
+        {
+          "t": 1.6,
+          "text": "enganchado"
+        }
+      ]
+    },
+    {
+      "end": 4.54,
+      "words": [
+        {
+          "t": 2.34,
+          "text": "Se"
+        },
+        {
+          "t": 2.44,
+          "text": "me"
+        },
+        {
+          "t": 2.62,
+          "text": "ocurren"
+        },
+        {
+          "t": 2.86,
+          "text": "mil"
+        },
+        {
+          "t": 3.06,
+          "text": "maneras"
+        },
+        {
+          "t": 3.48,
+          "text": "para"
+        },
+        {
+          "t": 3.92,
+          "text": "verte"
+        }
+      ]
+    },
+    {
+      "end": 6.8,
+      "words": [
+        {
+          "t": 4.54,
+          "text": "La"
+        },
+        {
+          "t": 4.78,
+          "text": "verdad"
+        },
+        {
+          "t": 4.94,
+          "text": "que"
+        },
+        {
+          "t": 5.06,
+          "text": "sí"
+        },
+        {
+          "t": 5.28,
+          "text": "soy"
+        },
+        {
+          "t": 5.4,
+          "text": "un"
+        },
+        {
+          "t": 5.58,
+          "text": "poco"
+        },
+        {
+          "t": 5.74,
+          "text": "impaciente"
+        }
+      ]
+    },
+    {
+      "end": 9.1,
+      "words": [
+        {
+          "t": 6.8,
+          "text": "No"
+        },
+        {
+          "t": 6.92,
+          "text": "me"
+        },
+        {
+          "t": 7.1,
+          "text": "sirve"
+        },
+        {
+          "t": 7.36,
+          "text": "de"
+        },
+        {
+          "t": 7.68,
+          "text": "mañana"
+        },
+        {
+          "t": 7.92,
+          "text": "ni"
+        },
+        {
+          "t": 8.18,
+          "text": "tampoco"
+        },
+        {
+          "t": 8.42,
+          "text": "en"
+        },
+        {
+          "t": 8.5,
+          "text": "la"
+        },
+        {
+          "t": 8.86,
+          "text": "semana"
+        }
+      ]
+    },
+    {
+      "end": 11.38,
+      "words": [
+        {
+          "t": 9.1,
+          "text": "Vos"
+        },
+        {
+          "t": 9.3,
+          "text": "cámbiate,"
+        },
+        {
+          "t": 9.64,
+          "text": "que"
+        },
+        {
+          "t": 9.84,
+          "text": "voy"
+        },
+        {
+          "t": 9.94,
+          "text": "a"
+        },
+        {
+          "t": 10.24,
+          "text": "pasar"
+        },
+        {
+          "t": 10.42,
+          "text": "en"
+        },
+        {
+          "t": 10.6,
+          "text": "veinte"
+        }
+      ]
+    },
+    {
+      "end": 13.72,
+      "words": [
+        {
+          "t": 11.38,
+          "text": "Vos"
+        },
+        {
+          "t": 11.62,
+          "text": "sabés"
+        },
+        {
+          "t": 11.78,
+          "text": "que"
+        },
+        {
+          "t": 11.9,
+          "text": "yo"
+        },
+        {
+          "t": 12.14,
+          "text": "tengo"
+        },
+        {
+          "t": 12.36,
+          "text": "algo"
+        },
+        {
+          "t": 13.04,
+          "text": "diferente"
+        }
+      ]
+    },
+    {
+      "end": 15.94,
+      "words": [
+        {
+          "t": 13.96,
+          "text": "Chocolate'"
+        },
+        {
+          "t": 14.2,
+          "text": "y"
+        },
+        {
+          "t": 14.38,
+          "text": "flore'"
+        },
+        {
+          "t": 14.54,
+          "text": "en"
+        },
+        {
+          "t": 14.68,
+          "text": "esa"
+        },
+        {
+          "t": 14.82,
+          "text": "no"
+        },
+        {
+          "t": 14.98,
+          "text": "me"
+        },
+        {
+          "t": 15.34,
+          "text": "cuente"
+        }
+      ]
+    },
+    {
+      "end": 17.76,
+      "words": [
+        {
+          "t": 15.98,
+          "text": "Yo"
+        },
+        {
+          "t": 16.08,
+          "text": "te"
+        },
+        {
+          "t": 16.2,
+          "text": "hago"
+        },
+        {
+          "t": 16.44,
+          "text": "cancione'"
+        },
+        {
+          "t": 16.78,
+          "text": "que"
+        },
+        {
+          "t": 16.96,
+          "text": "son"
+        },
+        {
+          "t": 17.2,
+          "text": "para"
+        },
+        {
+          "t": 17.58,
+          "text": "siempre"
+        }
+      ]
+    },
+    {
+      "end": 20,
+      "words": [
+        {
+          "t": 17.76,
+          "text": "Y"
+        },
+        {
+          "t": 17.9,
+          "text": "hago"
+        },
+        {
+          "t": 18.06,
+          "text": "que"
+        },
+        {
+          "t": 18.22,
+          "text": "las"
+        },
+        {
+          "t": 18.54,
+          "text": "coreen"
+        },
+        {
+          "t": 18.84,
+          "text": "en"
+        },
+        {
+          "t": 18.96,
+          "text": "lo'"
+        },
+        {
+          "t": 19.1,
+          "text": "show"
+        },
+        {
+          "t": 19.24,
+          "text": "tus"
+        },
+        {
+          "t": 19.64,
+          "text": "referentes"
+        }
+      ]
+    }
+  ],
+  "beats": {
+    "first": 0.14,
+    "period": 0.5754
+  }
+}

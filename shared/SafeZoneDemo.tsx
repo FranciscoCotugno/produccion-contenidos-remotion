@@ -2,7 +2,7 @@ import React from "react";
 import { z } from "zod";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { TIKTOK_SANS } from "./fonts";
-import { activeLineIndex, lineStarts, wordText } from "./lyrics";
+import { activeLineIndex, lineStarts } from "./lyrics";
 import { SafeZone, safeArea, safeZoneSchema } from "./SafeZone";
 import { temaSchema } from "./tema";
 
@@ -43,7 +43,7 @@ export const SafeZoneDemo: React.FC<z.infer<typeof safeZoneDemoSchema>> = ({ tem
         <div style={{ fontSize: 64, fontWeight: 700, lineHeight: 1.15, textAlign: "center" }}>
           {line?.words
             .filter((w) => t >= w.t)
-            .map((w, i) => wordText(w, line.words[i + 1], t))
+            .map((w) => w.text)
             .join(" ")}
         </div>
       </div>

@@ -16,7 +16,11 @@ const register = (family: string, faces: Face[], fallback: string) => {
   return `'${family}', ${fallback}`;
 };
 
-/** Variable: peso 300-900, ancho 75-150 ('wdth'), inclinación 0 a -6 ('slnt'). */
+/**
+ * Variable: peso 300-900 (Light 300, Regular 400, Medium 500, SemiBold 600,
+ * Bold 700, ExtraBold 800, Black 900), ancho 75-150 ('wdth'), inclinación 0
+ * a -6 ('slnt') y tamaño óptico 12-36 ('opsz').
+ */
 export const TIKTOK_SANS = register(
   "TikTok Sans",
   [{ file: "TikTokSans-Variable.ttf", weight: "300 900", stretch: "75% 150%", style: "oblique 0deg 6deg" }],
@@ -54,6 +58,44 @@ export const RONZINO = register(
   "'Helvetica Neue', sans-serif",
 );
 
+/** Angosta, para Brat. Variable: peso 400-700, redonda e itálica. */
+export const ARCHIVO_NARROW = register(
+  "Archivo Narrow",
+  [
+    { file: "ArchivoNarrow-Variable.ttf", weight: "400 700", style: "normal" },
+    { file: "ArchivoNarrow-Italic-Variable.ttf", weight: "400 700", style: "italic" },
+  ],
+  "sans-serif",
+);
+
+/**
+ * Alternativa libre a Arial: mismas métricas (ancho de cada letra), así que
+ * reemplaza a Arial sin cambiar cortes ni tamaños. Variable: peso 400-700,
+ * redonda e itálica.
+ */
+export const ARIMO = register(
+  "Arimo",
+  [
+    { file: "Arimo-Variable.ttf", weight: "400 700", style: "normal" },
+    { file: "Arimo-Italic-Variable.ttf", weight: "400 700", style: "italic" },
+  ],
+  "sans-serif",
+);
+
+/**
+ * La más parecida a la letra del sistema del iPhone (SF Pro, que no tiene
+ * licencia para servidor). Para interfaces que simulan apps. Variable: peso
+ * 100-900, tamaño óptico 14-32 ('opsz').
+ */
+export const INTER = register(
+  "Inter",
+  [{ file: "Inter-Variable.ttf", weight: "100 900", style: "normal" }],
+  "'Helvetica Neue', sans-serif",
+);
+
+/** Emojis a color (reacciones de los chats): funcionan igual en cualquier servidor. */
+export const NOTO_EMOJI = register("Noto Color Emoji", [{ file: "NotoColorEmoji-Regular.ttf" }], "sans-serif");
+
 /** Display, un solo peso. Para palabras cortas y títulos. */
 export const AKONY = register("AKONY", [{ file: "AKONY.woff2" }], "Impact, sans-serif");
 
@@ -62,5 +104,8 @@ export const FONT_LIST = [
   { name: "Fraunces Italic", family: FRAUNCES_ITALIC },
   { name: "Geist", family: GEIST },
   { name: "Ronzino", family: RONZINO },
+  { name: "Archivo Narrow", family: ARCHIVO_NARROW },
+  { name: "Arimo", family: ARIMO },
+  { name: "Inter", family: INTER },
   { name: "AKONY", family: AKONY },
 ];

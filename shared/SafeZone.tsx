@@ -15,9 +15,22 @@ import React from "react";
 import { z } from "zod";
 import { AbsoluteFill, Img, staticFile, useVideoConfig } from "remotion";
 
-/** Pantalla de la app y lo que tapa la interfaz, en px. Aproximado: calibrar con captura. */
+/**
+ * Pantalla de la app y lo que tapa la interfaz, en px.
+ *
+ * Calibrado con assets/safezone/captura-tiktok-iphone.jpg (iPhone, recortada
+ * al área del video y llevada a 1080×1920). Medido en esa captura:
+ * - arriba: las pestañas terminan en ~120 px; se deja 150 de margen.
+ * - derecha: la columna de botones y sus contadores arranca en x≈927, o sea
+ *   ~153 px; se toma 155.
+ * - izquierda: el usuario arranca a ~40 px; se deja 60.
+ * - abajo: en esa captura el video no tiene caption ni línea de sonido y la
+ *   barra de navegación queda fuera del video, así que solo tapa ~80 px. No
+ *   sirve para calibrar abajo: se mantienen los 450 px (caption de varias
+ *   líneas, sonido, y teléfonos donde la barra se superpone al video).
+ */
 export const TIKTOK_SCREEN = { width: 1080, height: 1920 };
-export const TIKTOK_UI = { top: 150, bottom: 450, right: 140, left: 60 };
+export const TIKTOK_UI = { top: 150, bottom: 450, right: 155, left: 60 };
 
 export const safeZoneSchema = z.object({
   /** mostrar la guía (solo para revisar en Studio) */

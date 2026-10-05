@@ -1,0 +1,89 @@
+TEXTOS DE EJEMPLO – instinto luv (Santy P)
+Para probar los moldes en el laboratorio. En producción, estos textos salen de la bajada de cada campaña.
+
+== chat ==
+[C3 oscuro, con respuesta]
+yo: cambiate que paso en veinte
+yo: [audio: fragmento]
+otro: jajaja dale
+otro: ya estoy abajo
+
+[C3 oscuro, en visto]
+yo: se me ocurren mil maneras para verte
+yo: [audio: fragmento]
+otro: [visto]
+
+[R1 claro, contador]
+hook: Día {n} escuchando esto en loop   (n de prueba: 3)
+
+[R1 claro, racha]
+hook: Hoy la racha se activa con:
+
+[R3 mensaje directo, compartido con mensaje]
+yo: [reel: clip] te dedico esto
+otro: sos un impaciente
+otro: [reacción: 🔥]
+
+[R3 mensaje directo, solo reel]
+yo: [reel: clip]
+otro: [reacción: 🫠]
+
+== nota-celular ==
+[confesión]
+título: para vos
+texto:
+no te voy a mandar flores
+ni chocolates.
+te voy a mandar este tema.
+yo te hago canciones que son para siempre
+
+[lista]
+título: excusas para verte hoy
+texto:
+1. te devuelvo el buzo
+2. paso por tu barrio "de casualidad"
+3. te mando este tema
+
+== carrusel ==
+[C1 fotos de día] slide 1: Santy P la escribió y yo la viví...
+[C2 fotos de noche] slide 1: cuando te dice "paso en veinte" y ya está en la puerta:
+[C8 fotos con flash] slide 1: lo que suena en el auto de camino a verte:
+[R2 descubrimiento] slide 1: nadie me avisó de este tema y ahora no lo puedo sacar
+slide 2 (estrofa):
+Se me ocurren mil maneras para verte
+La verdad que sí soy un poco impaciente
+No me sirve de mañana ni tampoco en la semana
+
+== reproductor-widget ==
+[C5 frío, frase] soy un poco impaciente, lo admito
+[C5 frío, pregunta] ¿por qué nadie habla de este tema?
+[C6 cálido, frase] pasá en veinte
+
+== letra-sobre-video ==
+[L08 línea fija] es una adicción que me tiene enganchado
+[L11 hook fijo] cuando la tocan en vivo:
+[hook fijo + letra] si algún día me extrañás, buscame en este tema
+[POV manejo nocturno] POV: le dijiste "paso en veinte" y llegaste en cinco
+[POV ciudad] POV: viernes a la noche y ya estás en camino
+
+== tarjeta-letra ==
+[una tarjeta]
+Es una adicción
+que me tiene enganchado
+
+[carrusel de 3]
+1: Se me ocurren mil maneras para verte
+2: La verdad que sí soy un poco impaciente
+3: Yo te hago cancione' que son para siempre
+
+== memes ==
+[fondo blanco con imagen] si Santy P no era impaciente, ¿por qué escribió esto?
+[ciclo] le escribo → no contesta → pongo este tema → le escribo de nuevo
+[reacciones] cuando dice "vos cambiate que voy a pasar en veinte":
+
+== brat-minimal (L04): palabras destacadas (aprobadas por Cotu) ==
+adicción · enganchado · mil · impaciente · veinte · diferente · siempre
+
+== karaoke (L09), modo "completá la letra": dónde cortar (aprobado por Cotu) ==
+Es una adicción que me tiene ___   (enganchado)
+Yo te hago cancione' que son para ___   (siempre)

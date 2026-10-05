@@ -1,0 +1,18 @@
+Título: Si sale el sol
+Artistas: FMK (PENDIENTE confirmar si va con Kchiporros: en 0:55 hay una parte hablada que dice "esto es FMK con Kchiporros")
+Duración total del tema: 2:27
+En el videoclip, el tema arranca en: 0:00 (0,65 s de silencio al principio)
+Fragmento 1: 0:26,6 a 0:55 (desde "estando cerca o a distancia igual te quiero" hasta "yo no la quiero malgastar": cierre de la primera estrofa y dos estribillos)
+Fragmento 2: 1:05 a 1:26 (desde "flaca" hasta "cantando hasta que llegue nuestro encuentro": segunda estrofa)
+Notas:
+- Campaña FMK. Bajada en docs/campanas/fmk-si-sale-el-sol.md.
+- Cantidades: 20 piezas con el fragmento 1 y 10 con el fragmento 2 (30 en total).
+- Pedido del sello: letra minimalista y finita, fade in y fade out, estética tipo Brat.
+- Tipografía obligatoria: Arial o TikTok Sans. En el proyecto: TikTok Sans (Light para la letra finita) o Arimo.
+- Fragmento 1: la bajada dice 0:28, pero a esa altura la voz ya va por "a distancia". El verso arranca en 0:26,7 (medido por Claude Code). El final coincide: "malgastar" cae en 0:52,7 y en 0:55,2 arranca la parte hablada.
+- Fragmento 2: coincide con la bajada ("flaca" en 1:05,5, "encuentro" en 1:24,9).
+- Clip: videoclip completo (YouTube, https://youtu.be/6e7OT7Hwpl4), 1920×1080, 25 fps.
+- Recorte del sello: fmk-si-sale-el-sol-1.mp4 es un recorte vertical (1080×1920) del fragmento 2. Va del segundo 63,7 al 97,6 del videoclip. No hay recorte del fragmento 1.
+- Audio: PROVISORIO. Está extraído del videoclip. Falta el audio en alta calidad del sello.
+- Portada: PROVISORIA. Es un cuadro del clip. Falta la portada oficial.
+- Fotos de prensa: 4 fotos de facugarayo en Drive (links en la bajada). PENDIENTE bajarlas.

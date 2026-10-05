@@ -1,0 +1,1075 @@
+{
+  "title": "Si sale el sol",
+  "artists": "FMK",
+  "cover": "media/fmk-si-sale-el-sol/portada.jpg",
+  "colors": {
+    "primary": "#8a3a2a",
+    "secondary": "#d9a066",
+    "text": "#ffffff"
+  },
+  "fragment": {
+    "src": "media/fmk-si-sale-el-sol/videocompleto-fmk-si-sale-el-sol.mp4",
+    "start": 0.65,
+    "end": 147.9
+  },
+  "track": {
+    "displayStart": 0,
+    "duration": 147.25
+  },
+  "lyrics": [
+    {
+      "end": 11.36,
+      "words": [
+        {
+          "t": 9.98,
+          "text": "se"
+        },
+        {
+          "t": 10.36,
+          "text": "fue"
+        },
+        {
+          "t": 10.64,
+          "text": "la"
+        },
+        {
+          "t": 11.08,
+          "text": "luz"
+        }
+      ]
+    },
+    {
+      "end": 12.64,
+      "words": [
+        {
+          "t": 11.36,
+          "text": "y"
+        },
+        {
+          "t": 11.72,
+          "text": "hace"
+        },
+        {
+          "t": 12.22,
+          "text": "calor"
+        }
+      ]
+    },
+    {
+      "end": 15.42,
+      "words": [
+        {
+          "t": 12.64,
+          "text": "no"
+        },
+        {
+          "t": 12.96,
+          "text": "aguanto"
+        },
+        {
+          "t": 13.9,
+          "text": "más"
+        },
+        {
+          "t": 14.34,
+          "text": "esta"
+        },
+        {
+          "t": 14.86,
+          "text": "ciudad"
+        }
+      ]
+    },
+    {
+      "end": 18.2,
+      "words": [
+        {
+          "t": 15.42,
+          "text": "nublado"
+        },
+        {
+          "t": 16.08,
+          "text": "el"
+        },
+        {
+          "t": 16.6,
+          "text": "cielo"
+        }
+      ]
+    },
+    {
+      "end": 20.38,
+      "words": [
+        {
+          "t": 18.2,
+          "text": "me"
+        },
+        {
+          "t": 18.62,
+          "text": "desespero"
+        }
+      ]
+    },
+    {
+      "end": 23.56,
+      "words": [
+        {
+          "t": 21.04,
+          "text": "aterricé"
+        },
+        {
+          "t": 21.28,
+          "text": "y"
+        },
+        {
+          "t": 22.24,
+          "text": "ya"
+        },
+        {
+          "t": 22.52,
+          "text": "te"
+        },
+        {
+          "t": 22.96,
+          "text": "pensé"
+        }
+      ]
+    },
+    {
+      "end": 26.7,
+      "words": [
+        {
+          "t": 23.8,
+          "text": "cambié"
+        },
+        {
+          "t": 24.2,
+          "text": "de"
+        },
+        {
+          "t": 24.82,
+          "text": "aire"
+        },
+        {
+          "t": 25.1,
+          "text": "en"
+        },
+        {
+          "t": 25.5,
+          "text": "Buenos"
+        },
+        {
+          "t": 26.18,
+          "text": "Aires"
+        }
+      ]
+    },
+    {
+      "end": 30.76,
+      "words": [
+        {
+          "t": 26.7,
+          "text": "estando"
+        },
+        {
+          "t": 27.56,
+          "text": "cerca"
+        },
+        {
+          "t": 27.98,
+          "text": "o"
+        },
+        {
+          "t": 28.16,
+          "text": "a"
+        },
+        {
+          "t": 28.48,
+          "text": "distancia"
+        },
+        {
+          "t": 29.42,
+          "text": "igual"
+        },
+        {
+          "t": 29.64,
+          "text": "te"
+        },
+        {
+          "t": 30.12,
+          "text": "quiero"
+        }
+      ]
+    },
+    {
+      "end": 33.6,
+      "words": [
+        {
+          "t": 31.82,
+          "text": "si"
+        },
+        {
+          "t": 32.3,
+          "text": "sale"
+        },
+        {
+          "t": 32.56,
+          "text": "el"
+        },
+        {
+          "t": 33,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 36.76,
+      "words": [
+        {
+          "t": 34.14,
+          "text": "contigo"
+        },
+        {
+          "t": 34.7,
+          "text": "quiero"
+        },
+        {
+          "t": 35.18,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 40.62,
+      "words": [
+        {
+          "t": 36.76,
+          "text": "bajo"
+        },
+        {
+          "t": 37.06,
+          "text": "la"
+        },
+        {
+          "t": 37.3,
+          "text": "luz"
+        },
+        {
+          "t": 37.44,
+          "text": "que"
+        },
+        {
+          "t": 37.78,
+          "text": "nos"
+        },
+        {
+          "t": 38.06,
+          "text": "domina"
+        },
+        {
+          "t": 39.12,
+          "text": "cada"
+        },
+        {
+          "t": 39.94,
+          "text": "día"
+        }
+      ]
+    },
+    {
+      "end": 42.74,
+      "words": [
+        {
+          "t": 40.84,
+          "text": "no"
+        },
+        {
+          "t": 41,
+          "text": "sé"
+        },
+        {
+          "t": 41.2,
+          "text": "por"
+        },
+        {
+          "t": 41.3,
+          "text": "qué"
+        },
+        {
+          "t": 41.52,
+          "text": "no"
+        },
+        {
+          "t": 41.78,
+          "text": "te"
+        },
+        {
+          "t": 42.14,
+          "text": "animas"
+        }
+      ]
+    },
+    {
+      "end": 44.73,
+      "words": [
+        {
+          "t": 42.74,
+          "text": "si"
+        },
+        {
+          "t": 43.18,
+          "text": "sale"
+        },
+        {
+          "t": 43.48,
+          "text": "el"
+        },
+        {
+          "t": 43.94,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 47.56,
+      "words": [
+        {
+          "t": 45.02,
+          "text": "contigo"
+        },
+        {
+          "t": 45.6,
+          "text": "quiero"
+        },
+        {
+          "t": 46.06,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 49.78,
+      "words": [
+        {
+          "t": 47.64,
+          "text": "hay"
+        },
+        {
+          "t": 47.9,
+          "text": "tanta"
+        },
+        {
+          "t": 48.14,
+          "text": "piel"
+        },
+        {
+          "t": 48.32,
+          "text": "que"
+        },
+        {
+          "t": 48.64,
+          "text": "nos"
+        },
+        {
+          "t": 49,
+          "text": "domina"
+        }
+      ]
+    },
+    {
+      "end": 51.46,
+      "words": [
+        {
+          "t": 49.78,
+          "text": "y"
+        },
+        {
+          "t": 49.9,
+          "text": "a"
+        },
+        {
+          "t": 50.12,
+          "text": "esta"
+        },
+        {
+          "t": 50.8,
+          "text": "vida"
+        }
+      ]
+    },
+    {
+      "end": 53.96,
+      "words": [
+        {
+          "t": 51.7,
+          "text": "yo"
+        },
+        {
+          "t": 51.9,
+          "text": "no"
+        },
+        {
+          "t": 52.06,
+          "text": "la"
+        },
+        {
+          "t": 52.4,
+          "text": "quiero"
+        },
+        {
+          "t": 52.72,
+          "text": "malgastar"
+        }
+      ]
+    },
+    {
+      "end": 66.6,
+      "words": [
+        {
+          "t": 65.52,
+          "text": "flaca"
+        }
+      ]
+    },
+    {
+      "end": 69.18,
+      "words": [
+        {
+          "t": 66.7,
+          "text": "te"
+        },
+        {
+          "t": 66.88,
+          "text": "invito"
+        },
+        {
+          "t": 67.14,
+          "text": "a"
+        },
+        {
+          "t": 67.38,
+          "text": "disfrutar"
+        },
+        {
+          "t": 67.92,
+          "text": "este"
+        },
+        {
+          "t": 68.56,
+          "text": "momento"
+        }
+      ]
+    },
+    {
+      "end": 72.08,
+      "words": [
+        {
+          "t": 69.46,
+          "text": "que"
+        },
+        {
+          "t": 69.7,
+          "text": "las"
+        },
+        {
+          "t": 69.9,
+          "text": "penas"
+        },
+        {
+          "t": 70.22,
+          "text": "se"
+        },
+        {
+          "t": 70.3,
+          "text": "vayan"
+        },
+        {
+          "t": 70.66,
+          "text": "con"
+        },
+        {
+          "t": 70.9,
+          "text": "el"
+        },
+        {
+          "t": 71.04,
+          "text": "viento"
+        }
+      ]
+    },
+    {
+      "end": 74.86,
+      "words": [
+        {
+          "t": 72.2,
+          "text": "que"
+        },
+        {
+          "t": 72.4,
+          "text": "salga"
+        },
+        {
+          "t": 72.4,
+          "text": "a"
+        },
+        {
+          "t": 72.72,
+          "text": "flor"
+        },
+        {
+          "t": 72.72,
+          "text": "de"
+        },
+        {
+          "t": 72.98,
+          "text": "piel"
+        },
+        {
+          "t": 73.24,
+          "text": "el"
+        },
+        {
+          "t": 73.48,
+          "text": "sentimiento"
+        }
+      ]
+    },
+    {
+      "end": 77.42,
+      "words": [
+        {
+          "t": 75.58,
+          "text": "de"
+        },
+        {
+          "t": 75.86,
+          "text": "nada"
+        },
+        {
+          "t": 76.14,
+          "text": "me"
+        },
+        {
+          "t": 76.24,
+          "text": "arrepiento"
+        }
+      ]
+    },
+    {
+      "end": 80.32,
+      "words": [
+        {
+          "t": 77.66,
+          "text": "que"
+        },
+        {
+          "t": 77.9,
+          "text": "los"
+        },
+        {
+          "t": 78.16,
+          "text": "días"
+        },
+        {
+          "t": 78.36,
+          "text": "se"
+        },
+        {
+          "t": 78.48,
+          "text": "me"
+        },
+        {
+          "t": 78.76,
+          "text": "pasen"
+        },
+        {
+          "t": 79.22,
+          "text": "más"
+        },
+        {
+          "t": 79.42,
+          "text": "lentos"
+        }
+      ]
+    },
+    {
+      "end": 83.14,
+      "words": [
+        {
+          "t": 80.46,
+          "text": "camino"
+        },
+        {
+          "t": 81,
+          "text": "con"
+        },
+        {
+          "t": 81.1,
+          "text": "el"
+        },
+        {
+          "t": 81.52,
+          "text": "corazón"
+        },
+        {
+          "t": 82.12,
+          "text": "contento"
+        }
+      ]
+    },
+    {
+      "end": 86.38,
+      "words": [
+        {
+          "t": 83.14,
+          "text": "cantando"
+        },
+        {
+          "t": 83.58,
+          "text": "hasta"
+        },
+        {
+          "t": 83.76,
+          "text": "que"
+        },
+        {
+          "t": 83.98,
+          "text": "llegue"
+        },
+        {
+          "t": 84.52,
+          "text": "nuestro"
+        },
+        {
+          "t": 84.9,
+          "text": "encuentro"
+        }
+      ]
+    },
+    {
+      "end": 88.2,
+      "words": [
+        {
+          "t": 86.4,
+          "text": "si"
+        },
+        {
+          "t": 86.86,
+          "text": "sale"
+        },
+        {
+          "t": 87.14,
+          "text": "el"
+        },
+        {
+          "t": 87.6,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 90.32,
+      "words": [
+        {
+          "t": 88.64,
+          "text": "contigo"
+        },
+        {
+          "t": 89.2,
+          "text": "quiero"
+        },
+        {
+          "t": 89.66,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 95.04,
+      "words": [
+        {
+          "t": 91.32,
+          "text": "bajo"
+        },
+        {
+          "t": 91.62,
+          "text": "la"
+        },
+        {
+          "t": 91.8,
+          "text": "luz"
+        },
+        {
+          "t": 91.98,
+          "text": "que"
+        },
+        {
+          "t": 92.32,
+          "text": "nos"
+        },
+        {
+          "t": 92.58,
+          "text": "domina"
+        },
+        {
+          "t": 93.64,
+          "text": "cada"
+        },
+        {
+          "t": 94.38,
+          "text": "día"
+        }
+      ]
+    },
+    {
+      "end": 97.24,
+      "words": [
+        {
+          "t": 95.32,
+          "text": "no"
+        },
+        {
+          "t": 95.54,
+          "text": "sé"
+        },
+        {
+          "t": 95.74,
+          "text": "por"
+        },
+        {
+          "t": 95.84,
+          "text": "qué"
+        },
+        {
+          "t": 96.04,
+          "text": "no"
+        },
+        {
+          "t": 96.2,
+          "text": "te"
+        },
+        {
+          "t": 96.64,
+          "text": "animas"
+        }
+      ]
+    },
+    {
+      "end": 99.56,
+      "words": [
+        {
+          "t": 97.24,
+          "text": "si"
+        },
+        {
+          "t": 97.68,
+          "text": "sale"
+        },
+        {
+          "t": 97.9,
+          "text": "el"
+        },
+        {
+          "t": 98.44,
+          "text": "sol"
+        }
+      ]
+    },
+    {
+      "end": 102.2,
+      "words": [
+        {
+          "t": 99.56,
+          "text": "contigo"
+        },
+        {
+          "t": 100.14,
+          "text": "quiero"
+        },
+        {
+          "t": 100.6,
+          "text": "despertar"
+        }
+      ]
+    },
+    {
+      "end": 104.34,
+      "words": [
+        {
+          "t": 102.2,
+          "text": "hay"
+        },
+        {
+          "t": 102.46,
+          "text": "tanta"
+        },
+        {
+          "t": 102.74,
+          "text": "piel"
+        },
+        {
+          "t": 102.9,
+          "text": "que"
+        },
+        {
+          "t": 103.2,
+          "text": "nos"
+        },
+        {
+          "t": 103.54,
+          "text": "domina"
+        }
+      ]
+    },
+    {
+      "end": 106.22,
+      "words": [
+        {
+          "t": 104.34,
+          "text": "y"
+        },
+        {
+          "t": 104.44,
+          "text": "a"
+        },
+        {
+          "t": 104.66,
+          "text": "esta"
+        },
+        {
+          "t": 105.44,
+          "text": "vida"
+        }
+      ]
+    },
+    {
+      "end": 108.16,
+      "words": [
+        {
+          "t": 106.26,
+          "text": "yo"
+        },
+        {
+          "t": 106.42,
+          "text": "no"
+        },
+        {
+          "t": 106.6,
+          "text": "la"
+        },
+        {
+          "t": 106.94,
+          "text": "quiero"
+        },
+        {
+          "t": 107.26,
+          "text": "malgastar"
+        }
+      ]
+    },
+    {
+      "end": 121.1,
+      "words": [
+        {
+          "t": 118.82,
+          "text": "imagina"
+        },
+        {
+          "t": 119.48,
+          "text": "vos"
+        },
+        {
+          "t": 119.8,
+          "text": "y"
+        },
+        {
+          "t": 120.28,
+          "text": "yo"
+        }
+      ]
+    },
+    {
+      "end": 124,
+      "words": [
+        {
+          "t": 121.54,
+          "text": "entre"
+        },
+        {
+          "t": 121.84,
+          "text": "las"
+        },
+        {
+          "t": 122.06,
+          "text": "olas"
+        },
+        {
+          "t": 122.58,
+          "text": "del"
+        },
+        {
+          "t": 123.06,
+          "text": "mar"
+        }
+      ]
+    },
+    {
+      "end": 127.7,
+      "words": [
+        {
+          "t": 124.14,
+          "text": "siempre"
+        },
+        {
+          "t": 124.56,
+          "text": "estoy"
+        },
+        {
+          "t": 124.9,
+          "text": "aquí"
+        },
+        {
+          "t": 125.3,
+          "text": "por"
+        },
+        {
+          "t": 125.62,
+          "text": "si"
+        },
+        {
+          "t": 126.1,
+          "text": "cambias"
+        },
+        {
+          "t": 126.7,
+          "text": "de"
+        },
+        {
+          "t": 127.06,
+          "text": "idea"
+        }
+      ]
+    },
+    {
+      "end": 130.32,
+      "words": [
+        {
+          "t": 127.76,
+          "text": "pa'"
+        },
+        {
+          "t": 128,
+          "text": "que"
+        },
+        {
+          "t": 128.34,
+          "text": "gires"
+        },
+        {
+          "t": 129.02,
+          "text": "y"
+        },
+        {
+          "t": 129.4,
+          "text": "me"
+        },
+        {
+          "t": 129.66,
+          "text": "veas"
+        }
+      ]
+    },
+    {
+      "end": 131.82,
+      "words": [
+        {
+          "t": 130.32,
+          "text": "vos"
+        },
+        {
+          "t": 130.72,
+          "text": "y"
+        },
+        {
+          "t": 131.16,
+          "text": "yo"
+        }
+      ]
+    },
+    {
+      "end": 134.96,
+      "words": [
+        {
+          "t": 132.3,
+          "text": "nos"
+        },
+        {
+          "t": 132.76,
+          "text": "podemos"
+        },
+        {
+          "t": 133.28,
+          "text": "escapar"
+        }
+      ]
+    },
+    {
+      "end": 138.68,
+      "words": [
+        {
+          "t": 135.14,
+          "text": "un"
+        },
+        {
+          "t": 135.48,
+          "text": "lugar"
+        },
+        {
+          "t": 135.78,
+          "text": "entre"
+        },
+        {
+          "t": 136.08,
+          "text": "Asunción"
+        },
+        {
+          "t": 137.04,
+          "text": "y"
+        },
+        {
+          "t": 137.24,
+          "text": "Necochea"
+        }
+      ]
+    },
+    {
+      "end": 141.48,
+      "words": [
+        {
+          "t": 138.68,
+          "text": "ya"
+        },
+        {
+          "t": 139.18,
+          "text": "sabes"
+        },
+        {
+          "t": 139.64,
+          "text": "lo"
+        },
+        {
+          "t": 139.88,
+          "text": "que"
+        },
+        {
+          "t": 140.18,
+          "text": "te"
+        },
+        {
+          "t": 140.84,
+          "text": "espera"
+        }
+      ]
+    }
+  ]
+}

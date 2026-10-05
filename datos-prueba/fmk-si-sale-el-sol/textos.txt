@@ -1,0 +1,97 @@
+TEXTOS DE EJEMPLO – Si sale el sol (FMK)
+Para probar los moldes en el laboratorio. En producción, estos textos salen de la bajada de cada campaña.
+Los versos con dudas de letra ("domina" en el primer estribillo, "animas") no se usan acá.
+
+== chat ==
+[C3 oscuro, con respuesta]
+yo: si sale el sol mañana te paso a buscar
+yo: [audio: fragmento]
+otro: y si llueve?
+yo: te paso a buscar igual
+otro: [reacción: ☀️]
+
+[C3 oscuro, en visto]
+yo: contigo quiero despertar
+yo: nada, eso
+yo: [audio: fragmento]
+otro: [visto]
+
+[R1 claro, contador]
+hook: Día {n} escuchando esto en loop   (n de prueba: 12)
+
+[R1 claro, racha]
+hook: Hoy la racha se activa con:
+
+[R3 mensaje directo, compartido con mensaje]
+yo: [reel: videoclip] esta es la nuestra
+otro: no puedo más con este tema
+otro: [reacción: 😭]
+
+[R3 mensaje directo, solo reel]
+yo: [reel: videoclip]
+otro: [reacción: ☀️]
+
+== nota-celular ==
+[confesión]
+título: no enviado
+texto:
+ya sé que dijimos que no.
+pero hoy salió el sol
+y lo primero que pensé fue en vos.
+si sale el sol, contigo quiero despertar
+
+[lista]
+título: cosas que me recuerdan a vos
+texto:
+1. el calor de enero
+2. los cortes de luz
+3. buenos aires a las 7 am
+4. este tema
+
+== carrusel ==
+[C1 fotos de día] slide 1: FMK la escribió y yo la viví...
+[C2 fotos de noche] slide 1: lo que le diría si me animara:
+[C8 fotos con flash] slide 1: le mandé esto a las 8 am sin contexto:
+[R2 descubrimiento] slide 1: nadie habla de este tema de FMK y es un crimen
+slide 2 (estrofa):
+si sale el sol
+contigo quiero despertar
+hay tanta piel que nos domina
+y a esta vida
+yo no la quiero malgastar
+
+== reproductor-widget ==
+[C5 frío, frase] ojalá mañana salga el sol
+[C5 frío, pregunta] ¿cómo que este tema no está en todas las playlists del verano?
+[C6 cálido, frase] para escuchar con la ventana abierta
+
+== letra-sobre-video ==
+[L08 línea fija] contigo quiero despertar
+[L11 hook fijo] cuando la tocan en vivo:
+[hook fijo + letra] si algún día me extrañás, buscame en este tema
+[POV ciudad] POV: volvés a Buenos Aires y lo primero que hacés es escribirle
+[POV manejo nocturno] POV: 2 am por la costanera y suena esto
+[POV playa] POV: primer día de vacaciones y ya te pensé
+
+== tarjeta-letra ==
+[una tarjeta]
+si sale el sol
+contigo quiero despertar
+
+[carrusel de 3]
+1: se fue la luz / y hace calor
+2: aterricé y ya te pensé
+3: flaca / te invito a disfrutar este momento
+
+== memes ==
+[fondo blanco con imagen] si FMK no estaba enamorado, ¿cómo escribió esto?
+[ciclo] sale el sol → pongo este tema → le escribo → no me contesta → sale el sol
+[reacciones] cuando arranca el estribillo:
+
+== brat-minimal (L04): palabras destacadas (aprobadas por Cotu) ==
+[fragmento 1] distancia · quiero · sol · despertar · piel · vida · malgastar
+[fragmento 2] flaca · momento · viento · piel · arrepiento · contento · encuentro
+
+== karaoke (L09), modo "completá la letra": dónde cortar (aprobado por Cotu) ==
+si sale el sol / contigo quiero ___   (despertar)
+y a esta vida / yo no la quiero ___   (malgastar)

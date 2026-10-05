@@ -17,11 +17,7 @@
       "words": [
         {
           "t": 0.3,
-          "text": "mi",
-          "stretch": {
-            "char": "i",
-            "max": 3
-          }
+          "text": "mi"
         },
         {
           "t": 1.4,
@@ -41,11 +37,7 @@
         },
         {
           "t": 3.4,
-          "text": "yo",
-          "stretch": {
-            "char": "o",
-            "max": 5
-          }
+          "text": "yo"
         },
         {
           "t": 4.7,

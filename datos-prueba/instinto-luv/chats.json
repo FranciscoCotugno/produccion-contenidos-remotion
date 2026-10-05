@@ -1,0 +1,146 @@
+{
+  "_nota": "Conversaciones de prueba para el molde chat (de textos.txt). t = segundo del fragmento en que aparece el mensaje. Fragmento de 20 s: la respuesta de C3 cae al 60-65 %. Sin reproductor de audio (pedido de Cotu, 2026-10-05).",
+  "c3-respuesta": {
+    "contacto": "lu",
+    "mensajes": [
+      {
+        "tipo": "texto",
+        "de": "yo",
+        "t": 0,
+        "texto": "cambiate que paso en veinte"
+      },
+      {
+        "tipo": "video",
+        "de": "yo",
+        "t": 0
+      },
+      {
+        "tipo": "escribiendo",
+        "de": "otro",
+        "t": 11,
+        "duracion": 1
+      },
+      {
+        "tipo": "texto",
+        "de": "otro",
+        "t": 12,
+        "texto": "jajaja dale"
+      },
+      {
+        "tipo": "texto",
+        "de": "otro",
+        "t": 13.2,
+        "texto": "ya estoy abajo"
+      }
+    ]
+  },
+  "c3-visto": {
+    "contacto": "tomi",
+    "mensajes": [
+      {
+        "tipo": "texto",
+        "de": "yo",
+        "t": 0,
+        "texto": "se me ocurren mil maneras para verte"
+      },
+      {
+        "tipo": "video",
+        "de": "yo",
+        "t": 0
+      },
+      {
+        "tipo": "visto",
+        "de": "otro",
+        "t": 7
+      }
+    ]
+  },
+  "r1-contador": {
+    "contacto": "cami",
+    "n": 3,
+    "mensajes": [
+      {
+        "tipo": "texto",
+        "de": "otro",
+        "t": 0,
+        "texto": "Día {n} escuchando esto en loop"
+      },
+      {
+        "tipo": "video",
+        "de": "otro",
+        "t": 0
+      },
+      {
+        "tipo": "link",
+        "de": "otro",
+        "t": 0
+      }
+    ]
+  },
+  "r1-racha": {
+    "contacto": "cami",
+    "n": 3,
+    "mensajes": [
+      {
+        "tipo": "texto",
+        "de": "otro",
+        "t": 0,
+        "texto": "Hoy la racha se activa con:"
+      },
+      {
+        "tipo": "video",
+        "de": "otro",
+        "t": 0
+      },
+      {
+        "tipo": "link",
+        "de": "otro",
+        "t": 0
+      }
+    ]
+  },
+  "r3-compartido": {
+    "contacto": "lu",
+    "mensajes": [
+      {
+        "tipo": "reel",
+        "de": "yo",
+        "t": 0
+      },
+      {
+        "tipo": "texto",
+        "de": "yo",
+        "t": 0,
+        "texto": "te dedico esto"
+      },
+      {
+        "tipo": "texto",
+        "de": "otro",
+        "t": 0,
+        "texto": "sos un impaciente"
+      },
+      {
+        "tipo": "reaccion",
+        "de": "otro",
+        "t": 0,
+        "emoji": "🔥"
+      }
+    ]
+  },
+  "r3-solo-reel": {
+    "contacto": "tomi",
+    "mensajes": [
+      {
+        "tipo": "reel",
+        "de": "yo",
+        "t": 0
+      },
+      {
+        "tipo": "reaccion",
+        "de": "otro",
+        "t": 0,
+        "emoji": "🫠"
+      }
+    ]
+  }
+}
