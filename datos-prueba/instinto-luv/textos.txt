@@ -49,10 +49,9 @@ texto:
 [C2 fotos de noche] slide 1: cuando te dice "paso en veinte" y ya está en la puerta:
 [C8 fotos con flash] slide 1: lo que suena en el auto de camino a verte:
 [R2 descubrimiento] slide 1: nadie me avisó de este tema y ahora no lo puedo sacar
-slide 2 (estrofa):
+slide 2 (frase): una sola frase, la elige quien hace la bajada
 Se me ocurren mil maneras para verte
-La verdad que sí soy un poco impaciente
-No me sirve de mañana ni tampoco en la semana
+(estrofa completa, de referencia: Se me ocurren mil maneras para verte / La verdad que sí soy un poco impaciente / No me sirve de mañana ni tampoco en la semana)
 
 == reproductor-widget ==
 [C5 frío, frase] soy un poco impaciente, lo admito

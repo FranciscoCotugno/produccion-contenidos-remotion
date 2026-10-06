@@ -1,0 +1,21 @@
+{
+  "_nota": "Carruseles de prueba (de textos.txt, sección carrusel). Slide 1 (A): fotos de los bancos de IA de prueba (día C1, noche C2, flash C8). Slides B y D: fotos de prensa del artista. La frase de la slide 2 es una sola frase de la estrofa, elegida por quien hace la bajada (pedido de Cotu); la estrofa completa queda en textos.txt.",
+  "hooks": {
+    "C1": "Santy P la escribió y yo la viví...",
+    "C2": "cuando te dice \"paso en veinte\" y ya está en la puerta:",
+    "C8": "lo que suena en el auto de camino a verte:",
+    "R2": "nadie me avisó de este tema y ahora no lo puedo sacar"
+  },
+  "frase": [
+    "Se me ocurren mil maneras para verte"
+  ],
+  "fotos": {
+    "C1": "media/bancos/fotos-dia/fotos-dia-003.jpg",
+    "C2": "media/bancos/fotos-noche/fotos-noche-002.jpg",
+    "C8": "media/bancos/fotos-flash/fotos-flash-001.jpg"
+  },
+  "artista": {
+    "frase": "media/santy-p-insintoluv/prensa-1.jpg",
+    "tarjeta": "media/santy-p-insintoluv/prensa-2.jpg"
+  }
+}

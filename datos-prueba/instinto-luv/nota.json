@@ -1,0 +1,11 @@
+{
+  "_nota": "Notas de prueba de nota-celular (C7), de textos.txt. El texto lo escribe quien hace la bajada; la última línea de la confesión es una frase de la letra.",
+  "confesion": {
+    "titulo": "para vos",
+    "texto": "no te voy a mandar flores\nni chocolates.\nte voy a mandar este tema.\nyo te hago canciones que son para siempre"
+  },
+  "lista": {
+    "titulo": "excusas para verte hoy",
+    "texto": "1. te devuelvo el buzo\n2. paso por tu barrio \"de casualidad\"\n3. te mando este tema"
+  }
+}

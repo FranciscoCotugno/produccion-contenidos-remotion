@@ -1,0 +1,32 @@
+{
+  "_nota": "Tarjetas de letra de prueba (de datos-prueba/fmk-si-sale-el-sol/textos.txt, sección tarjeta-letra). Las fotos de fondo (C4) son de los bancos de IA de prueba.",
+  "una": {
+    "lineas": [
+      "si sale el sol",
+      "contigo quiero despertar"
+    ],
+    "foto": "media/bancos/fotos-dia/fotos-dia-002.jpg"
+  },
+  "carrusel": [
+    {
+      "lineas": [
+        "se fue la luz",
+        "y hace calor"
+      ],
+      "foto": "media/bancos/fotos-dia/fotos-dia-004.jpg"
+    },
+    {
+      "lineas": [
+        "aterricé y ya te pensé"
+      ],
+      "foto": "media/bancos/fotos-dia/fotos-dia-005.jpg"
+    },
+    {
+      "lineas": [
+        "flaca",
+        "te invito a disfrutar este momento"
+      ],
+      "foto": "media/bancos/fotos-dia/fotos-dia-002.jpg"
+    }
+  ]
+}

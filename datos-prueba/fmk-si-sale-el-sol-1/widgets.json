@@ -1,0 +1,15 @@
+{
+  "_nota": "Widgets de prueba (de datos-prueba/fmk-si-sale-el-sol/textos.txt, sección reproductor-widget). Las imágenes de fondo son de los bancos de IA de prueba: frías y de noche para C5, cálidas para C6.",
+  "c5-frase": {
+    "texto": "ojalá mañana salga el sol",
+    "fondo": "media/bancos/fotos-noche/fotos-noche-007.jpg"
+  },
+  "c5-pregunta": {
+    "texto": "¿cómo que este tema no está en todas las playlists del verano?",
+    "fondo": "media/bancos/fotos-frias/fotos-frias-001.jpg"
+  },
+  "c6-frase": {
+    "texto": "para escuchar con la ventana abierta",
+    "fondo": "media/bancos/fotos-dia/fotos-dia-002.jpg"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "_nota": "Widgets de prueba (de textos.txt, sección reproductor-widget). Las imágenes de fondo son de los bancos de IA de prueba: frías y de noche para C5, cálidas para C6.",
+  "c5-frase": {
+    "texto": "soy un poco impaciente, lo admito",
+    "fondo": "media/bancos/fotos-noche/fotos-noche-005.jpg"
+  },
+  "c5-pregunta": {
+    "texto": "¿por qué nadie habla de este tema?",
+    "fondo": "media/bancos/fotos-frias/fotos-frias-002.jpg"
+  },
+  "c6-frase": {
+    "texto": "pasá en veinte",
+    "fondo": "media/bancos/fotos-dia/fotos-dia-005.jpg"
+  }
+}

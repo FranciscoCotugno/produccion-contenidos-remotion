@@ -1,0 +1,22 @@
+{
+  "_nota": "Carruseles de prueba (de datos-prueba/fmk-si-sale-el-sol/textos.txt, sección carrusel). Slide 1 (A): fotos de los bancos de IA de prueba (día C1, noche C2, flash C8). Slides B y D: cuadros del videoclip (no hay fotos de prensa de prueba; decisión de Cotu). La frase de la slide 2 es una sola frase de la estrofa, elegida por quien hace la bajada (pedido de Cotu); la estrofa completa queda en textos.txt.",
+  "hooks": {
+    "C1": "FMK la escribió y yo la viví...",
+    "C2": "lo que le diría si me animara:",
+    "C8": "le mandé esto a las 8 am sin contexto:",
+    "R2": "nadie habla de este tema de FMK y es un crimen"
+  },
+  "frase": [
+    "si sale el sol",
+    "contigo quiero despertar"
+  ],
+  "fotos": {
+    "C1": "media/bancos/fotos-dia/fotos-dia-006.jpg",
+    "C2": "media/bancos/fotos-noche/fotos-noche-003.jpg",
+    "C8": "media/bancos/fotos-flash/fotos-flash-002.jpg"
+  },
+  "artista": {
+    "frase": "media/fmk-si-sale-el-sol/cuadro-videoclip-1.jpg",
+    "tarjeta": "media/fmk-si-sale-el-sol/cuadro-videoclip-2.jpg"
+  }
+}

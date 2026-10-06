@@ -1,0 +1,30 @@
+{
+  "_nota": "Tarjetas de letra de prueba (de textos.txt, sección tarjeta-letra). Las fotos de fondo (C4) son de los bancos de IA de prueba.",
+  "una": {
+    "lineas": [
+      "Es una adicción",
+      "que me tiene enganchado"
+    ],
+    "foto": "media/bancos/fotos-noche/fotos-noche-006.jpg"
+  },
+  "carrusel": [
+    {
+      "lineas": [
+        "Se me ocurren mil maneras para verte"
+      ],
+      "foto": "media/bancos/fotos-noche/fotos-noche-004.jpg"
+    },
+    {
+      "lineas": [
+        "La verdad que sí soy un poco impaciente"
+      ],
+      "foto": "media/bancos/fotos-noche/fotos-noche-005.jpg"
+    },
+    {
+      "lineas": [
+        "Yo te hago cancione' que son para siempre"
+      ],
+      "foto": "media/bancos/fotos-noche/fotos-noche-006.jpg"
+    }
+  ]
+}

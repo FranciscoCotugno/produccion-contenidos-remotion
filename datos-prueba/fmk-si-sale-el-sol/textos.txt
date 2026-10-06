@@ -53,12 +53,10 @@ texto:
 [C2 fotos de noche] slide 1: lo que le diría si me animara:
 [C8 fotos con flash] slide 1: le mandé esto a las 8 am sin contexto:
 [R2 descubrimiento] slide 1: nadie habla de este tema de FMK y es un crimen
-slide 2 (estrofa):
+slide 2 (frase): una sola frase, la elige quien hace la bajada
 si sale el sol
 contigo quiero despertar
-hay tanta piel que nos domina
-y a esta vida
-yo no la quiero malgastar
+(estrofa completa, de referencia: hay tanta piel que nos domina / y a esta vida / yo no la quiero malgastar)
 
 == reproductor-widget ==
 [C5 frío, frase] ojalá mañana salga el sol

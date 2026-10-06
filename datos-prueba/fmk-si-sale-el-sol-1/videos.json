@@ -1,0 +1,11 @@
+{
+  "_nota": "Textos de prueba de letra-sobre-video (de datos-prueba/fmk-si-sale-el-sol/textos.txt). El material de nicho sale del banco nicho-driving-night (1080p); en L08 y L11 el fondo es el videoclip del fragmento.",
+  "l08-fija": "contigo quiero despertar",
+  "l11-hook": "cuando la tocan en vivo:",
+  "hook-letra": "si algún día me extrañás, buscame en este tema",
+  "pov": {
+    "texto": "POV: 2 am por la costanera y suena esto",
+    "video": "media/bancos/nicho-driving-night/1080p/nicho-driving-night-003.mp4",
+    "inicio": 0
+  }
+}

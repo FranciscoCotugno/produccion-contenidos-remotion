@@ -27,3 +27,6 @@ templates/*/render/
 
 # Copias de documentos de otras sesiones (los originales están en docs/)
 Claude outputs/
+
+# Config de sesión de Claude Code
+.claude/

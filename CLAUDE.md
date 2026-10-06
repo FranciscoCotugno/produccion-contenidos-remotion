@@ -18,7 +18,7 @@ Cada template terminado vive en `templates/<molde>/` y tiene:
 
 ## Reglas mínimas
 
-1. Cada template tiene su propio formato de video (9:16 de 1080×1920, 1:1 de 1080×1080 u otro), el que pide ese formato: no hay uno por defecto. Se declara en su ficha y en su composición. Siempre a 30 fps. Remotion 4.0.529, versión fija.
+1. Cada template tiene su propio formato de video (9:16 de 1080×1920, 1:1 de 1080×1080 u otro), el que pide ese formato: no hay uno por defecto. Sale en más de un formato solo si Cotu lo pide (hoy, `reproductor-widget` y `letra-sobre-video`: 9:16, 1:1 y 3:4; `karaoke`: 9:16 y 1:1). Se declara en su ficha y en su composición. Siempre a 30 fps. Remotion 4.0.529, versión fija.
 2. Todo lo variable (textos, tiempos, colores, imágenes, video, audio) entra como prop, con su esquema declarado. Nada de textos ni rutas de un tema escritos dentro del componente.
 3. La duración sale de los datos: inicio y fin del fragmento.
 4. Tipografías y assets solo con licencia que cubra el uso real: uso comercial en video e imagen, instalación en el servidor de render y uso compartido con el equipo. Las de licencia abierta cumplen todo; las pagas sirven si su licencia lo cubre. Cada asset se registra en `assets/LICENCIAS.md`.
@@ -39,9 +39,9 @@ Lo que hace que un formato funcione. Aplica a todos los templates.
 - **Cada formato se distingue de los demás en el primer segundo.** La variedad que importa es visual y de estructura, no de texto.
 - **Algo pasa desde el primer cuadro.** Nada de arrancar con pantalla vacía ni con fundidos largos desde negro: un fundido de entrada no dura más de 6 cuadros.
 - **El ritmo manda.** Los cambios de texto caen con la voz o con el beat. Una letra desfasada es lo primero que se nota y arruina la pieza.
-- **Legible en un celular.** Texto principal de 50 px o más, texto secundario de 32 px o más, siempre con contraste suficiente contra el fondo.
+- **Legible en un celular.** Texto principal de 50 px o más, texto secundario de 32 px o más, siempre con contraste suficiente contra el fondo. Excepción, pedida por Cotu: `brat-minimal` lleva la letra chica, como su referencia.
 - **El tema identificado.** Si el formato lo permite, título y artista visibles (tarjeta o reproductor): quien mira tiene que saber qué buscar.
-- **Nativo, no publicitario.** Tiene que parecer contenido de un usuario. Las interfaces (reproductores, notas) se inspiran en apps reales, sin logos ni copias exactas. **Excepción, pedida por Cotu: el chat es idéntico a WhatsApp** (diagramación, colores, proporciones, íconos). Igual, sin logos, y los elementos que son archivos de la app o de terceros (patrón de fondo, tipografía del sistema, emojis) se reemplazan por equivalentes propios o con licencia abierta.
+- **Nativo, no publicitario.** Tiene que parecer contenido de un usuario. **Las interfaces (chats, reproductores, tarjetas, notas) son idénticas a las de la app que imitan** (pedido de Cotu): diagramación, colores, proporciones e íconos. Sin logos ni nombres de marca, y los elementos que son archivos de la app o de terceros (patrón de fondo, tipografía propia de la app, emojis) se reemplazan por equivalentes propios o con licencia abierta.
 - **En los formatos de mood** (paisajes, POV, fondos), intervención mínima: una línea de texto o una tarjeta chica, nada más.
 - **Pensar en el loop.** Si el final empalma bien con el principio, la pieza se mira más de una vez.
 

@@ -1,0 +1,11 @@
+{
+  "_nota": "Notas de prueba de nota-celular (C7), de datos-prueba/fmk-si-sale-el-sol/textos.txt. El texto lo escribe quien hace la bajada; la última línea de la confesión es una frase de la letra.",
+  "confesion": {
+    "titulo": "no enviado",
+    "texto": "ya sé que dijimos que no.\npero hoy salió el sol\ny lo primero que pensé fue en vos.\nsi sale el sol, contigo quiero despertar"
+  },
+  "lista": {
+    "titulo": "cosas que me recuerdan a vos",
+    "texto": "1. el calor de enero\n2. los cortes de luz\n3. buenos aires a las 7 am\n4. este tema"
+  }
+}

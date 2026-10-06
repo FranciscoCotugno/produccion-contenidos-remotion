@@ -1,5 +1,5 @@
 import React from "react";
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
 import { FontSpecimen, fontSpecimenSchema } from "./shared/FontSpecimen";
 import { SafeZoneDemo, safeZoneDemoSchema } from "./shared/SafeZoneDemo";
 import { safeZoneOff } from "./shared/SafeZone";
@@ -12,6 +12,22 @@ import { BratColor, bratColorSchema, duracionBratColor } from "./templates/brat-
 import { ejemplosBratColor } from "./templates/brat-color/ejemplos";
 import { Chat, chatSchema, duracionChat } from "./templates/chat/Chat";
 import { FORMATO_CHAT, ejemplosChat } from "./templates/chat/ejemplos";
+import { TarjetaLetra, tarjetaLetraSchema } from "./templates/tarjeta-letra/TarjetaLetra";
+import { FORMATO_TARJETA, ejemplosTarjetaLetra } from "./templates/tarjeta-letra/ejemplos";
+import { ReproductorWidget, duracionWidget, reproductorWidgetSchema } from "./templates/reproductor-widget/ReproductorWidget";
+import { FORMATOS_WIDGET, ejemplosReproductorWidget } from "./templates/reproductor-widget/ejemplos";
+import { LetraSobreVideo, duracionLetraSobreVideo, letraSobreVideoSchema } from "./templates/letra-sobre-video/LetraSobreVideo";
+import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo } from "./templates/letra-sobre-video/ejemplos";
+import { BratMaximal, bratMaximalSchema, duracionBratMaximal } from "./templates/brat-maximal/BratMaximal";
+import { FORMATO_BRAT_MAXIMAL, ejemplosBratMaximal } from "./templates/brat-maximal/ejemplos";
+import { BratMinimal, bratMinimalSchema, duracionBratMinimal } from "./templates/brat-minimal/BratMinimal";
+import { FORMATO_BRAT_MINIMAL, ejemplosBratMinimal } from "./templates/brat-minimal/ejemplos";
+import { Carrusel, carruselSchema } from "./templates/carrusel/Carrusel";
+import { FORMATO_CARRUSEL, ejemplosCarrusel } from "./templates/carrusel/ejemplos";
+import { NotaCelular, notaCelularSchema, duracionNotaCelular } from "./templates/nota-celular/NotaCelular";
+import { FORMATO_NOTA, ejemplosNotaCelular } from "./templates/nota-celular/ejemplos";
+import { Karaoke, karaokeSchema, duracionKaraoke } from "./templates/karaoke/Karaoke";
+import { FORMATOS_KARAOKE, ejemplosKaraoke } from "./templates/karaoke/ejemplos";
 import agua from "./datos-prueba/agua/tema.json";
 import aQuienLeImporta from "./datos-prueba/a-quien-le-importa/tema.json";
 
@@ -118,6 +134,114 @@ export const RemotionRoot: React.FC = () => (
         fps={FPS}
         durationInFrames={1}
         calculateMetadata={duracionChat}
+        defaultProps={props}
+      />
+    ))}
+    {/* tarjeta-letra sale como imagen */}
+    {ejemplosTarjetaLetra.map(({ id, props }) => (
+      <Still
+        key={id}
+        id={id}
+        component={TarjetaLetra}
+        schema={tarjetaLetraSchema}
+        width={FORMATO_TARJETA.ancho}
+        height={FORMATO_TARJETA.alto}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosReproductorWidget.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={ReproductorWidget}
+        schema={reproductorWidgetSchema}
+        width={FORMATOS_WIDGET[formato].ancho}
+        height={FORMATOS_WIDGET[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionWidget}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosLetraSobreVideo.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={LetraSobreVideo}
+        schema={letraSobreVideoSchema}
+        width={FORMATOS_LETRA_VIDEO[formato].ancho}
+        height={FORMATOS_LETRA_VIDEO[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionLetraSobreVideo}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosBratMaximal.map(({ id, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={BratMaximal}
+        schema={bratMaximalSchema}
+        width={FORMATO_BRAT_MAXIMAL.ancho}
+        height={FORMATO_BRAT_MAXIMAL.alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionBratMaximal}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosBratMinimal.map(({ id, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={BratMinimal}
+        schema={bratMinimalSchema}
+        width={FORMATO_BRAT_MINIMAL.ancho}
+        height={FORMATO_BRAT_MINIMAL.alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionBratMinimal}
+        defaultProps={props}
+      />
+    ))}
+    {/* carrusel: cada slide sale como imagen */}
+    {ejemplosCarrusel.map(({ id, props }) => (
+      <Still
+        key={id}
+        id={id}
+        component={Carrusel}
+        schema={carruselSchema}
+        width={FORMATO_CARRUSEL.ancho}
+        height={FORMATO_CARRUSEL.alto}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosNotaCelular.map(({ id, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={NotaCelular}
+        schema={notaCelularSchema}
+        width={FORMATO_NOTA.ancho}
+        height={FORMATO_NOTA.alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionNotaCelular}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosKaraoke.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={Karaoke}
+        schema={karaokeSchema}
+        width={FORMATOS_KARAOKE[formato].ancho}
+        height={FORMATOS_KARAOKE[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionKaraoke}
         defaultProps={props}
       />
     ))}
