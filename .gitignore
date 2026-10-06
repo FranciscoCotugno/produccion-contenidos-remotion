@@ -2,22 +2,9 @@ node_modules
 out
 .DS_Store
 
-# Medios de prueba: pesan y tienen copyright, viven en una carpeta compartida.
-# Solo entran los textos de cada tema (datos y letra), que pesan poco.
-assets/media/**
-!assets/media/**/
-!assets/media/*/datos*.txt
-!assets/media/*/letra*.txt
-*.mp4
-*.mov
-*.wav
-*.mp3
-*.m4a
-*.aac
-
-# Guías de calibración: capturas reales de TikTok
-assets/guias/
-assets/safezone/
+# Los medios de prueba SÍ entran al repo (pedido de Cotu, 2026-10-06), para que
+# Agustín tenga todo: audio y video de los temas, bancos de IA, guías de
+# calibración y los videos de referencias/. Pesan unos 390 MB.
 
 # Whisper (binario, modelo, cache y reportes de scripts/tiempos-letra.mts)
 .whisper/
