@@ -2,8 +2,12 @@ node_modules
 out
 .DS_Store
 
-# Medios de prueba: pesan y tienen copyright, viven en una carpeta compartida
-assets/media/
+# Medios de prueba: pesan y tienen copyright, viven en una carpeta compartida.
+# Solo entran los textos de cada tema (datos y letra), que pesan poco.
+assets/media/**
+!assets/media/**/
+!assets/media/*/datos*.txt
+!assets/media/*/letra*.txt
 *.mp4
 *.mov
 *.wav
@@ -17,3 +21,9 @@ assets/safezone/
 
 # Whisper (binario, modelo, cache y reportes de scripts/tiempos-letra.mts)
 .whisper/
+
+# Renders (videos y fotogramas): se generan desde Studio
+templates/*/render/
+
+# Copias de documentos de otras sesiones (los originales están en docs/)
+Claude outputs/
