@@ -8,6 +8,11 @@ import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import siSaleElSol2 from "../../datos-prueba/fmk-si-sale-el-sol-2/tema.json";
 import agua from "../../datos-prueba/agua/tema.json";
 import aQuienLeImporta from "../../datos-prueba/a-quien-le-importa/tema.json";
+import maxi1 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1/tema.json";
+import maxi1b from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1b/tema.json";
+import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
+import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
+import reproductorMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/reproductor.json";
 import type { ReproductorAppProps } from "./ReproductorApp";
 
 // Reemplazo para los temas cuyo clip todavía no está en assets/media/: un
@@ -36,6 +41,14 @@ const base: Omit<ReproductorAppProps, "tema"> = {
 };
 
 const instinto = tema(instintoLuv, { reemplazo: false });
+// Campana Maxi Espindola, tanda 1. L05 va en piel Apple oscura. L06 y L13 no
+// tienen piel todavia, asi que sus piezas se suman a L05 (Cotu, 2026-10-07).
+const maxiL05: { id: string; props: ReproductorAppProps }[] = [
+  { id: "Maxi-L05-F1", props: { ...base, tema: tema(maxi1, { reemplazo: false }) } },
+  { id: "Maxi-L05-F1b", props: { ...base, tema: tema(maxi1b, { reemplazo: false }), texto: { modo: "fijo", fijo: reproductorMaxi["l05-fijo"] } } },
+  { id: "Maxi-L05-F2", props: { ...base, tema: tema(maxi2, { reemplazo: false }) } },
+  { id: "Maxi-L05-F3", props: { ...base, tema: tema(maxi3, { reemplazo: false }) } },
+];
 
 export const ejemplosReproductorApp: { id: string; props: ReproductorAppProps }[] = [
   { id: "ReproductorApp-AppleOscura-InstintoLuv", props: { ...base, tema: instinto } },
@@ -57,6 +70,7 @@ export const ejemplosReproductorApp: { id: string; props: ReproductorAppProps }[
     id: "ReproductorApp-AppleOscura-SiSaleElSol-2",
     props: { ...base, tema: tema(siSaleElSol2, { reemplazo: false }), pesoLetra: "light" },
   },
+  ...maxiL05,
   // Comparaciones para decidir en Studio
   { id: "Comparar-Peso-Bold", props: { ...base, tema: instinto, pesoLetra: "bold" } },
   { id: "Comparar-Peso-SemiBold", props: { ...base, tema: instinto, pesoLetra: "semibold" } },

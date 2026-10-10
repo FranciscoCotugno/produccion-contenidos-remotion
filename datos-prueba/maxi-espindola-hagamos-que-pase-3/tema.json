@@ -1,0 +1,157 @@
+{
+  "title": "Hagamos que pase",
+  "artists": "Maxi Espindola",
+  "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+  "colors": {
+    "primary": "#13316F",
+    "secondary": "#FD9574",
+    "text": "#FFFFFF"
+  },
+  "fragment": {
+    "src": "media/maxi-espindola-hagamos-que-pase/videoclip.mp4",
+    "start": 29.26,
+    "end": 41.4
+  },
+  "track": {
+    "displayStart": 28.74,
+    "duration": 171.9
+  },
+  "lyrics": [
+    {
+      "end": 3.94,
+      "words": [
+        {
+          "t": 0.42,
+          "text": "Y"
+        },
+        {
+          "t": 0.84,
+          "text": "para"
+        },
+        {
+          "t": 1.1,
+          "text": "qué"
+        },
+        {
+          "t": 1.8,
+          "text": "dejar"
+        },
+        {
+          "t": 2.16,
+          "text": "que"
+        },
+        {
+          "t": 2.56,
+          "text": "pase"
+        },
+        {
+          "t": 2.84,
+          "text": "otra"
+        },
+        {
+          "t": 3.38,
+          "text": "canción"
+        }
+      ]
+    },
+    {
+      "end": 7.28,
+      "words": [
+        {
+          "t": 3.94,
+          "text": "Si"
+        },
+        {
+          "t": 4.18,
+          "text": "se"
+        },
+        {
+          "t": 4.42,
+          "text": "me"
+        },
+        {
+          "t": 4.64,
+          "text": "ve"
+        },
+        {
+          "t": 4.7,
+          "text": "en"
+        },
+        {
+          "t": 4.84,
+          "text": "la"
+        },
+        {
+          "t": 5.62,
+          "text": "cara"
+        },
+        {
+          "t": 6.02,
+          "text": "cuál"
+        },
+        {
+          "t": 6.18,
+          "text": "es"
+        },
+        {
+          "t": 6.34,
+          "text": "mi"
+        },
+        {
+          "t": 6.54,
+          "text": "intención"
+        }
+      ]
+    },
+    {
+      "end": 9.56,
+      "words": [
+        {
+          "t": 7.28,
+          "text": "Ya"
+        },
+        {
+          "t": 7.66,
+          "text": "no"
+        },
+        {
+          "t": 7.92,
+          "text": "hay"
+        },
+        {
+          "t": 8.34,
+          "text": "más"
+        },
+        {
+          "t": 8.53,
+          "text": "que"
+        },
+        {
+          "t": 8.87,
+          "text": "hablar"
+        }
+      ]
+    },
+    {
+      "end": 11.58,
+      "words": [
+        {
+          "t": 9.56,
+          "text": "Solo"
+        },
+        {
+          "t": 9.88,
+          "text": "hagamos"
+        },
+        {
+          "t": 10.28,
+          "text": "que"
+        },
+        {
+          "t": 10.96,
+          "text": "pase."
+        }
+      ]
+    }
+  ]
+}

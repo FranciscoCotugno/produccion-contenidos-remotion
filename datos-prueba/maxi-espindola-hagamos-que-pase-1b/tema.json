@@ -1,0 +1,121 @@
+{
+  "title": "Hagamos que pase",
+  "artists": "Maxi Espindola",
+  "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+  "colors": {
+    "primary": "#13316F",
+    "secondary": "#FD9574",
+    "text": "#FFFFFF"
+  },
+  "fragment": {
+    "src": "media/maxi-espindola-hagamos-que-pase/videoclip.mp4",
+    "start": 57.58,
+    "end": 71.92
+  },
+  "track": {
+    "displayStart": 57.06,
+    "duration": 171.9
+  },
+  "lyrics": [
+    {
+      "end": 4.1,
+      "words": [
+        {
+          "t": 0.4,
+          "text": "Bailando"
+        },
+        {
+          "t": 1.7,
+          "text": "toda"
+        },
+        {
+          "t": 2.14,
+          "text": "la"
+        },
+        {
+          "t": 2.82,
+          "text": "noche"
+        }
+      ]
+    },
+    {
+      "end": 7.44,
+      "words": [
+        {
+          "t": 4.24,
+          "text": "Perdóname"
+        },
+        {
+          "t": 5.48,
+          "text": "la"
+        },
+        {
+          "t": 5.92,
+          "text": "intensidad"
+        }
+      ]
+    },
+    {
+      "end": 11.24,
+      "words": [
+        {
+          "t": 7.44,
+          "text": "Sé"
+        },
+        {
+          "t": 7.84,
+          "text": "que"
+        },
+        {
+          "t": 8.36,
+          "text": "no"
+        },
+        {
+          "t": 8.78,
+          "text": "me"
+        },
+        {
+          "t": 9.38,
+          "text": "conoces"
+        }
+      ]
+    },
+    {
+      "end": 14.34,
+      "words": [
+        {
+          "t": 11.24,
+          "text": "Pero"
+        },
+        {
+          "t": 11.72,
+          "text": "estamos"
+        },
+        {
+          "t": 11.96,
+          "text": "a"
+        },
+        {
+          "t": 12.08,
+          "text": "un"
+        },
+        {
+          "t": 12.36,
+          "text": "solo"
+        },
+        {
+          "t": 12.66,
+          "text": "trago"
+        },
+        {
+          "t": 13.08,
+          "text": "de"
+        },
+        {
+          "t": 13.72,
+          "text": "empezar."
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,11 @@ import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import videosInstinto from "../../datos-prueba/instinto-luv/videos.json";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import videosSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/videos.json";
+import maxi1 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1/tema.json";
+import maxi1b from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1b/tema.json";
+import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
+import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
+import videosMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/videos.json";
 import type { LetraSobreVideoProps } from "./LetraSobreVideo";
 
 /** El molde sale en tres formatos (pedido de Cotu). */
@@ -47,6 +52,34 @@ const temas = [
   { id: "SiSaleElSol-1", tema: temaSchema.parse(siSaleElSol1), videos: videosSol1 as Videos },
 ];
 
+// Campana Maxi Espindola, tanda 1. L08 va con el videoclip; L11 con el material
+// en vivo (siempre en mute, el audio es el del tema). Las dos cuentas en 9:16.
+// maxi-envivo-2 no se usa en L11: recortado se ve mal (chequeo del 2026-10-07).
+const enVivoMaxi = (datos: unknown, idVideo: string): LetraSobreVideoProps => {
+  const v = videosMaxi.envivo.find((x) => x.id === idVideo)!;
+  return {
+    ...base,
+    tema: temaSchema.parse(datos),
+    video: { src: v.src, inicio: v.inicio, oscurecer: 0.15 },
+    modo: "hook" as const,
+    textoFijo: videosMaxi["l11-hook"],
+    posicionHook: "arriba" as const,
+  };
+};
+
+const nueve = (props: LetraSobreVideoProps) => ({ formato: "9x16" as const, props });
+
+const ejemplosMaxi: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  { id: "Maxi-L08-F1", ...nueve(sobreClip(temaSchema.parse(maxi1), "letra", "", "centro")) },
+  { id: "Maxi-L08-F1b", ...nueve(sobreClip(temaSchema.parse(maxi1b), "fija", videosMaxi["l08-fija"], "centro")) },
+  { id: "Maxi-L08-F2", ...nueve(sobreClip(temaSchema.parse(maxi2), "hook-letra", videosMaxi["hook-letra"], "arriba")) },
+  { id: "Maxi-L08-F3", ...nueve(sobreClip(temaSchema.parse(maxi3), "letra", "", "centro")) },
+  { id: "Maxi-L11-F1", ...nueve(enVivoMaxi(maxi1, "envivo-1")) },
+  { id: "Maxi-L11-F1b", ...nueve(enVivoMaxi(maxi1b, "envivo-3")) },
+  { id: "Maxi-L11-F2", ...nueve(enVivoMaxi(maxi2, "envivo-4")) },
+  { id: "Maxi-L11-F3", ...nueve(enVivoMaxi(maxi3, "envivo-1")) },
+];
+
 export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = temas.flatMap(({ id, tema, videos }) => [
   // los cuatro modos, en 9:16
   { id: `LetraVideo-L08-Letra-9x16-${id}`, formato: "9x16" as const, props: sobreClip(tema, "letra", "", "centro") },
@@ -59,4 +92,4 @@ export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; 
     { id: `LetraVideo-L08-Letra-${formato}-${id}`, formato, props: sobreClip(tema, "letra", "", "centro") },
     { id: `LetraVideo-POV-${formato}-${id}`, formato, props: pov(tema, videos.pov) },
   ]),
-]);
+]).concat(ejemplosMaxi);

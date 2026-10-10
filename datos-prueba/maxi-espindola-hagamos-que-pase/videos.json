@@ -1,0 +1,56 @@
+{
+  "_nota": "Textos de letra-sobre-video (de textos.txt, aprobados por Cotu). L08 usa el videoclip del fragmento; L11 usa el material en vivo de 'envivo' (siempre en mute, el audio es el del tema). POV queda fuera de la tanda 1: no hay banco de nicho para este tema.",
+  "l08-fija": "solo hagamos que pase",
+  "l11-hook": "cuando la tocan en vivo:",
+  "hook-letra": "para mandarle a quien te gusta y todavía no le dijiste nada",
+  "envivo": [
+    {
+      "id": "envivo-1",
+      "src": "media/maxi-espindola-hagamos-que-pase/maxi-envivo.mp4",
+      "formato": "9x16",
+      "ancho": 576,
+      "alto": 1024,
+      "inicio": 0,
+      "cuentas": [
+        "L02"
+      ]
+    },
+    {
+      "id": "envivo-2",
+      "src": "media/maxi-espindola-hagamos-que-pase/maxi-envivo-2.mp4",
+      "formato": "3x4",
+      "ancho": 576,
+      "alto": 768,
+      "inicio": 4,
+      "cuentas": [
+        "L03"
+      ]
+    },
+    {
+      "id": "envivo-3",
+      "src": "media/maxi-espindola-hagamos-que-pase/maxi-envivo-3.mp4",
+      "formato": "9x16",
+      "ancho": 576,
+      "alto": 1024,
+      "inicio": 10,
+      "cuentas": [
+        "L02"
+      ]
+    },
+    {
+      "id": "envivo-4",
+      "src": "media/maxi-espindola-hagamos-que-pase/maxi-envivo-4.mp4",
+      "formato": "9x16",
+      "ancho": 576,
+      "alto": 1024,
+      "inicio": 8,
+      "cuentas": [
+        "L03"
+      ]
+    }
+  ],
+  "pov-pendiente": [
+    "POV: salís sin ganas y terminás bailando toda la noche",
+    "POV: se cruzan en la joda y los dos miran para otro lado"
+  ]
+}

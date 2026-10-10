@@ -1,0 +1,158 @@
+{
+  "title": "Hagamos que pase",
+  "artists": "Maxi Espindola",
+  "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+  "colors": {
+    "primary": "#13316F",
+    "secondary": "#FD9574",
+    "text": "#FFFFFF"
+  },
+  "fragment": {
+    "src": "media/maxi-espindola-hagamos-que-pase/videoclip.mp4",
+    "start": 12.76,
+    "end": 28.9
+  },
+  "track": {
+    "displayStart": 12.24,
+    "duration": 171.9
+  },
+  "lyrics": [
+    {
+      "end": 2.7,
+      "words": [
+        {
+          "t": 0.4,
+          "text": "y"
+        },
+        {
+          "t": 0.94,
+          "text": "ahora"
+        }
+      ]
+    },
+    {
+      "end": 6.96,
+      "words": [
+        {
+          "t": 2.7,
+          "text": "Somos"
+        },
+        {
+          "t": 3.2,
+          "text": "dos"
+        },
+        {
+          "t": 3.58,
+          "text": "extraños"
+        },
+        {
+          "t": 4.06,
+          "text": "con"
+        },
+        {
+          "t": 4.24,
+          "text": "la"
+        },
+        {
+          "t": 4.62,
+          "text": "mirada"
+        },
+        {
+          "t": 5.28,
+          "text": "perdida"
+        },
+        {
+          "t": 5.82,
+          "text": "de"
+        },
+        {
+          "t": 6.32,
+          "text": "frente"
+        }
+      ]
+    },
+    {
+      "end": 9.7,
+      "words": [
+        {
+          "t": 6.96,
+          "text": "Buscando"
+        },
+        {
+          "t": 7.7,
+          "text": "callarnos"
+        },
+        {
+          "t": 8.44,
+          "text": "la"
+        },
+        {
+          "t": 8.98,
+          "text": "mente."
+        }
+      ]
+    },
+    {
+      "end": 11.74,
+      "words": [
+        {
+          "t": 9.7,
+          "text": "Y"
+        },
+        {
+          "t": 9.92,
+          "text": "si"
+        },
+        {
+          "t": 10.32,
+          "text": "terminamos"
+        },
+        {
+          "t": 11.26,
+          "text": "aquí,"
+        }
+      ]
+    },
+    {
+      "end": 16.14,
+      "words": [
+        {
+          "t": 11.74,
+          "text": "en"
+        },
+        {
+          "t": 12.1,
+          "text": "medio"
+        },
+        {
+          "t": 12.4,
+          "text": "de"
+        },
+        {
+          "t": 12.66,
+          "text": "tanta"
+        },
+        {
+          "t": 13.14,
+          "text": "gente,"
+        },
+        {
+          "t": 13.64,
+          "text": "no"
+        },
+        {
+          "t": 13.76,
+          "text": "es"
+        },
+        {
+          "t": 13.98,
+          "text": "por"
+        },
+        {
+          "t": 14.52,
+          "text": "accidente."
+        }
+      ]
+    }
+  ]
+}

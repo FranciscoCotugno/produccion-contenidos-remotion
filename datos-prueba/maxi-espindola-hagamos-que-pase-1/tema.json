@@ -1,0 +1,254 @@
+{
+  "title": "Hagamos que pase",
+  "artists": "Maxi Espindola",
+  "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+  "colors": {
+    "primary": "#13316F",
+    "secondary": "#FD9574",
+    "text": "#FFFFFF"
+  },
+  "fragment": {
+    "src": "media/maxi-espindola-hagamos-que-pase/videoclip.mp4",
+    "start": 41.1,
+    "end": 72.4
+  },
+  "track": {
+    "displayStart": 40.58,
+    "duration": 171.9
+  },
+  "lyrics": [
+    {
+      "end": 2.84,
+      "words": [
+        {
+          "t": 0.4,
+          "text": "La"
+        },
+        {
+          "t": 0.62,
+          "text": "luna"
+        },
+        {
+          "t": 1.16,
+          "text": "nos"
+        },
+        {
+          "t": 1.44,
+          "text": "sacó"
+        },
+        {
+          "t": 1.74,
+          "text": "a"
+        },
+        {
+          "t": 2.1,
+          "text": "bailar"
+        }
+      ]
+    },
+    {
+      "end": 5.9,
+      "words": [
+        {
+          "t": 2.84,
+          "text": "Tú"
+        },
+        {
+          "t": 3.1,
+          "text": "y"
+        },
+        {
+          "t": 3.34,
+          "text": "yo"
+        },
+        {
+          "t": 4.06,
+          "text": "toda"
+        },
+        {
+          "t": 4.6,
+          "text": "la"
+        },
+        {
+          "t": 5.3,
+          "text": "noche"
+        }
+      ]
+    },
+    {
+      "end": 9.82,
+      "words": [
+        {
+          "t": 6.68,
+          "text": "Calmando"
+        },
+        {
+          "t": 7.76,
+          "text": "la"
+        },
+        {
+          "t": 8.34,
+          "text": "curiosidad"
+        }
+      ]
+    },
+    {
+      "end": 13.54,
+      "words": [
+        {
+          "t": 9.82,
+          "text": "Si"
+        },
+        {
+          "t": 10.08,
+          "text": "es"
+        },
+        {
+          "t": 10.64,
+          "text": "buena"
+        },
+        {
+          "t": 11.24,
+          "text": "idea,"
+        },
+        {
+          "t": 11.86,
+          "text": "no"
+        },
+        {
+          "t": 12.4,
+          "text": "sé"
+        }
+      ]
+    },
+    {
+      "end": 16.88,
+      "words": [
+        {
+          "t": 13.7,
+          "text": "Solo"
+        },
+        {
+          "t": 14,
+          "text": "sé"
+        },
+        {
+          "t": 14.2,
+          "text": "que"
+        },
+        {
+          "t": 14.58,
+          "text": "contigo"
+        },
+        {
+          "t": 15.26,
+          "text": "quiero"
+        },
+        {
+          "t": 16.14,
+          "text": "terminar."
+        }
+      ]
+    },
+    {
+      "end": 20.08,
+      "words": [
+        {
+          "t": 16.88,
+          "text": "Bailando"
+        },
+        {
+          "t": 18.18,
+          "text": "toda"
+        },
+        {
+          "t": 18.62,
+          "text": "la"
+        },
+        {
+          "t": 19.24,
+          "text": "noche"
+        }
+      ]
+    },
+    {
+      "end": 23.92,
+      "words": [
+        {
+          "t": 20.72,
+          "text": "Perdóname"
+        },
+        {
+          "t": 21.92,
+          "text": "la"
+        },
+        {
+          "t": 22.36,
+          "text": "intensidad"
+        }
+      ]
+    },
+    {
+      "end": 27.56,
+      "words": [
+        {
+          "t": 23.92,
+          "text": "Sé"
+        },
+        {
+          "t": 24.32,
+          "text": "que"
+        },
+        {
+          "t": 24.82,
+          "text": "no"
+        },
+        {
+          "t": 25.26,
+          "text": "me"
+        },
+        {
+          "t": 25.84,
+          "text": "conoces"
+        }
+      ]
+    },
+    {
+      "end": 30.82,
+      "words": [
+        {
+          "t": 27.72,
+          "text": "Pero"
+        },
+        {
+          "t": 28.26,
+          "text": "estamos"
+        },
+        {
+          "t": 28.26,
+          "text": "a"
+        },
+        {
+          "t": 28.62,
+          "text": "un"
+        },
+        {
+          "t": 28.84,
+          "text": "solo"
+        },
+        {
+          "t": 29.14,
+          "text": "trago"
+        },
+        {
+          "t": 29.56,
+          "text": "de"
+        },
+        {
+          "t": 30.22,
+          "text": "empezar."
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,9 @@ import { temaSchema } from "../../shared/tema";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import siSaleElSol2 from "../../datos-prueba/fmk-si-sale-el-sol-2/tema.json";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
+import maxi1a from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1a/tema.json";
+import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
+import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
 import type { BratPuroProps } from "./BratPuro";
 
 // Efectos de la versión "película" (elegida por Cotu, 2026-10-05), por piel:
@@ -51,6 +54,13 @@ const base: Omit<BratPuroProps, "tema"> = {
 const sol1 = temaSchema.parse(siSaleElSol1);
 const sol2 = temaSchema.parse(siSaleElSol2);
 const instinto = temaSchema.parse(instintoLuv);
+// Campana Maxi Espindola, tanda 1. L01 va en brat-puro, fondo liso y piel blanca.
+// Las piezas y sus fragmentos salen de docs/campanas/...-piezas.md.
+const maxiL01 = [
+  { id: "Maxi-L01-F1a", tema: temaSchema.parse(maxi1a) },
+  { id: "Maxi-L01-F2", tema: temaSchema.parse(maxi2) },
+  { id: "Maxi-L01-F3", tema: temaSchema.parse(maxi3) },
+];
 
 // FMK exige TikTok Sans o Arial: va con TikTok Sans angosta
 const fmk = { tipografia: "tiktok-sans-angosta" } as const;
@@ -60,6 +70,7 @@ export const ejemplosBratPuro: { id: string; props: BratPuroProps }[] = [
   { id: "BratPuro-Blanca-SiSaleElSol-1", props: { ...base, ...fmk, tema: sol1 } },
   { id: "BratPuro-Blanca-SiSaleElSol-2", props: { ...base, ...fmk, tema: sol2 } },
   { id: "BratPuro-Negra-InstintoLuv", props: { ...base, ...negra, tema: instinto } },
+  ...maxiL01.map(({ id, tema }) => ({ id, props: { ...base, tema } })),
   // Con video de fondo: el videoclip del tema (sincronizado con el audio) o un video de IA
   {
     id: "BratPuro-Video-Clip-SiSaleElSol-1",

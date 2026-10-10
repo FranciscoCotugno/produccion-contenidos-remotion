@@ -7,6 +7,10 @@ import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import chatsInstinto from "../../datos-prueba/instinto-luv/chats.json";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import chatsSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/chats.json";
+import maxi1 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1/tema.json";
+import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
+import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
+import chatsMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/chats.json";
 import { mensajeSchema, type ChatProps } from "./Chat";
 
 const base: Omit<ChatProps, "tema" | "mensajes" | "n" | "cabecera"> = {
@@ -73,7 +77,37 @@ export const FORMATO_CHAT = {
   "instagram-claro": { ancho: 1080, alto: 1920 },
 } as const;
 
+// Campana Maxi Espindola, tanda 1. Los tiempos de chats.json estan calzados a un
+// fragmento de 16,14 s (F2): se reescalan a la duracion de cada fragmento para que
+// la respuesta siga cayendo al 60 % y no se vaya del final.
+const REF_CHAT = 16.14;
+const chatsM = chatsMaxi as unknown as Record<string, Conversacion>;
+const escalar = (c: Conversacion, dur: number): Conversacion => ({
+  ...c,
+  mensajes: c.mensajes.map((m) => {
+    const msg = m as Record<string, unknown>;
+    const t = typeof msg.t === "number" ? msg.t : 0;
+    return { ...msg, t: Math.round((t * dur * 100) / REF_CHAT) / 100 };
+  }),
+});
+const piezaMaxi = (id: string, datos: unknown, clave: string, molde: "c3" | "r1" | "r3"): { id: string; props: ChatProps } => {
+  const tema = temaSchema.parse(datos);
+  const conv = escalar(chatsM[clave], tema.fragment.end - tema.fragment.start);
+  if (molde === "r3") return { id, props: r3(tema, conv) };
+  return { id, props: { ...armar(tema, conv), ladoMio: molde === "r1" ? "derecha" : "izquierda" } };
+};
+const maxiChat: { id: string; props: ChatProps }[] = [
+  piezaMaxi("Maxi-C3-F1", maxi1, "c3-respuesta", "c3"),
+  piezaMaxi("Maxi-C3-F2", maxi2, "c3-respuesta-variante", "c3"),
+  piezaMaxi("Maxi-C3-F3", maxi3, "c3-visto", "c3"),
+  piezaMaxi("Maxi-R1-F1", maxi1, "r1-contador", "r1"),
+  piezaMaxi("Maxi-R1-F2", maxi2, "r1-racha", "r1"),
+  piezaMaxi("Maxi-R3-F1", maxi1, "r3-compartido", "r3"),
+  piezaMaxi("Maxi-R3-F3", maxi3, "r3-solo-reel", "r3"),
+];
+
 export const ejemplosChat: { id: string; props: ChatProps }[] = [
+  ...maxiChat,
   ...temas.flatMap(({ id, tema, chats }) => modos.map((modo) => ({ id: `Chat-${modo.id}-${id}`, props: { ...armar(tema, chats[modo.chat]), ladoMio: modo.ladoMio } }))),
   ...temas.flatMap(({ id, tema, chats }) => modosR3.map((modo) => ({ id: `Chat-${modo.id}-${id}`, props: r3(tema, chats[modo.chat]) }))),
   // Comparaciones para decidir en Studio

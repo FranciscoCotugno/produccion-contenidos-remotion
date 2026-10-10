@@ -1,0 +1,15 @@
+{
+  "_nota": "Notas de prueba de nota-celular (C7). confesion y lista salen de textos.txt (aprobadas por Cotu). borrador la redacto Code el 2026-10-09 porque la tanda 1 pide 3 piezas y en este molde el fragmento solo cambia el audio: repetir una nota daria dos piezas iguales en pantalla. La ultima linea es cita literal de la letra.",
+  "confesion": {
+    "titulo": "no enviado",
+    "texto": "no sé si es buena idea.\npero hoy tengo ganas de salir\ny de que estés vos.\nsolo hagamos que pase"
+  },
+  "lista": {
+    "titulo": "señales de que hoy se sale",
+    "texto": "1. nadie tiene ganas de quedarse\n2. la luna está re linda\n3. alguien puso este tema"
+  },
+  "borrador": {
+    "titulo": "borrador",
+    "texto": "no sé si mandártelo.\npero cada vez que suena\nme acuerdo de esa noche.\nperdóname la intensidad"
+  }
+}
