@@ -28,6 +28,8 @@ import { FORMATO_CARRUSEL, ejemplosCarrusel } from "./templates/carrusel/ejemplo
 import { NotaCelular, notaCelularSchema, duracionNotaCelular } from "./templates/nota-celular/NotaCelular";
 import { FORMATO_NOTA, ejemplosNotaCelular } from "./templates/nota-celular/ejemplos";
 import { Karaoke, karaokeSchema, duracionKaraoke } from "./templates/karaoke/Karaoke";
+import { PanelLetra, panelLetraSchema, duracionPanelLetra } from "./templates/panel-letra/PanelLetra";
+import { FORMATOS_PANEL, ejemplosPanelLetra } from "./templates/panel-letra/ejemplos";
 import { FORMATOS_KARAOKE, ejemplosKaraoke } from "./templates/karaoke/ejemplos";
 import agua from "./datos-prueba/agua/tema.json";
 import aQuienLeImporta from "./datos-prueba/a-quien-le-importa/tema.json";
@@ -242,6 +244,20 @@ export const RemotionRoot: React.FC = () => (
         fps={FPS}
         durationInFrames={1}
         calculateMetadata={duracionKaraoke}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosPanelLetra.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={PanelLetra}
+        schema={panelLetraSchema}
+        width={FORMATOS_PANEL[formato].ancho}
+        height={FORMATOS_PANEL[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionPanelLetra}
         defaultProps={props}
       />
     ))}
