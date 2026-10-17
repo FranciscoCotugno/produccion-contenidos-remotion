@@ -138,16 +138,22 @@ Códigos visuales de las apps, **sin logos ni nombres de marca**: los íconos
   curvas, anclaje, arranque, desplazamiento y su transición, encabezado, botón,
   interludio, ajuste de letra y adelanto de lectura.
 
-## Para decidir en Studio
+## Decidido en Studio (Cotu, 2026-10-17)
 
-Las composiciones `Comparar-*` están para mirarlas juntas:
+| Decisión | Queda |
+|---|---|
+| Curva del desenfoque | El punto medio: 0,45 arriba y 0,6 abajo |
+| Cuántas líneas | Muchas: 3 arriba y 6 abajo en la piel A; 6 y 8 en la B |
+| Desplazamiento | A saltos |
+| Tipografía | **TikTok Sans** (y es la que exigen FMK y Sony) |
+| Encabezado | Completo, con el botón redondo |
 
-1. **Curva del desenfoque** (`Suave` / `Media` / `Marcada`). La decisión central:
-   define si se lee como profundidad o como suciedad.
-2. **Cuántas líneas a la vista** (`Pocas` / `Muchas`).
-3. **Desplazamiento** (`Saltos` / `Continuo`).
-4. **Tipografía** (`Inter` / `TikTokSans`).
-5. **Encabezado** (`Completo` / `SinBoton` / `Minimo` / `Ninguno`).
+Sobre la curva: las dos primeras comparaciones que armé (`Suave` y `Media`) eran
+casi la misma —0,6 abajo en las dos, 0,5 contra 0,4 arriba— así que no había nada
+que distinguir, y Cotu dijo "suave o media" con razón. Queda el punto medio. La
+comparación `Comparar-Curva-Suave` se rehizo en 0,3 para que sí se distinga.
+
+Las composiciones `Comparar-*` siguen ahí para volver sobre cualquiera de las cinco.
 
 ## Se repite con otros moldes
 

@@ -14,9 +14,7 @@ import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.jso
 import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
 import videosMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/videos.json";
 import frasesMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/frases.json";
-import aguaE1 from "../../datos-prueba/maluma-agua-estribillo-1/tema.json";
 import aguaE2 from "../../datos-prueba/maluma-agua-estribillo-2/tema.json";
-import aguaLyric from "../../datos-prueba/maluma-agua-lyric-1/tema.json";
 import aguaB1 from "../../datos-prueba/maluma-agua-bailando-1/tema.json";
 import aguaB2 from "../../datos-prueba/maluma-agua-bailando-2/tema.json";
 import aguaB3 from "../../datos-prueba/maluma-agua-bailando-3/tema.json";
@@ -102,8 +100,8 @@ const sobreSiMismo = (
 };
 
 const ejemplosAgua: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
-  { id: "Agua-Estribillo-1", formato: "9x16", props: sobreSiMismo(aguaE1, "letra", "", "centro") },
-  { id: "Agua-Lyric-1", formato: "1x1", props: sobreSiMismo(aguaLyric, "letra", "", "centro") },
+  // Agua-Estribillo-1 y Agua-Lyric-1 salieron de acá: Cotu los vio aburridos y
+  // esas dos piezas pasaron a brat-maximal (2026-10-17). Se borraron.
   // vertEstribillo2 no tiene el estribillo cantado: va con frase fija, como los de baile
   { id: "Agua-Estribillo-2", formato: "9x16", props: sobreSiMismo(aguaE2, "hook", frasesAgua["estribillo-2"], "arriba") },
   ...[aguaB1, aguaB2, aguaB3].map((t, i) => ({

@@ -1,10 +1,10 @@
 {
   "title": "AGUA",
   "artists": "Maluma, Shakira",
-  "cover": "",
+  "cover": "media/maluma-aguashakira/portada.jpg",
   "colors": {
-    "primary": "#1B6B8C",
-    "secondary": "#4FC3E8",
+    "primary": "#5E3528",
+    "secondary": "#C2A08C",
     "text": "#FFFFFF"
   },
   "lyrics": [

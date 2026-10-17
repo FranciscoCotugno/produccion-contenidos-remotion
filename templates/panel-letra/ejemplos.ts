@@ -43,7 +43,8 @@ const DESENFOQUE: Omit<PanelLetraProps, "tema"> = {
   piel: "desenfoque",
   fondo: { desenfoque: 105, oscurecer: 0.24, escala: 1.4, color: "", vineta: 0.38 },
   letra: {
-    tipografia: "inter",
+    // TikTok Sans y no Inter (Cotu, 2026-10-17): es ademas la que exigen FMK y Sony
+    tipografia: "tiktok",
     tamano: 78,
     peso: 700,
     interlineado: 108,
@@ -52,13 +53,19 @@ const DESENFOQUE: Omit<PanelLetraProps, "tema"> = {
     margenDerecho: 155,
   },
   atenuar: {
-    lineasArriba: 2,
-    lineasAbajo: 4,
+    // "muchas lineas" (Cotu, 2026-10-17)
+    lineasArriba: 3,
+    lineasAbajo: 6,
     opacidadMin: 0.14,
     desenfoqueMax: 16,
-    // lo que ya se cantó se apaga más rápido que lo que viene (como en la
-    // referencia): con la misma distancia, la de arriba queda más borrada
-    curvaArriba: 0.4,
+    // Lo que ya se cantó se apaga más rápido que lo que viene (como en la
+    // referencia): con la misma distancia, la de arriba queda más borrada.
+    //
+    // Cotu eligió "suave o media" sin decidirse, y con razón: las dos
+    // comparaciones que armé eran casi la misma (0,6 abajo en las dos, 0,5
+    // contra 0,4 arriba), así que no había nada que distinguir. Queda el punto
+    // medio. La que sí se veía distinta era "marcada", y quedó afuera.
+    curvaArriba: 0.45,
     curvaAbajo: 0.6,
   },
   anclaje: 0.41,
@@ -82,7 +89,7 @@ const LISO: Omit<PanelLetraProps, "tema"> = {
   piel: "liso",
   fondo: { desenfoque: 0, oscurecer: 0, escala: 1, color: "", vineta: 0.2 },
   letra: {
-    tipografia: "inter",
+    tipografia: "tiktok",
     tamano: 68,
     peso: 700,
     interlineado: 82,
@@ -130,12 +137,14 @@ const base: Ejemplo[] = [
 /** Comparaciones para decidir en Studio (ver FICHA, "Para decidir en Studio"). */
 const comparar: Ejemplo[] = [
   // 1. curva del desenfoque: cuánto tiene la vecina inmediata
+  // la de antes ("Suave") era casi igual a la elegida y no distinguía nada; esta
+  // apaga de verdad a las vecinas, que es el otro extremo útil
   {
     id: "Comparar-Curva-Suave",
     formato: "9x16",
-    props: { ...DESENFOQUE, tema: maxi, atenuar: { ...DESENFOQUE.atenuar, curvaAbajo: 0.6, curvaArriba: 0.5 } },
+    props: { ...DESENFOQUE, tema: maxi, atenuar: { ...DESENFOQUE.atenuar, curvaAbajo: 0.3, curvaArriba: 0.3 } },
   },
-  { id: "Comparar-Curva-Media", formato: "9x16", props: { ...DESENFOQUE, tema: maxi } },
+  { id: "Comparar-Curva-Elegida", formato: "9x16", props: { ...DESENFOQUE, tema: maxi } },
   {
     id: "Comparar-Curva-Marcada",
     formato: "9x16",
