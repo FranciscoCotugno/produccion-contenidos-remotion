@@ -30,6 +30,8 @@ import { FORMATO_NOTA, ejemplosNotaCelular } from "./templates/nota-celular/ejem
 import { Karaoke, karaokeSchema, duracionKaraoke } from "./templates/karaoke/Karaoke";
 import { PanelLetra, panelLetraSchema, duracionPanelLetra } from "./templates/panel-letra/PanelLetra";
 import { FORMATOS_PANEL, ejemplosPanelLetra } from "./templates/panel-letra/ejemplos";
+import { BloquePalabra, bloquePalabraSchema, duracionBloquePalabra } from "./templates/bloque-palabra/BloquePalabra";
+import { FORMATOS_BLOQUE, ejemplosBloquePalabra } from "./templates/bloque-palabra/ejemplos";
 import { FORMATOS_KARAOKE, ejemplosKaraoke } from "./templates/karaoke/ejemplos";
 import agua from "./datos-prueba/agua/tema.json";
 import aQuienLeImporta from "./datos-prueba/a-quien-le-importa/tema.json";
@@ -258,6 +260,20 @@ export const RemotionRoot: React.FC = () => (
         fps={FPS}
         durationInFrames={1}
         calculateMetadata={duracionPanelLetra}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosBloquePalabra.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={BloquePalabra}
+        schema={bloquePalabraSchema}
+        width={FORMATOS_BLOQUE[formato].ancho}
+        height={FORMATOS_BLOQUE[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionBloquePalabra}
         defaultProps={props}
       />
     ))}

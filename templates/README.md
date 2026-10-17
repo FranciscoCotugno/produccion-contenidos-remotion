@@ -16,7 +16,8 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 9 | `carrusel` | C1, C2, C8, R2 | Imágenes (3:4) | Desde cero | Terminado (3:4) |
 | 10 | `nota-celular` | C7 | Video | Desde cero | Terminado (1:1) |
 | 11 | `karaoke` | L09 | Video | Desde cero | Terminado (9:16, 1:1) |
-| 12 | ~~`tipografico`~~ | L10 | Video | Desde cero | **De baja** (2026-10-06, decisión de Cotu): no convenció. L10 queda sin molde. |
+| 12 | ~~`tipografico`~~ | L10 | Video | Desde cero | **De baja** (2026-10-06, decisión de Cotu): no convenció. Lo rehace `bloque-palabra`. |
+| 12a | `bloque-palabra` | L10 y las de tipografía sobre color | Video | Rehace `tipografico` (pedido 3) | En revisión con Cotu (4:3, 9:16, 1:1) |
 | 12b | `panel-letra` | lyrics puras (el panel de letra abierto de una app) | Video | Desde cero (pedido 2) | En revisión con Cotu (9:16, 1:1, 3:4, 4:3) |
 | 13 | `prensa` | P1, P2 | Video | Desde cero | Pendiente |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
@@ -51,6 +52,7 @@ Acá se corta el laboratorio por ahora: **con estos 11 moldes se puede empezar a
 | `carrusel` | C1, C2, C8, R2 | Imágenes (2 por posteo) | 3:4 | `Carrusel-*` | un hook por cuenta y **una frase** de la letra (`carrusel.json`) |
 | `nota-celular` | C7 | Video | 1:1 | `Nota-*` | título y texto de la nota (`nota.json`) |
 | `panel-letra` | lyrics puras | Video | 9:16, 1:1, 3:4, 4:3 | `PanelLetra-*` | nada (la letra es toda la pieza) |
+| `bloque-palabra` | L10 y tipografía sobre color | Video | 4:3, 9:16, 1:1 | `BloquePalabra-*` | nada |
 | `karaoke` | L09 | Video | 9:16, 1:1 | `Karaoke-*` | nada |
 
 ### Lo que decide una persona antes de producir
