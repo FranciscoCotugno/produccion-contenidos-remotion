@@ -1,5 +1,14 @@
 # Brat minimal
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuenta:** L04.
 - **Sale como:** video, 30 fps.
@@ -46,7 +55,7 @@ En el laboratorio se pasan a mano como prop (`destacadas`), sin importar mayúsc
 
 ## Qué es fijo y qué varía
 - **Fijo:** tipografía, reglas de golpes, tratamiento del texto.
-- **Varía (props, `bratMinimalSchema`):** `tema` (fragmento de audio y letra), `video` (archivo, inicio, desaturado, brillo), `destacadas`, `tamanos`, `posicion`, `saltos`, `minimoGolpe`, `fundido`, `grano`, `adelantoLectura`, `safeZone`.
+- **Varía (props, `bratMinimalSchema`):** `tema` (fragmento de audio y letra), `video` (archivo, inicio, desaturado, brillo), `destacadas`, `tamanos`, `posicion`, `saltos`, `minimoGolpe`, `fundido`, `grano`, `adelantoLectura`, `franjaBotones`.
 
 ## Zona segura
 En 1:1, TikTok muestra el cuadro con bandas: la zona libre es x 60–925, y 0–1050. La grilla de lugares va dentro, con margen para que ningún golpe se salga.

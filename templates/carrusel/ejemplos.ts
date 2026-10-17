@@ -2,7 +2,7 @@
 // qué foto y qué texto. Cada slide es una imagen 3:4. Los textos y las fotos
 // salen de datos-prueba/<tema>/carrusel.json (textos de textos.txt).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import carruselInstinto from "../../datos-prueba/instinto-luv/carrusel.json";
@@ -30,7 +30,7 @@ const slide = (tema: Tema, tipo: CarruselProps["tipo"], foto: string, texto: str
   posicionTexto: "centro",
   colorTexto: "",
   colorFondo: "",
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
   ...extra,
 });
 

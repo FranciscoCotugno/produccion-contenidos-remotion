@@ -13,7 +13,7 @@ import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { AbsoluteFill, Img, continueRender, delayRender, staticFile, useVideoConfig } from "remotion";
 import { TIKTOK_SANS } from "../../shared/fonts";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 
 export const carruselSchema = z.object({
@@ -32,7 +32,7 @@ export const carruselSchema = z.object({
   colorTexto: z.string(),
   /** color de fondo de la slide C; vacío = automático desde la portada */
   colorFondo: z.string(),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type CarruselProps = z.infer<typeof carruselSchema>;
 
@@ -138,9 +138,9 @@ const useColorPortada = (activo: boolean, src: string, forzado: string, respaldo
 
 // --- la slide ----------------------------------------------------------------------
 
-export const Carrusel: React.FC<CarruselProps> = ({ tema, tipo, foto, oscurecer, texto, posicionTexto, colorTexto, colorFondo, safeZone }) => {
+export const Carrusel: React.FC<CarruselProps> = ({ tema, tipo, foto, oscurecer, texto, posicionTexto, colorTexto, colorFondo, franjaBotones }) => {
   const { width, height } = useVideoConfig();
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const esC = tipo === "C-hook-color";
   const base = useColorPortada(esC, tema.cover, colorFondo, tema.colors?.primary ?? "#535353");
   if (!base) return null;
@@ -220,7 +220,7 @@ export const Carrusel: React.FC<CarruselProps> = ({ tema, tipo, foto, oscurecer,
         </div>
       )}
 
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

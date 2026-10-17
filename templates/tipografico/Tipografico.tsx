@@ -24,8 +24,9 @@ import {
 } from "remotion";
 import { RONZINO } from "../../shared/fonts";
 import { beatPulse } from "../../shared/effects";
-import { SafeZone, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const tipograficoSchema = z.object({
   tema: temaSchema,
@@ -37,14 +38,14 @@ export const tipograficoSchema = z.object({
   golpeBeat: z.boolean(),
   /** cuadros que cada palabra aparece antes de cantarse */
   adelantoLectura: z.number().int().min(0).max(15),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type TipograficoProps = z.infer<typeof tipograficoSchema>;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionTipografico: CalculateMetadataFunction<TipograficoProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionTipografico: CalculateMetadataFunction<TipograficoProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, "");
 
 const T = {
   peso: 700,
@@ -304,7 +305,7 @@ const entradaPalabra = (animacion: Animacion, edad: number, fps: number, indice:
   return { transform: `translateY(${interpolate(s, [0, 1], [-60, 0])}px)`, opacity: opacidad };
 };
 
-export const Tipografico: React.FC<TipograficoProps> = ({ tema, colores, palabrasPorFrase, golpeBeat, adelantoLectura, safeZone }) => {
+export const Tipografico: React.FC<TipograficoProps> = ({ tema, colores, palabrasPorFrase, golpeBeat, adelantoLectura, franjaBotones }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
@@ -373,7 +374,7 @@ export const Tipografico: React.FC<TipograficoProps> = ({ tema, colores, palabra
       </div>
 
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

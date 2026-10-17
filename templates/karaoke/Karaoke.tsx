@@ -4,13 +4,17 @@
 //
 // Sin el modo "completá la letra": lo sacó Cotu.
 
+// OffthreadVideo y no Html5Video: Html5Video posiciona un <video> del navegador por
+// busqueda y no siempre cae en el cuadro exacto, asi que el fondo se mueve a tirones
+// mientras la letra va fluida. OffthreadVideo extrae el cuadro exacto. No acepta
+// `loop`: el video de fondo debe durar al menos lo que el fragmento. (2026-10-14)
 import React from "react";
 import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
 import {
   AbsoluteFill,
   Html5Audio,
-  Html5Video,
+  OffthreadVideo,
   staticFile,
   useCurrentFrame,
   useVideoConfig,
@@ -18,7 +22,8 @@ import {
 } from "remotion";
 import { TIKTOK_SANS } from "../../shared/fonts";
 import { lineStarts } from "../../shared/lyrics";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 
 export const karaokeSchema = z.object({
@@ -36,14 +41,13 @@ export const karaokeSchema = z.object({
   lineaSiguiente: z.boolean(),
   /** cuadros que la línea aparece antes de cantarse */
   adelantoLectura: z.number().int().min(0).max(15),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type KaraokeProps = z.infer<typeof karaokeSchema>;
 
-/** La duración sale del fragmento: inicio y fin. */
-export const duracionKaraoke: CalculateMetadataFunction<KaraokeProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionKaraoke: CalculateMetadataFunction<KaraokeProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.video.src);
 
 const T = {
   px: 60,
@@ -82,10 +86,10 @@ const Palabra: React.FC<{ texto: string; progreso: number; color: string; ultima
   </span>
 );
 
-export const Karaoke: React.FC<KaraokeProps> = ({ tema, video, colorResaltado, lineaSiguiente, adelantoLectura, safeZone }) => {
+export const Karaoke: React.FC<KaraokeProps> = ({ tema, video, colorResaltado, lineaSiguiente, adelantoLectura, franjaBotones }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const t = frame / fps + adelantoLectura / fps;
   const color = colorResaltado || tema.colors?.secondary || "#FFD426";
 
@@ -110,11 +114,10 @@ export const Karaoke: React.FC<KaraokeProps> = ({ tema, video, colorResaltado, l
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
-      <Html5Video
+      <OffthreadVideo
         src={staticFile(video.src)}
         trimBefore={Math.round(video.inicio * fps)}
         muted
-        loop
         style={{ width: "100%", height: "100%", objectFit: "cover" }}
       />
       {video.oscurecer > 0 && <AbsoluteFill style={{ background: `rgba(0,0,0,${video.oscurecer})` }} />}
@@ -147,7 +150,7 @@ export const Karaoke: React.FC<KaraokeProps> = ({ tema, video, colorResaltado, l
       </div>
 
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

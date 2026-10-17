@@ -1,5 +1,14 @@
 # Carrusel
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** C1 (fotos de día, cálidas), C2 (fotos de noche, frías), C8 (fotos con flash, estética de cámara de rollo), R2 (descubrimiento).
 - **Sale como:** imágenes (2 por carrusel). Se publican en modo foto de TikTok, y el sonido oficial se elige al publicar.
@@ -34,7 +43,7 @@ Como en `tarjeta-letra` (C9): el fondo sale del color dominante de la portada, u
 
 ## Qué es fijo y qué varía
 - **Fijo:** el diseño de cada tipo de slide y la tipografía.
-- **Varía (props, `carruselSchema`):** `tema` (título, artistas, portada, colores), `tipo`, `foto`, `oscurecer`, `texto`, `posicionTexto`, `colorTexto`, `colorFondo`, `safeZone`. Un carrusel es la lista de sus slides (en `ejemplos.ts`, `Carrusel-<cuenta>-<n>-<tema>`).
+- **Varía (props, `carruselSchema`):** `tema` (título, artistas, portada, colores), `tipo`, `foto`, `oscurecer`, `texto`, `posicionTexto`, `colorTexto`, `colorFondo`, `franjaBotones`. Un carrusel es la lista de sus slides (en `ejemplos.ts`, `Carrusel-<cuenta>-<n>-<tema>`).
 
 ## Qué decide la bajada (antes de armar el carrusel)
 La bajada de cada tema la escribe una persona, y de ahí salen los textos del carrusel (pedido de Cotu):

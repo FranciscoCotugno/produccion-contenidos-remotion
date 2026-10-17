@@ -37,8 +37,9 @@ import {
 } from "remotion";
 import { INTER, NOTO_EMOJI, TIKTOK_SANS } from "../../shared/fonts";
 import { activeLineIndex, lineStarts } from "../../shared/lyrics";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const mensajeSchema = z.object({
   /** texto, audio (el fragmento), video (sticker con el clip), link (tarjeta del tema), reel (tarjeta vertical con el clip, R3), reaccion (emoji sobre el mensaje anterior), visto, escribiendo */
@@ -91,14 +92,14 @@ export const chatSchema = z.object({
   palabrasEnVideo: z.number().int().min(1).max(6),
   /** cuadros que la letra del video aparece antes de cantarse */
   adelantoLectura: z.number().int().min(0).max(15),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type ChatProps = z.infer<typeof chatSchema>;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionChat: CalculateMetadataFunction<ChatProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionChat: CalculateMetadataFunction<ChatProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.tema.fragment.src);
 
 /**
  * WhatsApp oscuro en iPhone. Colores medidos en la referencia (fondo,
@@ -446,7 +447,7 @@ const LetraVideo: React.FC<{ props: ChatProps; t: number; u: (pt: number) => num
 };
 
 export const Chat: React.FC<ChatProps> = (props) => {
-  const { tema, piel, mensajes, n, hora, cabecera, escala, iconoAudio, letraEnVideo, adelantoLectura, animacion, ladoMio, ancho, barraEscribir, safeZone } = props;
+  const { tema, piel, mensajes, n, hora, cabecera, escala, iconoAudio, letraEnVideo, adelantoLectura, animacion, ladoMio, ancho, barraEscribir, franjaBotones } = props;
   const ig = piel === "instagram-claro";
   // alto de la barra para escribir (a la escala pedida)
   const altoBarra = barraEscribir ? (ig ? PT_IG.barra.alto : PT.barra.alto) * escala : 0;
@@ -457,7 +458,7 @@ export const Chat: React.FC<ChatProps> = (props) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const duracion = tema.fragment.end - tema.fragment.start;
 
   // la columna de la conversación: el cuadro entero (los mensajes pegados a los bordes, como en la app) o la zona libre
@@ -857,7 +858,7 @@ export const Chat: React.FC<ChatProps> = (props) => {
       </div>
 
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

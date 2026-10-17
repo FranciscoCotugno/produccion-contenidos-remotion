@@ -2,13 +2,18 @@
 // pieza. Sale en 1:1 (1080×1080), como la referencia. Las destacadas salen de
 // datos-prueba/<tema>/brat-minimal.json (aprobadas por Cotu en textos.txt).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import destacadasInstinto from "../../datos-prueba/instinto-luv/brat-minimal.json";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import destacadasSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/brat-minimal.json";
 import maxi1a from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1a/tema.json";
+import aguaE1 from "../../datos-prueba/maluma-agua-estribillo-1/tema.json";
+import destAguaE1 from "../../datos-prueba/maluma-agua-estribillo-1/brat-minimal.json";
+import destAguaLyric from "../../datos-prueba/maluma-agua-lyric-1/brat-minimal.json";
+import aguaLyric from "../../datos-prueba/maluma-agua-lyric-1/tema.json";
+import agua from "../../datos-prueba/maluma-agua-estribillo/tema.json";
 import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
 import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
 import destacadasMaxi1a from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1a/brat-minimal.json";
@@ -32,7 +37,7 @@ const armar = (tema: Tema, destacadas: string[], grano = 0, desaturar = 0.88): B
   fundido: 3,
   grano,
   adelantoLectura: 3,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 });
 
 const temas = [
@@ -47,7 +52,18 @@ const maxiL04 = [
   { id: "Maxi-L04-F3", tema: temaSchema.parse(maxi3), destacadas: destacadasMaxi3.destacadas },
 ];
 
+// Campana Maluma "AGUA": la variante de letra chica. El fragmento apunta al audio,
+// asi que el video se pasa aparte; dura menos que la pieza y se repite solo.
+// Sin destacadas: cuales van las elige la bajada, no Code.
+const aguaMinimal: BratMinimalProps = {
+  ...armar(temaSchema.parse(agua), []),
+  video: { src: "media/maluma-aguashakira/loop1.mp4", inicio: 0, desaturar: 0.88, brillo: 0.7 },
+};
+
 export const ejemplosBratMinimal: { id: string; props: BratMinimalProps }[] = [
+  { id: "Maluma-Brat-LetraChica", props: aguaMinimal },
+  { id: "Agua-Lyric-Minimal", props: armar(temaSchema.parse(aguaLyric), destAguaLyric.destacadas) },
+  { id: "Agua-Estribillo-Minimal", props: armar(temaSchema.parse(aguaE1), destAguaE1.destacadas) },
   ...temas.map(({ id, tema, destacadas }) => ({ id: `BratMinimal-${id}`, props: armar(tema, destacadas) })),
   ...maxiL04.map(({ id, tema, destacadas }) => ({ id, props: armar(tema, destacadas) })),
   // variante en color: el mismo molde sin el blanco y negro (pedido de Cotu)

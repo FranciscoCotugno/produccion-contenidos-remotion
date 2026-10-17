@@ -2,7 +2,7 @@
 // pieza, y en qué formato. Los textos y los videos de nicho salen de
 // datos-prueba/<tema>/videos.json (textos de textos.txt).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import videosInstinto from "../../datos-prueba/instinto-luv/videos.json";
@@ -13,19 +13,31 @@ import maxi1b from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1b/tema.j
 import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
 import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
 import videosMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/videos.json";
-import type { LetraSobreVideoProps } from "./LetraSobreVideo";
+import frasesMaxi from "../../datos-prueba/maxi-espindola-hagamos-que-pase/frases.json";
+import aguaE1 from "../../datos-prueba/maluma-agua-estribillo-1/tema.json";
+import aguaE2 from "../../datos-prueba/maluma-agua-estribillo-2/tema.json";
+import aguaLyric from "../../datos-prueba/maluma-agua-lyric-1/tema.json";
+import aguaB1 from "../../datos-prueba/maluma-agua-bailando-1/tema.json";
+import aguaB2 from "../../datos-prueba/maluma-agua-bailando-2/tema.json";
+import aguaB3 from "../../datos-prueba/maluma-agua-bailando-3/tema.json";
+import frasesAgua from "../../datos-prueba/maluma-agua-bailando-1/frases.json";
+import { TEXTO_DE_SIEMPRE, TEXTO_SUBTITULO_FINO, type LetraSobreVideoProps } from "./LetraSobreVideo";
 
 /** El molde sale en tres formatos (pedido de Cotu). */
 export const FORMATOS_LETRA_VIDEO = {
   "9x16": { ancho: 1080, alto: 1920 },
   "1x1": { ancho: 1080, alto: 1080 },
   "3x4": { ancho: 1080, alto: 1440 },
+  // 4:3 apaisado: el de la referencia 11 y el de las cuentas con mejores
+  // numeros del relevamiento. TikTok lo muestra con bandas arriba y abajo,
+  // asi que el epigrafe y los botones no caen sobre la pieza.
+  "4x3": { ancho: 1440, alto: 1080 },
 } as const;
 export type FormatoLetraVideo = keyof typeof FORMATOS_LETRA_VIDEO;
 
 type Videos = { "l08-fija": string; "l11-hook": string; "hook-letra": string; pov: { texto: string; video: string; inicio: number } };
 
-const base = { adelantoLectura: 3, safeZone: safeZoneOff } as const;
+const base = { adelantoLectura: 3, texto: TEXTO_DE_SIEMPRE, franjaBotones: franjaOff } as const;
 
 /** L08 y L11: el videoclip del fragmento de fondo (L11, en producción, material en vivo) */
 const sobreClip = (tema: Tema, modo: LetraSobreVideoProps["modo"], textoFijo: string, posicionHook: LetraSobreVideoProps["posicionHook"]): LetraSobreVideoProps => ({
@@ -52,35 +64,67 @@ const temas = [
   { id: "SiSaleElSol-1", tema: temaSchema.parse(siSaleElSol1), videos: videosSol1 as Videos },
 ];
 
-// Campana Maxi Espindola, tanda 1. L08 va con el videoclip; L11 con el material
-// en vivo (siempre en mute, el audio es el del tema). Las dos cuentas en 9:16.
-// maxi-envivo-2 no se usa en L11: recortado se ve mal (chequeo del 2026-10-07).
-const enVivoMaxi = (datos: unknown, idVideo: string): LetraSobreVideoProps => {
+// Campana Maxi Espindola, tanda 1. Frases aprobadas por Cotu el 2026-10-14, del
+// banco frases.json: cada pieza toma una distinta por indice, asi no se repiten
+// dentro de la cuenta. L08 va con el videoclip y modo "fija" (solo la frase, sin
+// letra sincronizada: pedido de Cotu). L11 va con material en vivo, siempre en
+// mute, y un hook distinto por pieza. maxi-envivo-2 no se usa en L11: recortado
+// se ve mal (chequeo del 2026-10-07).
+const temasMaxi = [maxi1, maxi1b, maxi2, maxi3];
+// envivo-1 dura 21,9 s y no alcanza para F1 (31,3 s), que va con envivo-3
+const videosL11 = ["envivo-3", "envivo-1", "envivo-4", "envivo-1"];
+const idsMaxi = ["F1", "F1b", "F2", "F3"];
+
+const enVivoMaxi = (datos: unknown, idVideo: string, textoFijo: string): LetraSobreVideoProps => {
   const v = videosMaxi.envivo.find((x) => x.id === idVideo)!;
   return {
     ...base,
     tema: temaSchema.parse(datos),
     video: { src: v.src, inicio: v.inicio, oscurecer: 0.15 },
     modo: "hook" as const,
-    textoFijo: videosMaxi["l11-hook"],
+    textoFijo,
     posicionHook: "arriba" as const,
   };
 };
 
 const nueve = (props: LetraSobreVideoProps) => ({ formato: "9x16" as const, props });
 
-const ejemplosMaxi: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
-  { id: "Maxi-L08-F1", ...nueve(sobreClip(temaSchema.parse(maxi1), "letra", "", "centro")) },
-  { id: "Maxi-L08-F1b", ...nueve(sobreClip(temaSchema.parse(maxi1b), "fija", videosMaxi["l08-fija"], "centro")) },
-  { id: "Maxi-L08-F2", ...nueve(sobreClip(temaSchema.parse(maxi2), "hook-letra", videosMaxi["hook-letra"], "arriba")) },
-  { id: "Maxi-L08-F3", ...nueve(sobreClip(temaSchema.parse(maxi3), "letra", "", "centro")) },
-  { id: "Maxi-L11-F1", ...nueve(enVivoMaxi(maxi1, "envivo-1")) },
-  { id: "Maxi-L11-F1b", ...nueve(enVivoMaxi(maxi1b, "envivo-3")) },
-  { id: "Maxi-L11-F2", ...nueve(enVivoMaxi(maxi2, "envivo-4")) },
-  { id: "Maxi-L11-F3", ...nueve(enVivoMaxi(maxi3, "envivo-1")) },
+// Campana Maluma "AGUA". Cada video trae su propio audio, asi que el fragmento es
+// el video mismo. Los tres de baile llevan una frase fija aprobada por Cotu.
+const sobreSiMismo = (
+  datos: unknown,
+  modo: LetraSobreVideoProps["modo"],
+  textoFijo: string,
+  posicionHook: LetraSobreVideoProps["posicionHook"],
+): LetraSobreVideoProps => {
+  const tema = temaSchema.parse(datos);
+  return { ...base, tema, video: { src: tema.fragment.src, inicio: tema.fragment.start, oscurecer: 0.15 }, modo, textoFijo, posicionHook };
+};
+
+const ejemplosAgua: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  { id: "Agua-Estribillo-1", formato: "9x16", props: sobreSiMismo(aguaE1, "letra", "", "centro") },
+  { id: "Agua-Lyric-1", formato: "1x1", props: sobreSiMismo(aguaLyric, "letra", "", "centro") },
+  // vertEstribillo2 no tiene el estribillo cantado: va con frase fija, como los de baile
+  { id: "Agua-Estribillo-2", formato: "9x16", props: sobreSiMismo(aguaE2, "hook", frasesAgua["estribillo-2"], "arriba") },
+  ...[aguaB1, aguaB2, aguaB3].map((t, i) => ({
+    id: `Agua-Bailando-${i + 1}`,
+    formato: "9x16" as const,
+    props: sobreSiMismo(t, "hook", frasesAgua.bailando[i], "arriba"),
+  })),
 ];
 
-export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = temas.flatMap(({ id, tema, videos }) => [
+const ejemplosMaxi: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  ...idsMaxi.map((f, i) => ({
+    id: `Maxi-L08-${f}`,
+    ...nueve(sobreClip(temaSchema.parse(temasMaxi[i]), "fija", frasesMaxi.L08[i], "centro")),
+  })),
+  ...idsMaxi.map((f, i) => ({
+    id: `Maxi-L11-${f}`,
+    ...nueve(enVivoMaxi(temasMaxi[i], videosL11[i], frasesMaxi.L11[i])),
+  })),
+];
+
+const ejemplosBase: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = temas.flatMap(({ id, tema, videos }) => [
   // los cuatro modos, en 9:16
   { id: `LetraVideo-L08-Letra-9x16-${id}`, formato: "9x16" as const, props: sobreClip(tema, "letra", "", "centro") },
   { id: `LetraVideo-L08-Fija-9x16-${id}`, formato: "9x16" as const, props: sobreClip(tema, "fija", videos["l08-fija"], "centro") },
@@ -92,4 +136,38 @@ export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; 
     { id: `LetraVideo-L08-Letra-${formato}-${id}`, formato, props: sobreClip(tema, "letra", "", "centro") },
     { id: `LetraVideo-POV-${formato}-${id}`, formato, props: pov(tema, videos.pov) },
   ]),
-]).concat(ejemplosMaxi);
+]);
+
+// --- Comparaciones del subtitulo fino (pedido 1) -----------------------------
+// En 4:3 y sobre el videoclip, que es la situacion de la referencia 11.
+// Medido sobre su fotograma, su letra equivale a unos 30 px en 1080 de ancho.
+const subBase = sobreClip(temaSchema.parse(maxi3), "letra", "", "centro");
+const sub = (texto: Partial<LetraSobreVideoProps["texto"]>): LetraSobreVideoProps => ({
+  ...subBase,
+  texto: { ...TEXTO_SUBTITULO_FINO, ...texto },
+});
+const cuatroTercios = (props: LetraSobreVideoProps) => ({ formato: "4x3" as const, props });
+
+const comparaciones: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  // 1. el tamano: 52 es el de siempre, 30 es el medido en la referencia
+  // 33 es el que mide igual que la referencia (22 px de altura de minuscula a 1440 de ancho)
+  ...[52, 44, 38, 33, 30].map((tamano) => ({ id: `Sub-Tamano-${tamano}`, ...cuatroTercios(sub({ tamano })) })),
+  // 2. la altura de la linea
+  ...[0.5, 0.52, 0.55].map((altura) => ({
+    id: `Sub-Altura-${Math.round(altura * 100)}`,
+    ...cuatroTercios(sub({ altura })),
+  })),
+  // 3. la sombra
+  ...(["ninguna", "suave", "media", "normal"] as const).map((sombra) => ({
+    id: `Sub-Sombra-${sombra}`,
+    ...cuatroTercios(sub({ sombra })),
+  })),
+];
+
+export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  ...ejemplosBase,
+  ...ejemplosMaxi,
+  ...ejemplosAgua,
+  ...comparaciones,
+];
+

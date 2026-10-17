@@ -1,7 +1,7 @@
 // Datos de ejemplo del molde: con qué tema, piel y modo de texto se arma
 // cada composición en Studio.
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
@@ -37,7 +37,7 @@ const base: Omit<ReproductorAppProps, "tema"> = {
   pesoLetra: "bold",
   centrar: "pantalla",
   desenfoqueFondo: 38,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 };
 
 const instinto = tema(instintoLuv, { reemplazo: false });

@@ -1,7 +1,7 @@
 // Datos de ejemplo del molde: con qué tema y opciones se arma cada
 // composición en Studio.
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
@@ -30,7 +30,7 @@ const base: Omit<BratColorProps, "tema"> = {
   destello: { modo: "invertir", cuadros: 3 },
   golpeBloque: 0.08,
   explosionDesde: 0,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 };
 
 // instinto-luv: beat marcado (104,3 BPM, grilla por el bombo)

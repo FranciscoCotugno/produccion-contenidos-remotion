@@ -1,5 +1,14 @@
 # Tipográfico
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 > **Molde de baja (2026-10-06, decisión de Cotu): no convenció.** No se construye más y sus composiciones se sacaron de Studio. El código, los ejemplos y los fotogramas quedan en la carpeta como registro de lo que se probó; no se borró nada. **L10 queda sin molde asignado.**
 >
 > Se probó en 9:16 con la letra centrada en la zona segura, y después en 1:1 con la frase centrada en el cuadro y la letra mucho más grande. Lo que se resolvió en el camino y puede servir para otro molde: sacar tres colores plenos de la portada (ver "Los tres colores") y el set de cinco animaciones que rota por frase.
@@ -49,7 +58,7 @@ El texto va en blanco o negro, el que más contraste haga con cada fondo (4,5:1 
 
 ## Qué es fijo y qué varía
 - **Fijo:** el set de animaciones, la tipografía y cómo se arman las frases.
-- **Varía (props, `tipograficoSchema`):** `tema` (fragmento de audio, letra, portada, colores, beats), `colores` (vacío = de la portada), `palabrasPorFrase`, `golpeBeat`, `adelantoLectura`, `safeZone`.
+- **Varía (props, `tipograficoSchema`):** `tema` (fragmento de audio, letra, portada, colores, beats), `colores` (vacío = de la portada), `palabrasPorFrase`, `golpeBeat`, `adelantoLectura`, `franjaBotones`.
 
 ## Zona segura
 **Este molde no se ajusta a la zona segura: la frase va centrada en el cuadro** (decisión de Cotu). Acá la letra es la pieza entera, así que manda el centro del cuadro y no el de la zona libre. Solo se dejan 40 px de margen contra los bordes.

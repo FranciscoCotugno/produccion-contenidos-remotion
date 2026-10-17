@@ -1,7 +1,7 @@
 // Datos de ejemplo del molde: con qué tema se arma. El fondo rota entre tres
 // colores sacados de la portada (vacío = automático). Sale en 1:1 (pedido de Cotu).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
@@ -17,7 +17,7 @@ const armar = (tema: Tema): TipograficoProps => ({
   palabrasPorFrase: 3,
   golpeBeat: true,
   adelantoLectura: 3,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 });
 
 const temas = [

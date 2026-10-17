@@ -1,0 +1,153 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "colors": {
+    "primary": "#1B6B8C",
+    "secondary": "#4FC3E8",
+    "text": "#FFFFFF"
+  },
+  "lyrics": [
+    {
+      "end": 1.96,
+      "words": [
+        {
+          "t": 0.4,
+          "text": "no"
+        },
+        {
+          "t": 0.52,
+          "text": "me"
+        },
+        {
+          "t": 0.74,
+          "text": "mire"
+        },
+        {
+          "t": 1.28,
+          "text": "así"
+        }
+      ]
+    },
+    {
+      "end": 6.1,
+      "words": [
+        {
+          "t": 1.96,
+          "text": "Porque"
+        },
+        {
+          "t": 2.52,
+          "text": "cuando"
+        },
+        {
+          "t": 2.84,
+          "text": "me"
+        },
+        {
+          "t": 3.16,
+          "text": "miras"
+        },
+        {
+          "t": 3.44,
+          "text": "se"
+        },
+        {
+          "t": 3.66,
+          "text": "hace"
+        },
+        {
+          "t": 3.88,
+          "text": "agua"
+        },
+        {
+          "t": 4.16,
+          "text": "la"
+        },
+        {
+          "t": 5.02,
+          "text": "boca"
+        }
+      ]
+    },
+    {
+      "end": 8.74,
+      "words": [
+        {
+          "t": 6.1,
+          "text": "Calma’"
+        },
+        {
+          "t": 6.46,
+          "text": "mi"
+        },
+        {
+          "t": 6.72,
+          "text": "sed"
+        },
+        {
+          "t": 6.9,
+          "text": "desde"
+        },
+        {
+          "t": 7.18,
+          "text": "que"
+        },
+        {
+          "t": 7.44,
+          "text": "estás"
+        },
+        {
+          "t": 8.02,
+          "text": "aquí"
+        }
+      ]
+    },
+    {
+      "end": 13.06,
+      "words": [
+        {
+          "t": 8.74,
+          "text": "Ay,"
+        },
+        {
+          "t": 8.88,
+          "text": "de"
+        },
+        {
+          "t": 9.02,
+          "text": "ti"
+        },
+        {
+          "t": 9.42,
+          "text": "todo"
+        },
+        {
+          "t": 9.66,
+          "text": "es"
+        },
+        {
+          "t": 10.34,
+          "text": "necesario,"
+        },
+        {
+          "t": 10.82,
+          "text": "todo"
+        },
+        {
+          "t": 11.16,
+          "text": "me"
+        },
+        {
+          "t": 11.62,
+          "text": "provoca"
+        }
+      ]
+    }
+  ],
+  "fragment": {
+    "src": "media/maluma-aguashakira/vertEstribillo.mp4",
+    "start": 1.08,
+    "end": 14.14
+  }
+}

@@ -1,5 +1,14 @@
 # Tarjeta de letra
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 > El nombre del molde quedó de antes: desde el 2026-10-05 la tarjeta va **sin letra** (decisión de Cotu). La estructura final y el nombre los decide Agustín.
 
 ## Identificación
@@ -22,7 +31,7 @@ Parece algo que alguien compartió desde la app: nativo, no publicitario. Deja e
 
 ## Qué es fijo y qué varía
 - **Fijo:** el diseño de la tarjeta y la tipografía.
-- **Varía (props, `tarjetaLetraSchema`):** `tema` (portada, título, artistas), `piel` (`c4-foto` / `c9-color`), `fondo` (foto, desenfoque, oscurecido), `colorFondo` (C9; vacío = automático), `tarjeta` (lado de la portada 376, centro vertical 400), `safeZone`.
+- **Varía (props, `tarjetaLetraSchema`):** `tema` (portada, título, artistas), `piel` (`c4-foto` / `c9-color`), `fondo` (foto, desenfoque, oscurecido), `colorFondo` (C9; vacío = automático), `tarjeta` (lado de la portada 376, centro vertical 400), `franjaBotones`.
 
 ## Modos
 1. **Una tarjeta**, una imagen.

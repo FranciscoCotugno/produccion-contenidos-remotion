@@ -7,12 +7,16 @@
 // bloque queda en pantalla hasta que entra la primera palabra de la frase
 // siguiente. Sin cierre: la pieza termina con la última frase.
 
+// OffthreadVideo y no Html5Video: Html5Video posiciona un <video> del navegador por
+// busqueda y no siempre cae en el cuadro exacto, asi que el fondo se mueve a tirones
+// mientras la letra va fluida. OffthreadVideo extrae el cuadro exacto. No acepta
+// `loop`: el video de fondo debe durar al menos lo que el fragmento. (2026-10-14)
 import React, { useEffect, useId, useMemo, useState } from "react";
 import { z } from "zod";
 import {
   AbsoluteFill,
   Html5Audio,
-  Html5Video,
+  OffthreadVideo,
   Img,
   cancelRender,
   continueRender,
@@ -24,8 +28,10 @@ import {
 } from "remotion";
 import { Dust, FrameWeave, Halation, beatPulse } from "../../shared/effects";
 import { ARCHIVO_NARROW, ARIMO, TIKTOK_SANS } from "../../shared/fonts";
-import { SafeZone, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, franjaBotonesSchema } from "../../shared/FranjaBotones";
+import { VideoEnBucle } from "../../shared/VideoEnBucle";
 import { temaSchema, type Tema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const bratPuroSchema = z.object({
   tema: temaSchema,
@@ -94,7 +100,7 @@ export const bratPuroSchema = z.object({
    * tiempo fuerte; 0 = apagado). Usa `tema.beats`; sin grilla no hace nada.
    */
   golpeBeat: z.number().min(0).max(0.05).step(0.005),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 
 export type BratPuroProps = z.infer<typeof bratPuroSchema>;
@@ -115,10 +121,9 @@ type Tipografia = (typeof TIPOGRAFIAS)[keyof typeof TIPOGRAFIAS];
 const PRIMERA_PALABRA_DESDE_INICIO_S = 0.5;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionBratPuro: CalculateMetadataFunction<BratPuroProps> = ({ props }) => {
-  const s = props.tema.fragment.end - props.tema.fragment.start;
-  return { durationInFrames: Math.max(1, Math.round(s * 30)) };
-};
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionBratPuro: CalculateMetadataFunction<BratPuroProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.fondo.tipo === "video" ? props.fondo.src : "");
 
 /**
  * Espera a que cargue la tipografía antes de medir: si se midiera con la de
@@ -401,7 +406,7 @@ const esClaro = (color: string) => {
  * frase y el ritmo.
  */
 export const BratEscena: React.FC<BratEscenaProps> = (props) => {
-  const { tema, tipografia, mayusculas, bloque, letra, ajusteLetra, adelantoLectura, efectos, fondo, safeZone, colores, escalaBloque } =
+  const { tema, tipografia, mayusculas, bloque, letra, ajusteLetra, adelantoLectura, efectos, fondo, franjaBotones, colores, escalaBloque } =
     props;
   const frame = useCurrentFrame();
   const { fps, width } = useVideoConfig();
@@ -446,7 +451,7 @@ export const BratEscena: React.FC<BratEscenaProps> = (props) => {
         <>
           <AbsoluteFill>
             {fondo.tipo === "video" ? (
-              <Html5Video src={staticFile(fondo.src)} trimBefore={Math.round(fondo.inicio * fps)} muted loop style={estiloFondo} />
+              <VideoEnBucle src={fondo.src} inicio={fondo.inicio} style={estiloFondo} />
             ) : (
               <Img src={staticFile(fondo.src)} style={estiloFondo} />
             )}
@@ -480,7 +485,7 @@ export const BratEscena: React.FC<BratEscenaProps> = (props) => {
       {efectos.grano > 0 && <GranoFondoLiso opacidad={efectos.grano} />}
       {efectos.polvo && <Dust color={letraClara ? "255,240,220" : "40,32,24"} />}
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

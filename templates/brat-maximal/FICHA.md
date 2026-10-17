@@ -1,5 +1,14 @@
 # Brat maximal
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** L02 (sobre material en vivo), L03 (sobre el videoclip).
 - **Sale como:** video, 30 fps.
@@ -30,7 +39,7 @@ TikTok Sans regular (400), con mayúsculas y minúsculas tal cual la letra. Como
 
 ## Qué es fijo y qué varía
 - **Fijo:** tipografía, tamaño máximo y tratamiento del texto.
-- **Varía (props, `bratMaximalSchema`):** `tema` (fragmento de audio, letra, beats), `video` (archivo, inicio, desenfoque, brillo), `golpeBeat`, `palabrasPorFrase`, `adelantoLectura`, `safeZone`.
+- **Varía (props, `bratMaximalSchema`):** `tema` (fragmento de audio, letra, beats), `video` (archivo, inicio, desenfoque, brillo), `golpeBeat`, `palabrasPorFrase`, `adelantoLectura`, `franjaBotones`.
 
 ## Tiempos y animación
 - Cada frase entra con corte seco cuando se canta su primera palabra, con 3 cuadros de adelanto de lectura. Queda hasta que entra la siguiente.

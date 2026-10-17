@@ -1,5 +1,5 @@
 {
-  "_nota": "Conversaciones de prueba del molde chat (de textos.txt, aprobadas por Cotu). t = segundo del fragmento. Los tiempos estan calzados a un fragmento de ~16 s (F2 o F1b): la respuesta de C3 cae al 60-65 %. Para fragmentos mas largos o mas cortos hay que recalzarlos. Sin reproductor de audio (pedido de Cotu, 2026-10-05).",
+  "_nota": "Conversaciones del molde chat. Las de C3 las aprobo Cotu el 2026-10-14. t = segundo sobre un fragmento de referencia de 16,14 s; ejemplos.ts las reescala a la duracion de cada fragmento. Sin reproductor de audio (Cotu, 2026-10-05).",
   "c3-respuesta": {
     "contacto": "lu",
     "mensajes": [
@@ -7,7 +7,7 @@
         "tipo": "texto",
         "de": "yo",
         "t": 0,
-        "texto": "vení que acá pasa algo"
+        "texto": "escuchá esto"
       },
       {
         "tipo": "video",
@@ -24,13 +24,13 @@
         "tipo": "texto",
         "de": "otro",
         "t": 9.6,
-        "texto": "jajaja qué pasa"
+        "texto": "qué es"
       },
       {
         "tipo": "texto",
         "de": "otro",
         "t": 10.8,
-        "texto": "ya salgo"
+        "texto": "pasame el nombre"
       }
     ]
   },
@@ -38,15 +38,15 @@
     "contacto": "nico",
     "mensajes": [
       {
-        "tipo": "texto",
-        "de": "yo",
-        "t": 0,
-        "texto": "la luna nos sacó a bailar"
-      },
-      {
         "tipo": "video",
         "de": "yo",
         "t": 0
+      },
+      {
+        "tipo": "texto",
+        "de": "yo",
+        "t": 0,
+        "texto": "salió hoy"
       },
       {
         "tipo": "escribiendo",
@@ -58,13 +58,13 @@
         "tipo": "texto",
         "de": "otro",
         "t": 9.6,
-        "texto": "dónde están"
+        "texto": "ya la escuché"
       },
       {
         "tipo": "texto",
-        "de": "yo",
-        "t": 11.0,
-        "texto": "ya te mando ubicación"
+        "de": "otro",
+        "t": 10.8,
+        "texto": "tres veces"
       }
     ]
   },
@@ -75,7 +75,7 @@
         "tipo": "texto",
         "de": "yo",
         "t": 0,
-        "texto": "perdón por la intensidad"
+        "texto": "me hizo acordar a vos"
       },
       {
         "tipo": "video",

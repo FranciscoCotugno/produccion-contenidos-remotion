@@ -6,12 +6,16 @@
 // Tamaño chico como en la referencia (pedido de Cotu), por debajo del mínimo
 // de legibilidad de CLAUDE.md: es una excepción de este molde.
 
+// OffthreadVideo y no Html5Video: Html5Video posiciona un <video> del navegador por
+// busqueda y no siempre cae en el cuadro exacto, asi que el fondo se mueve a tirones
+// mientras la letra va fluida. OffthreadVideo extrae el cuadro exacto. No acepta
+// `loop`: el video de fondo debe durar al menos lo que el fragmento. (2026-10-14)
 import React, { useMemo } from "react";
 import { z } from "zod";
 import {
   AbsoluteFill,
   Html5Audio,
-  Html5Video,
+  OffthreadVideo,
   interpolate,
   staticFile,
   useCurrentFrame,
@@ -20,8 +24,10 @@ import {
 } from "remotion";
 import { ARIMO } from "../../shared/fonts";
 import { Grain } from "../../shared/effects";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
+import { VideoEnBucle } from "../../shared/VideoEnBucle";
 import { temaSchema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const bratMinimalSchema = z.object({
   tema: temaSchema,
@@ -54,14 +60,14 @@ export const bratMinimalSchema = z.object({
   grano: z.number().min(0).max(0.6).step(0.05),
   /** cuadros que cada palabra aparece antes de cantarse */
   adelantoLectura: z.number().int().min(0).max(15),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type BratMinimalProps = z.infer<typeof bratMinimalSchema>;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionBratMinimal: CalculateMetadataFunction<BratMinimalProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionBratMinimal: CalculateMetadataFunction<BratMinimalProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.video.src);
 
 /** ancho máximo de un renglón: las palabras normales seguidas comparten renglón hasta este ancho */
 const ANCHO_RENGLON = 420;
@@ -132,7 +138,7 @@ const golpes = (tema: BratMinimalProps["tema"], destacadas: string[], minimo: nu
  * con margen para que el bloque no se salga. Cada golpe toma uno, fijo (sale
  * del orden en la letra, no del azar), y nunca el mismo que el anterior.
  */
-const lugares = (area: ReturnType<typeof safeArea>) => {
+const lugares = (area: ReturnType<typeof areaDelCuadro>) => {
   const mx = ANCHO_RENGLON / 2 + 20;
   const xs = [area.left + mx, (area.left + area.right) / 2, area.right - mx];
   const ys = [area.top + area.height * 0.22, area.top + area.height * 0.5, area.top + area.height * 0.76];
@@ -141,10 +147,10 @@ const lugares = (area: ReturnType<typeof safeArea>) => {
 /** orden en que se recorren los 9 lugares: saltando lejos, o a un lugar vecino (una vuelta alrededor del centro) */
 const ORDEN = { lejos: [3, 2, 7, 4, 0, 8, 1, 6, 5], cerca: [4, 1, 2, 5, 8, 7, 6, 3] };
 
-export const BratMinimal: React.FC<BratMinimalProps> = ({ tema, video, destacadas, tamanos, posicion, saltos, minimoGolpe, fundido, grano, adelantoLectura, safeZone }) => {
+export const BratMinimal: React.FC<BratMinimalProps> = ({ tema, video, destacadas, tamanos, posicion, saltos, minimoGolpe, fundido, grano, adelantoLectura, franjaBotones }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const t = frame / fps + adelantoLectura / fps;
 
   // el golpe en pantalla: el último que ya arrancó (queda hasta el siguiente); el primero, desde el cuadro 0
@@ -173,11 +179,9 @@ export const BratMinimal: React.FC<BratMinimalProps> = ({ tema, video, destacada
 
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
-      <Html5Video
-        src={staticFile(video.src)}
-        trimBefore={Math.round(video.inicio * fps)}
-        muted
-        loop
+      <VideoEnBucle
+        src={video.src}
+        inicio={video.inicio}
         style={{
           width: "100%",
           height: "100%",
@@ -210,7 +214,7 @@ export const BratMinimal: React.FC<BratMinimalProps> = ({ tema, video, destacada
 
       {grano > 0 && <Grain amount={grano} />}
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

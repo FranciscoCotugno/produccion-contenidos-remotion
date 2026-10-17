@@ -2,7 +2,7 @@
 // pieza, y en qué formato. Los textos y las imágenes de prueba salen de
 // datos-prueba/<tema>/widgets.json (textos de textos.txt).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import widgetsInstinto from "../../datos-prueba/instinto-luv/widgets.json";
@@ -25,7 +25,7 @@ const base = {
   posicion: "auto",
   ancho: 720,
   adelantoLectura: 3,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 } as const;
 
 const conImagen = (tema: Tema, piel: ReproductorWidgetProps["piel"], item: Item, tinte: ReproductorWidgetProps["fondo"]["tinte"]): ReproductorWidgetProps => ({

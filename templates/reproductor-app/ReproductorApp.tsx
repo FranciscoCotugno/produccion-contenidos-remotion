@@ -22,7 +22,7 @@ import {
 } from "remotion";
 import { TIKTOK_SANS } from "../../shared/fonts";
 import { lineStarts, type Line, type Word } from "../../shared/lyrics";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 import { ESCALA_APPLE_OSCURA, PielApple, TARJETA_APPLE } from "./PielApple";
 
@@ -49,7 +49,7 @@ export const reproductorAppSchema = z.object({
   /** centro horizontal del reproductor y la letra: la pantalla o la zona libre de interfaz */
   centrar: z.enum(["pantalla", "zonaSegura"]),
   desenfoqueFondo: z.number().min(0).max(80).step(1),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 
 export type ReproductorAppProps = z.infer<typeof reproductorAppSchema>;
@@ -225,12 +225,12 @@ export const ReproductorApp: React.FC<ReproductorAppProps> = ({
   pesoLetra,
   centrar,
   desenfoqueFondo,
-  safeZone,
+  franjaBotones,
 }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
 
   const track = tema.track ?? { displayStart: tema.fragment.start, duration: Math.max(180, tema.fragment.end) };
   const colores = { ...COLORES_POR_DEFECTO, ...tema.colors };
@@ -335,7 +335,7 @@ export const ReproductorApp: React.FC<ReproductorAppProps> = ({
 
       {audioAparte && <Html5Audio src={staticFile(audio.src)} trimBefore={Math.round(audio.start * fps)} />}
 
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

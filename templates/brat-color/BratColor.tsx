@@ -12,6 +12,7 @@ import { z } from "zod";
 import { zColor } from "@remotion/zod-types";
 import { useCurrentFrame, useVideoConfig, type CalculateMetadataFunction } from "remotion";
 import { BratEscena, bratPuroSchema, fraseEnPantalla, tiempoLetra } from "../brat-puro/BratPuro";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const bratColorSchema = bratPuroSchema.omit({ piel: true, golpeBeat: true }).extend({
   /** colores de fondo, en orden: uno por frase y vuelve a empezar */
@@ -31,10 +32,10 @@ export const bratColorSchema = bratPuroSchema.omit({ piel: true, golpeBeat: true
 export type BratColorProps = z.infer<typeof bratColorSchema>;
 
 /** La duración sale del fragmento: inicio y fin (igual que brat-puro). */
-export const duracionBratColor: CalculateMetadataFunction<BratColorProps> = ({ props }) => {
-  const s = props.tema.fragment.end - props.tema.fragment.start;
-  return { durationInFrames: Math.max(1, Math.round(s * 30)) };
-};
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionBratColor: CalculateMetadataFunction<BratColorProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start,
+    props.fondo.tipo === "video" ? props.fondo.src : "");
 
 /** cuánto tarda en volver el golpe del bloque */
 const CAIDA_GOLPE_S = 0.12;

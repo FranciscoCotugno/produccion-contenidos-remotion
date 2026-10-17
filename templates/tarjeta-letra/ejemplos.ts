@@ -2,7 +2,7 @@
 // Las fotos de prueba salen de datos-prueba/<tema>/tarjetas.json (las líneas
 // de letra de ese archivo ya no se usan: la tarjeta va sin letra).
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import tarjetasInstinto from "../../datos-prueba/instinto-luv/tarjetas.json";
@@ -18,7 +18,7 @@ const base: Omit<TarjetaLetraProps, "tema" | "piel" | "fondo"> = {
   // en el tercio de arriba de la imagen (pedido de Cotu): el conjunto va de y ≈ 165 a 635;
   // portada 376 (dos veces un 15 % menos que 520)
   tarjeta: { portada: 376, centroY: 400 },
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 };
 
 type Tarjeta = { lineas: string[]; foto: string };

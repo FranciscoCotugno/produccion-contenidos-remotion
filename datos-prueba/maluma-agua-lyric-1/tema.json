@@ -1,0 +1,268 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "colors": {
+    "primary": "#1B6B8C",
+    "secondary": "#4FC3E8",
+    "text": "#FFFFFF"
+  },
+  "lyrics": [
+    {
+      "end": 4.12,
+      "words": [
+        {
+          "t": 0.28,
+          "text": "Porque"
+        },
+        {
+          "t": 0.74,
+          "text": "cuando"
+        },
+        {
+          "t": 0.98,
+          "text": "me"
+        },
+        {
+          "t": 1.4,
+          "text": "miras"
+        },
+        {
+          "t": 1.74,
+          "text": "se"
+        },
+        {
+          "t": 1.9,
+          "text": "hace"
+        },
+        {
+          "t": 2.16,
+          "text": "agua"
+        },
+        {
+          "t": 2.38,
+          "text": "la"
+        },
+        {
+          "t": 3.32,
+          "text": "boca"
+        }
+      ]
+    },
+    {
+      "end": 6.96,
+      "words": [
+        {
+          "t": 4.3,
+          "text": "Calma’"
+        },
+        {
+          "t": 4.62,
+          "text": "mi"
+        },
+        {
+          "t": 4.92,
+          "text": "sed"
+        },
+        {
+          "t": 4.92,
+          "text": "desde"
+        },
+        {
+          "t": 5.5,
+          "text": "que"
+        },
+        {
+          "t": 5.78,
+          "text": "estás"
+        },
+        {
+          "t": 6.36,
+          "text": "aquí"
+        }
+      ]
+    },
+    {
+      "end": 11.36,
+      "words": [
+        {
+          "t": 6.96,
+          "text": "Ay,"
+        },
+        {
+          "t": 7.1,
+          "text": "de"
+        },
+        {
+          "t": 7.3,
+          "text": "ti"
+        },
+        {
+          "t": 7.7,
+          "text": "todo"
+        },
+        {
+          "t": 7.9,
+          "text": "es"
+        },
+        {
+          "t": 8.62,
+          "text": "necesario,"
+        },
+        {
+          "t": 9.08,
+          "text": "todo"
+        },
+        {
+          "t": 9.36,
+          "text": "me"
+        },
+        {
+          "t": 9.8,
+          "text": "provoca"
+        }
+      ]
+    },
+    {
+      "end": 14.56,
+      "words": [
+        {
+          "t": 11.36,
+          "text": "Deja"
+        },
+        {
+          "t": 11.84,
+          "text": "los"
+        },
+        {
+          "t": 12.2,
+          "text": "miedos"
+        },
+        {
+          "t": 12.44,
+          "text": "y"
+        },
+        {
+          "t": 12.86,
+          "text": "empieza"
+        },
+        {
+          "t": 13.04,
+          "text": "a"
+        },
+        {
+          "t": 13.4,
+          "text": "sentir"
+        }
+      ]
+    },
+    {
+      "end": 18.34,
+      "words": [
+        {
+          "t": 14.56,
+          "text": "Nos"
+        },
+        {
+          "t": 15.08,
+          "text": "podemos"
+        },
+        {
+          "t": 15.66,
+          "text": "quedar"
+        },
+        {
+          "t": 16.02,
+          "text": "con"
+        },
+        {
+          "t": 16.16,
+          "text": "el"
+        },
+        {
+          "t": 16.22,
+          "text": "\"¿qué"
+        },
+        {
+          "t": 16.54,
+          "text": "hubiera"
+        },
+        {
+          "t": 17.44,
+          "text": "sido?\""
+        }
+      ]
+    },
+    {
+      "end": 21.96,
+      "words": [
+        {
+          "t": 18.34,
+          "text": "Pero"
+        },
+        {
+          "t": 18.72,
+          "text": "mañana"
+        },
+        {
+          "t": 19.26,
+          "text": "vamo'"
+        },
+        {
+          "t": 19.62,
+          "text": "a"
+        },
+        {
+          "t": 19.84,
+          "text": "estar"
+        },
+        {
+          "t": 20.14,
+          "text": "arrepentidos"
+        }
+      ]
+    },
+    {
+      "end": 25.52,
+      "words": [
+        {
+          "t": 21.96,
+          "text": "Mira"
+        },
+        {
+          "t": 22.2,
+          "text": "que"
+        },
+        {
+          "t": 22.6,
+          "text": "nuestros"
+        },
+        {
+          "t": 22.96,
+          "text": "cuerpos"
+        },
+        {
+          "t": 23.44,
+          "text": "poco"
+        },
+        {
+          "t": 23.58,
+          "text": "a"
+        },
+        {
+          "t": 23.94,
+          "text": "poco"
+        },
+        {
+          "t": 24.34,
+          "text": "chocan"
+        }
+      ]
+    }
+  ],
+  "fragment": {
+    "src": "media/maluma-aguashakira/lyric1.mp4",
+    "start": 0,
+    "end": 25.52
+  }
+}

@@ -1,5 +1,14 @@
 # Nota del celular
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuenta:** C7.
 - **Sale como:** video, 30 fps.
@@ -46,7 +55,7 @@ El título y el texto de la nota los escribe quien hace la bajada del tema (est�
 
 ## Qué es fijo y qué varía
 - **Fijo:** el diseño de la interfaz y la tipografía.
-- **Varía (props, `notaCelularSchema`):** `tema` (fragmento, portada, título, artistas), `piel`, `modo`, `titulo`, `texto`, `velocidad`, `fecha`, `mostrarTarjeta`, `safeZone`.
+- **Varía (props, `notaCelularSchema`):** `tema` (fragmento, portada, título, artistas), `piel`, `modo`, `titulo`, `texto`, `velocidad`, `fecha`, `mostrarTarjeta`, `franjaBotones`.
 
 ## Zona segura y ubicación de la tarjeta
 - **El texto no pasa de la zona libre:** el margen de la app es de 20 pt, pero el bloque se corta en x = 925, porque si no los renglones largos quedan abajo de la columna de botones. Los renglones cortan antes, como cortaría la app en una pantalla más angosta.

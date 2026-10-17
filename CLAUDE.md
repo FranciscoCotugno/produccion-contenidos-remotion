@@ -18,12 +18,13 @@ Cada template terminado vive en `templates/<molde>/` y tiene:
 
 ## Reglas mínimas
 
-1. Cada template tiene su propio formato de video (9:16 de 1080×1920, 1:1 de 1080×1080 u otro), el que pide ese formato: no hay uno por defecto. Sale en más de un formato solo si Cotu lo pide (hoy, `reproductor-widget` y `letra-sobre-video`: 9:16, 1:1 y 3:4; `karaoke`: 9:16 y 1:1). Se declara en su ficha y en su composición. Siempre a 30 fps. Remotion 4.0.529, versión fija.
+1. **No hay un formato único de salida** (reglas generales, 2026-10-17): un molde sale en varios, como ya hace `letra-sobre-video` (9:16, 1:1 y 3:4). El relevamiento de octubre lo respalda: de las cuentas con mejores números, la mayoría **no publica en 9:16** sino en 4:3 o 16:9, y deja que TikTok ponga las bandas. Cada molde declara sus formatos en su ficha y en su composición; se le suman a medida que se trabaja ese molde, no todos de golpe. **Los cuadros por segundo salen del video de fondo, no se eligen**: la composición se renderiza al fps de su material (25 si el videoclip es de 25, 30 si es de 30), y una pieza sin video va a 30. Lo resuelve solo `metadataDeFragmento` de `shared/fpsFuente.ts`, que lee el fps del archivo; ningún molde escribe un fps a mano. Renderizar a un fps distinto al de la fuente obliga a repetir o saltear cuadros y el fondo sale a tirones. Remotion 4.0.529, versión fija.
 2. Todo lo variable (textos, tiempos, colores, imágenes, video, audio) entra como prop, con su esquema declarado. Nada de textos ni rutas de un tema escritos dentro del componente.
 3. La duración sale de los datos: inicio y fin del fragmento.
 4. Tipografías y assets solo con licencia que cubra el uso real: uso comercial en video e imagen, instalación en el servidor de render y uso compartido con el equipo. Las de licencia abierta cumplen todo; las pagas sirven si su licencia lo cubre. Cada asset se registra en `assets/LICENCIAS.md`.
-5. Respetar la zona segura de TikTok, aplicada sobre cómo se ve el formato final en la app (guía en `shared/SafeZone`).
-6. Reusar lo que ya existe en `shared/` (formato de letra, tipografías, efectos), pero no armar arquitectura nueva: la estructura común la decide Agustín. Si algo se repite entre templates, se anota en la ficha.
+5. **No hay zona segura: las composiciones van a sangre completa** y el texto puede llegar al borde si el diseño lo pide (`areaDelCuadro()` devuelve el cuadro entero). La caja vieja obligaba a márgenes que quedaban mal y empujaban todo al centro. **La única precaución que queda es la columna de botones de TikTok sobre el borde derecho**: conviene no poner ahí algo que haya que leer. Es un borde, no una caja. El pie de pantalla no se cuida con márgenes sino **eligiendo el formato**: en 4:3 o 1:1 el epígrafe y los botones caen sobre las bandas negras y no sobre la pieza. La guía `shared/FranjaBotones` marca esa franja en Studio (apagada por defecto).
+6. **Ningún molde lleva marca de agua**: ni `@usuario`, ni logotipo, ni firma. Las cuentas de referencia casi todas tienen una y por eso aparece descrita en `assets/referencias/*/ANALISIS.md`: eso es descripción de la referencia, no especificación.
+7. Reusar lo que ya existe en `shared/` (formato de letra, tipografías, efectos), pero no armar arquitectura nueva: la estructura común la decide Agustín. Si algo se repite entre templates, se anota en la ficha.
 
 ## Datos de entrada comunes
 
@@ -39,24 +40,26 @@ Lo que hace que un formato funcione. Aplica a todos los templates.
 - **Cada formato se distingue de los demás en el primer segundo.** La variedad que importa es visual y de estructura, no de texto.
 - **Algo pasa desde el primer cuadro.** Nada de arrancar con pantalla vacía ni con fundidos largos desde negro: un fundido de entrada no dura más de 6 cuadros.
 - **El ritmo manda.** Los cambios de texto caen con la voz o con el beat. Una letra desfasada es lo primero que se nota y arruina la pieza.
-- **Legible en un celular.** Texto principal de 50 px o más, texto secundario de 32 px o más, siempre con contraste suficiente contra el fondo. Excepción, pedida por Cotu: `brat-minimal` lleva la letra chica, como su referencia.
+- **Legible en un celular.** Texto principal de 50 px o más, texto secundario de 32 px o más, siempre con contraste suficiente contra el fondo. Excepciones pedidas por Cotu, ambas a propósito: `brat-minimal` lleva la letra chica como su referencia, y el **modo subtítulo fino** de `letra-sobre-video` va a 33 px, medido sobre su referencia, porque respetar el mínimo rompe el formato.
 - **El tema identificado.** Si el formato lo permite, título y artista visibles (tarjeta o reproductor): quien mira tiene que saber qué buscar.
 - **Nativo, no publicitario.** Tiene que parecer contenido de un usuario. **Las interfaces (chats, reproductores, tarjetas, notas) son idénticas a las de la app que imitan** (pedido de Cotu): diagramación, colores, proporciones e íconos. Sin logos ni nombres de marca, y los elementos que son archivos de la app o de terceros (patrón de fondo, tipografía propia de la app, emojis) se reemplazan por equivalentes propios o con licencia abierta.
 - **En los formatos de mood** (paisajes, POV, fondos), intervención mínima: una línea de texto o una tarjeta chica, nada más.
 - **Pensar en el loop.** Si el final empalma bien con el principio, la pieza se mira más de una vez.
 
-## Zona segura de TikTok
+## La franja de botones de TikTok
 
-En un 9:16 (1080×1920), la interfaz de TikTok tapa aproximadamente:
+Lo único que hay que cuidar del borde. En una pieza 9:16 (1080×1920), la columna
+de botones de la app (like, comentarios, compartir) tapa unos **155 px sobre el
+borde derecho**. No conviene poner ahí algo que haya que leer.
 
-- **Arriba:** 150 px (pestañas y estado).
-- **Abajo:** 450 px (caption, sonido y barra de navegación).
-- **Derecha:** 155 px (botones de like, comentarios, compartir).
-- **Izquierda:** 60 px de margen.
+En los demás formatos no hay nada que cuidar: en 4:3, 1:1 o 16:9 la app muestra
+la pieza con bandas negras arriba y abajo, y tanto los botones como el epígrafe
+caen sobre esas bandas. Ese es uno de los motivos para no hacer todo en 9:16.
 
-Nada importante (letra, título, tarjeta) puede quedar en esas zonas. Las medidas son aproximadas: la guía `shared/SafeZone` se calibra con una captura real de TikTok superpuesta, y se prende y apaga desde Studio.
-
-En formatos que no son 9:16 (por ejemplo 1:1), TikTok los muestra con bandas arriba y abajo: la zona segura se aplica sobre el cuadro final tal como se ve en la app.
+La guía `shared/FranjaBotones` pinta esa franja sobre cualquier composición para
+revisarla en Studio; arranca apagada, así nunca sale en un render. Se calibra con
+una captura real de TikTok en `assets/safezone/`. En un formato que no sea 9:16
+no pinta nada, y eso es correcto.
 
 ## Estructura del proyecto
 
@@ -89,7 +92,7 @@ Cada template es un molde que puede servir a varias cuentas de la grilla. Los mo
 Un template está terminado cuando:
 
 - Renderiza con al menos 2 temas de prueba distintos sin tocar código.
-- Respeta la zona segura.
+- Nada que haya que leer cae bajo la franja de botones, si la pieza es 9:16.
 - Todo lo variable es prop, con su esquema declarado.
 - Usa solo assets con licencia verificada para el uso real, registrados en `assets/LICENCIAS.md`.
 - Tiene su `FICHA.md` completa y un render de ejemplo exportado.
@@ -102,6 +105,7 @@ Un template está terminado cuando:
 
 ## Renders
 
+- **Claude Code puede construir, renderizar un cuadro, mirarlo y corregir solo.** Un `.png` se abre y se ve; un `.mp4` no. Conviene usarlo en vez de esperar una ronda de revisión por cada ajuste intermedio.
 - **No renderizar videos** (`npx remotion render`) salvo que Cotu lo pida explícitamente.
 - Para revisar o mostrar un molde: dejarlo abierto en Studio. Si hace falta mostrar algo, generar solo fotogramas con `npx remotion still`: de 4 a 6 cuadros clave, en `templates/<molde>/render/`.
 - Nunca dejar un `remotion render` corriendo en segundo plano.

@@ -2,7 +2,7 @@
 // Los textos salen de datos-prueba/<tema>/nota.json (de textos.txt): los
 // escribe quien hace la bajada del tema.
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import notaInstinto from "../../datos-prueba/instinto-luv/nota.json";
@@ -18,7 +18,7 @@ import type { NotaCelularProps } from "./NotaCelular";
 export const FORMATO_NOTA = { ancho: 1080, alto: 1080 } as const;
 
 type Nota = { titulo: string; texto: string };
-type Datos = { confesion: Nota; lista: Nota; borrador?: Nota };
+type Datos = { confesion: Nota; lista: Nota; borrador?: Nota } & Record<`letra-${string}`, Nota>;
 
 const armar = (tema: Tema, modo: NotaCelularProps["modo"], nota: Nota, piel: NotaCelularProps["piel"]): NotaCelularProps => ({
   tema,
@@ -29,7 +29,7 @@ const armar = (tema: Tema, modo: NotaCelularProps["modo"], nota: Nota, piel: Not
   velocidad: 14,
   fecha: "Hoy 9:40",
   mostrarTarjeta: true,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 });
 
 const temas = [
@@ -41,10 +41,13 @@ const temas = [
 // distintas a proposito: en este molde el fragmento solo cambia el audio, asi
 // que repetir texto daria dos piezas iguales en pantalla.
 const nm = notaMaxi as Datos;
+// PRUEBA del 2026-10-14: la nota lleva la letra literal del fragmento en vez de un
+// texto escrito, idea de Cotu ("de ultima se puede escribir toda la letra de la
+// cancion"). Pendiente de aprobacion; si no convence, C7 se da de baja como L09.
 const maxiC7: { id: string; props: NotaCelularProps }[] = [
-  { id: "Maxi-C7-F1", props: armar(temaSchema.parse(maxi1), "confesion", nm.confesion, "clara") },
-  { id: "Maxi-C7-F2", props: armar(temaSchema.parse(maxi2), "lista", nm.lista, "clara") },
-  { id: "Maxi-C7-F3", props: armar(temaSchema.parse(maxi3), "confesion", nm.borrador!, "clara") },
+  { id: "Maxi-C7-F1", props: armar(temaSchema.parse(maxi1), "confesion", nm["letra-F1"], "clara") },
+  { id: "Maxi-C7-F2", props: armar(temaSchema.parse(maxi2), "confesion", nm["letra-F2"], "clara") },
+  { id: "Maxi-C7-F3", props: armar(temaSchema.parse(maxi3), "confesion", nm["letra-F3"], "clara") },
 ];
 
 export const ejemplosNotaCelular: { id: string; props: NotaCelularProps }[] = [

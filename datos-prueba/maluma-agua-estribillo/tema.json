@@ -1,0 +1,136 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "colors": {
+    "primary": "#1B6B8C",
+    "secondary": "#4FC3E8",
+    "text": "#FFFFFF"
+  },
+  "fragment": {
+    "src": "media/maluma-aguashakira/audio.mp3",
+    "start": 30.22,
+    "end": 41.6
+  },
+  "lyrics": [
+    {
+      "end": 4.36,
+      "words": [
+        {
+          "t": 0.34,
+          "text": "Porque"
+        },
+        {
+          "t": 0.78,
+          "text": "cuando"
+        },
+        {
+          "t": 1.04,
+          "text": "me"
+        },
+        {
+          "t": 1.46,
+          "text": "miras"
+        },
+        {
+          "t": 1.84,
+          "text": "se"
+        },
+        {
+          "t": 1.98,
+          "text": "hace"
+        },
+        {
+          "t": 2.22,
+          "text": "agua"
+        },
+        {
+          "t": 2.44,
+          "text": "la"
+        },
+        {
+          "t": 3.34,
+          "text": "boca"
+        }
+      ]
+    },
+    {
+      "end": 7.02,
+      "words": [
+        {
+          "t": 4.36,
+          "text": "Calma’"
+        },
+        {
+          "t": 4.66,
+          "text": "mi"
+        },
+        {
+          "t": 4.94,
+          "text": "sed"
+        },
+        {
+          "t": 4.96,
+          "text": "desde"
+        },
+        {
+          "t": 5.54,
+          "text": "que"
+        },
+        {
+          "t": 5.78,
+          "text": "estás"
+        },
+        {
+          "t": 6.38,
+          "text": "aquí"
+        }
+      ]
+    },
+    {
+      "end": 11.38,
+      "words": [
+        {
+          "t": 7.02,
+          "text": "Ay,"
+        },
+        {
+          "t": 7.18,
+          "text": "de"
+        },
+        {
+          "t": 7.34,
+          "text": "ti"
+        },
+        {
+          "t": 7.76,
+          "text": "todo"
+        },
+        {
+          "t": 7.94,
+          "text": "es"
+        },
+        {
+          "t": 8.66,
+          "text": "necesario,"
+        },
+        {
+          "t": 9.14,
+          "text": "todo"
+        },
+        {
+          "t": 9.4,
+          "text": "me"
+        },
+        {
+          "t": 9.86,
+          "text": "provoca"
+        }
+      ]
+    }
+  ],
+  "track": {
+    "displayStart": 30.22,
+    "duration": 191.6
+  }
+}

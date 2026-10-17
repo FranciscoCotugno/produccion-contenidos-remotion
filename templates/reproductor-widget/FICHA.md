@@ -1,5 +1,14 @@
 # Reproductor compacto sobre fondo
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** L07 (sobre el videoclip), C5 (sobre imagen, estética fría y nocturna), C6 (sobre imagen, estética cálida).
 - **Sale como:** video, 30 fps.
@@ -31,7 +40,7 @@ El fondo marca el clima (el videoclip, o una escena vacía con mood) y el widget
 
 ## Qué es fijo y qué varía
 - **Fijo:** el diseño de cada piel y la tipografía.
-- **Varía (props, `reproductorWidgetSchema`):** `tema` (título, artistas, portada, fragmento, letra, `track` para la barra), `piel`, `fondo` (tipo video o imagen, archivo, inicio, zoom, oscurecido, tinte), `texto` (modo y texto fijo), `posicion`, `ancho`, `adelantoLectura`, `safeZone`.
+- **Varía (props, `reproductorWidgetSchema`):** `tema` (título, artistas, portada, fragmento, letra, `track` para la barra), `piel`, `fondo` (tipo video o imagen, archivo, inicio, zoom, oscurecido, tinte), `texto` (modo y texto fijo), `posicion`, `ancho`, `adelantoLectura`, `franjaBotones`.
 
 ## Modos de texto
 1. **Frase fija** de mood (`texto.modo: "fijo"`).

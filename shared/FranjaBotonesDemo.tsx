@@ -3,20 +3,19 @@ import { z } from "zod";
 import { AbsoluteFill, useCurrentFrame, useVideoConfig } from "remotion";
 import { TIKTOK_SANS } from "./fonts";
 import { activeLineIndex, lineStarts } from "./lyrics";
-import { SafeZone, safeArea, safeZoneSchema } from "./SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "./FranjaBotones";
 import { temaSchema } from "./tema";
 
 // Composición de prueba de la base: título y letra de un tema de prueba
-// ubicados dentro de la zona segura, para ver la guía funcionando en 9:16
-// y en 1:1. No es un template.
+// a sangre, para ver la guia de la franja de botones en 9:16 y en 1:1. No es un template.
 
-export const safeZoneDemoSchema = z.object({ tema: temaSchema, safeZone: safeZoneSchema });
+export const franjaDemoSchema = z.object({ tema: temaSchema, franjaBotones: franjaBotonesSchema });
 
-export const SafeZoneDemo: React.FC<z.infer<typeof safeZoneDemoSchema>> = ({ tema, safeZone }) => {
+export const FranjaBotonesDemo: React.FC<z.infer<typeof franjaDemoSchema>> = ({ tema, franjaBotones }) => {
   const frame = useCurrentFrame();
   const { fps, width, height } = useVideoConfig();
   const t = frame / fps;
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const starts = lineStarts(tema.lyrics);
   const line = tema.lyrics[activeLineIndex(tema.lyrics, t, starts)];
 
@@ -47,7 +46,7 @@ export const SafeZoneDemo: React.FC<z.infer<typeof safeZoneDemoSchema>> = ({ tem
             .join(" ")}
         </div>
       </div>
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

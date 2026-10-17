@@ -30,8 +30,9 @@ import {
 } from "remotion";
 import { INTER, TIKTOK_SANS } from "../../shared/fonts";
 import { activeLineIndex, lineStarts } from "../../shared/lyrics";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const reproductorWidgetSchema = z.object({
   tema: temaSchema,
@@ -56,14 +57,14 @@ export const reproductorWidgetSchema = z.object({
   ancho: z.number().min(400).max(865).step(5),
   /** cuadros que cada línea de letra aparece antes de cantarse */
   adelantoLectura: z.number().int().min(0).max(15),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type ReproductorWidgetProps = z.infer<typeof reproductorWidgetSchema>;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionWidget: CalculateMetadataFunction<ReproductorWidgetProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionWidget: CalculateMetadataFunction<ReproductorWidgetProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.fondo.tipo === "video" ? props.fondo.src : "");
 
 /**
  * Medidas del widget de vidrio, tomadas de la imagen de referencia de Cotu
@@ -289,11 +290,11 @@ const TEXTO = { px: 52, interlineado: 1.15, letrasPorRenglon: 26, separacion: 34
 const renglones = (s: string) => Math.min(3, Math.max(1, Math.ceil(s.length / TEXTO.letrasPorRenglon)));
 
 export const ReproductorWidget: React.FC<ReproductorWidgetProps> = (props) => {
-  const { tema, fondo, texto, posicion, ancho, adelantoLectura, safeZone } = props;
+  const { tema, fondo, texto, posicion, ancho, adelantoLectura, franjaBotones } = props;
   const frame = useCurrentFrame();
   const { fps, width, height, durationInFrames } = useVideoConfig();
   const t = frame / fps;
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
 
   // el widget no pasa del ancho libre del formato
   const anchoWidget = Math.min(ancho, area.right - area.left);
@@ -367,7 +368,7 @@ export const ReproductorWidget: React.FC<ReproductorWidgetProps> = (props) => {
       </div>
 
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

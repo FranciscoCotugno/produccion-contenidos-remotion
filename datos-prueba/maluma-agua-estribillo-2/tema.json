@@ -1,0 +1,17 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "colors": {
+    "primary": "#1B6B8C",
+    "secondary": "#4FC3E8",
+    "text": "#FFFFFF"
+  },
+  "lyrics": [],
+  "fragment": {
+    "src": "media/maluma-aguashakira/vertEstribillo2.mp4",
+    "start": 0,
+    "end": 31.42
+  },
+  "_nota": "Sin letra sincronizada: el video no tiene el estribillo cantado (Whisper solo oye 'Ey, Shak, no me mire asi' y 'Como!', incluso sobre la voz separada). Decision de Cotu del 2026-10-15: va con una frase fija, como los de baile."
+}

@@ -23,8 +23,9 @@ import {
   type CalculateMetadataFunction,
 } from "remotion";
 import { INTER } from "../../shared/fonts";
-import { SafeZone, safeArea, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
+import { metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const notaCelularSchema = z.object({
   tema: temaSchema,
@@ -42,14 +43,14 @@ export const notaCelularSchema = z.object({
   fecha: z.string(),
   /** la tarjeta del tema entra desde abajo al terminar el tipeo */
   mostrarTarjeta: z.boolean(),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type NotaCelularProps = z.infer<typeof notaCelularSchema>;
 
 /** La duración sale del fragmento: inicio y fin. */
-export const duracionNotaCelular: CalculateMetadataFunction<NotaCelularProps> = ({ props }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * 30)),
-});
+/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
+export const duracionNotaCelular: CalculateMetadataFunction<NotaCelularProps> = ({ props }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, "");
 
 /** Medidas de la app, en puntos de pantalla (la de un iPhone, 393 pt de ancho). */
 const PT = {
@@ -177,13 +178,13 @@ const tiemposTipeo = (texto: string, velocidad: number, desde: number, hasta: nu
 
 // --- la pieza --------------------------------------------------------------------------
 
-export const NotaCelular: React.FC<NotaCelularProps> = ({ tema, piel, titulo, texto, velocidad, fecha, mostrarTarjeta, safeZone }) => {
+export const NotaCelular: React.FC<NotaCelularProps> = ({ tema, piel, titulo, texto, velocidad, fecha, mostrarTarjeta, franjaBotones }) => {
   const frame = useCurrentFrame();
   const { fps, width, height, durationInFrames } = useVideoConfig();
   const t = frame / fps;
   const c = PIELES[piel];
   const u = (pt: number) => (pt * width) / PT.pantalla;
-  const area = safeArea(width, height);
+  const area = areaDelCuadro(width, height);
   const duracion = durationInFrames / fps;
   const margenTexto = Math.max(u(PT.margenTexto), area.left);
 
@@ -327,7 +328,7 @@ export const NotaCelular: React.FC<NotaCelularProps> = ({ tema, piel, titulo, te
       </div>
 
       <Html5Audio src={staticFile(tema.fragment.src)} trimBefore={Math.round(tema.fragment.start * fps)} />
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

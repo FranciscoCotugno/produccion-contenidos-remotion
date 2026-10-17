@@ -1,5 +1,14 @@
 # Letra sobre video
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** L08 (letra sobre el videoclip), L11 (letra sobre material en vivo), POV1 a POV8 (material de nicho).
 - **Sale como:** video, 30 fps.
@@ -42,7 +51,7 @@ La letra va en minúscula. Los textos fijos van tal cual se escriben ("POV:" en 
 
 ## Qué es fijo y qué varía
 - **Fijo:** el estilo del texto.
-- **Varía (props, `letraSobreVideoSchema`):** `tema` (fragmento de audio y letra), `video` (archivo, inicio, oscurecido), `modo`, `textoFijo`, `posicionHook`, `adelantoLectura`, `safeZone`.
+- **Varía (props, `letraSobreVideoSchema`):** `tema` (fragmento de audio y letra), `video` (archivo, inicio, oscurecido), `modo`, `textoFijo`, `posicionHook`, `adelantoLectura`, `franjaBotones`.
 
 ## Tiempos y animación
 - El texto fijo está desde el primer cuadro.
@@ -62,6 +71,48 @@ Por tema: los cuatro modos y el POV en 9:16, y además la letra y el POV en 1:1 
 ## Se repite con otros moldes
 - La letra con adelanto de lectura y fundido corto: también en `reproductor-widget` y `reproductor-app`.
 - El video de fondo en loop con `Html5Video`: también en `brat-puro`.
+
+## Modo subtítulo fino (pedido 1, 2026-10-17)
+
+No es un modo aparte: es el mismo molde con otros valores en la prop `texto`.
+Sale de la referencia `assets/referencias/11-letra-sobre-videoclip`
+(`@soloporenata`, 495,2 mil likes), que es **4:3 apaisado**, el formato de las
+cuentas con mejores números del relevamiento. Por eso el molde ahora también
+sale en **4:3 (1440×1080)**, además de 9:16, 1:1 y 3:4.
+
+Lo que define al formato es que **el texto no compita con la imagen**: chico,
+fino, en minúscula, a media altura, con una sombra apenas marcada, sobre el
+videoclip sin oscurecer.
+
+**Medido sobre el fotograma de la referencia** (1440 px de ancho): altura de
+minúscula 22 px, caja del texto 36 px, centro vertical al 50,2 % del alto.
+Renderizando y midiendo igual, eso equivale a **tamaño 33** en la escala del
+molde (que se mide sobre 1080 de ancho y se escala sola a los demás formatos).
+
+| Perilla | De siempre | Subtítulo fino |
+|---|---|---|
+| `texto.tamano` | 52 | 33 (ver abajo) |
+| `texto.peso` | 500 | 300 |
+| `texto.altura` | 0,5 | 0,5 |
+| `texto.sombra` | `normal` | `media` |
+| `texto.ancho` | 640 | 760 |
+
+**La letra ya salía en minúscula** antes de este pedido: el molde la baja siempre.
+No hizo falta tocarlo.
+
+**Excepción al mínimo de 50 px de `CLAUDE.md`.** A 33 el texto queda muy por
+debajo, y es a propósito: respetarlo rompe el formato. Es la segunda excepción
+anotada, junto con `brat-minimal`.
+
+**El tamaño no quedó cerrado en uno solo.** Cotu miró 52, 44, 38, 33 y 30 y le
+sirvieron todos: la idea es que cada cuenta use el suyo y así no se parezcan
+entre ellas. 33 queda como el valor del preset porque es el que mide igual que
+la referencia, pero cualquiera de los cinco es válido.
+
+La sombra quedó en `media`, un escalón más que `suave`, por pedido de Cotu.
+
+Las comparaciones para elegir en Studio están en `ejemplos.ts` como
+`Sub-Tamano-*`, `Sub-Altura-*` y `Sub-Sombra-*`, todas en 4:3 sobre el videoclip.
 
 ## Referencias
 Ver `referencias/letra-sobre-video/REFERENCIAS.md`.

@@ -1,5 +1,14 @@
 # Brat puro
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** L01 (fondo blanco, letra negra), L12 (fondo negro, letra blanca).
 - **Sale como:** video.
@@ -46,7 +55,7 @@ En la referencia, el último renglón se estira solo cuando ya está completo: "
 | `fondo` | `tipo` (`color` / `video` / `imagen`), `src`, `inicio`, `desenfoque` (px), `velo` (0–1) | liso (`color`) |
 | `golpeBeat` | el bloque crece apenas en cada tiempo (escala extra, 0 = apagado); usa `tema.beats` | 0 |
 | `efectos` | textura opcional: `grano` (0–0,4), `polvo` (sí/no), `temblor` (0–2), `halacion` (0–1), `desenfoque` (px) | versión "película" por piel (`EFECTOS_PELICULA` en `ejemplos.ts`) |
-| `safeZone` | guía de zona segura (solo Studio) | apagada |
+| `franjaBotones` | guía de zona segura (solo Studio) | apagada |
 
 Tamaño de letra a escala de la referencia: "Suena" a tamaño máximo ocupa el 61 % del ancho del bloque, como en el original (Archivo Narrow mide 2,37 em en "Suena": 0,61 × 760 / 2,37 ≈ 196 px; se calculó con 760 de ancho, antes de bajarlo a 740). En la referencia el bloque ocupa el 38 % del ancho del cuadrado (unos 410 px en 1080); acá es más grande (740) para que se lea mejor en el celular.
 

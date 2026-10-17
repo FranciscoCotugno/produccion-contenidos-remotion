@@ -11,7 +11,7 @@ import React, { useEffect, useState } from "react";
 import { z } from "zod";
 import { AbsoluteFill, Img, continueRender, delayRender, staticFile, useVideoConfig } from "remotion";
 import { GEIST } from "../../shared/fonts";
-import { SafeZone, safeZoneSchema } from "../../shared/SafeZone";
+import { FranjaBotones, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 
 export const tarjetaLetraSchema = z.object({
@@ -28,7 +28,7 @@ export const tarjetaLetraSchema = z.object({
   colorFondo: z.string(),
   /** lado de la portada y centro vertical del conjunto, en px */
   tarjeta: z.object({ portada: z.number().min(300).max(800).step(5), centroY: z.number().min(300).max(1100).step(5) }),
-  safeZone: safeZoneSchema,
+  franjaBotones: franjaBotonesSchema,
 });
 export type TarjetaLetraProps = z.infer<typeof tarjetaLetraSchema>;
 
@@ -134,7 +134,7 @@ const useColorPortada = (src: string, forzado: string, respaldo: string) => {
   return color;
 };
 
-export const TarjetaLetra: React.FC<TarjetaLetraProps> = ({ tema, piel, fondo, colorFondo, tarjeta, safeZone }) => {
+export const TarjetaLetra: React.FC<TarjetaLetraProps> = ({ tema, piel, fondo, colorFondo, tarjeta, franjaBotones }) => {
   const { width } = useVideoConfig();
   const base = useColorPortada(tema.cover, colorFondo, tema.colors?.primary ?? "#535353");
   if (!base) return null;
@@ -196,7 +196,7 @@ export const TarjetaLetra: React.FC<TarjetaLetraProps> = ({ tema, piel, fondo, c
         <div style={{ marginTop: 6, fontSize: T.artistas, fontWeight: 500, opacity: 0.85, lineHeight: 1.2, maxWidth: T.anchoTexto }}>{tema.artists}</div>
       </div>
 
-      <SafeZone config={safeZone} />
+      <FranjaBotones config={franjaBotones} />
     </AbsoluteFill>
   );
 };

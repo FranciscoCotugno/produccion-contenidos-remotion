@@ -109,3 +109,15 @@ export const FONT_LIST = [
   { name: "Inter", family: INTER },
   { name: "AKONY", family: AKONY },
 ];
+
+/**
+ * Suma los emojis de licencia abierta como respaldo de una familia, para textos
+ * que mezclan letras y emojis (un hook como "SHALUMA ES REAL 🥵"). Sin esto el
+ * emoji cae en el del sistema operativo, que el CLAUDE.md no permite: tiene que
+ * ser propio o de licencia abierta.
+ */
+export const conEmoji = (familia: string) =>
+  familia
+    .split(", ")
+    .flatMap((f, i) => (i === 0 ? [f, "'Noto Color Emoji'"] : [f]))
+    .join(", ");

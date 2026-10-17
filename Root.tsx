@@ -1,9 +1,10 @@
 import React from "react";
 import { Composition, Still } from "remotion";
 import { FontSpecimen, fontSpecimenSchema } from "./shared/FontSpecimen";
-import { SafeZoneDemo, safeZoneDemoSchema } from "./shared/SafeZoneDemo";
-import { safeZoneOff } from "./shared/SafeZone";
+import { FranjaBotonesDemo, franjaDemoSchema } from "./shared/FranjaBotonesDemo";
+import { franjaOff } from "./shared/FranjaBotones";
 import { temaSchema, type Tema } from "./shared/tema";
+import { metadataDeFragmento } from "./shared/fpsFuente";
 import { ReproductorApp, reproductorAppSchema } from "./templates/reproductor-app/ReproductorApp";
 import { ejemplosReproductorApp } from "./templates/reproductor-app/ejemplos";
 import { BratPuro, bratPuroSchema, duracionBratPuro } from "./templates/brat-puro/BratPuro";
@@ -39,10 +40,9 @@ const temas = {
   aQuienLeImporta: temaSchema.parse(aQuienLeImporta),
 };
 
-/** La duración sale del fragmento: fin menos inicio. */
-const durationFromTema = <P extends { tema: Tema }>({ props }: { props: P }) => ({
-  durationInFrames: Math.max(1, Math.round((props.tema.fragment.end - props.tema.fragment.start) * FPS)),
-});
+/** La duración sale del fragmento y el fps del video del tema (ver shared/fpsFuente). */
+const durationFromTema = <P extends { tema: Tema }>({ props }: { props: P }) =>
+  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.tema.fragment.src);
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -57,9 +57,9 @@ export const RemotionRoot: React.FC = () => (
       defaultProps={{ sample: "se hace agua la boca" }}
     />
     <Composition
-      id="SafeZone-9x16"
-      component={SafeZoneDemo}
-      schema={safeZoneDemoSchema}
+      id="FranjaBotones-9x16"
+      component={FranjaBotonesDemo}
+      schema={franjaDemoSchema}
       width={1080}
       height={1920}
       fps={FPS}
@@ -67,19 +67,19 @@ export const RemotionRoot: React.FC = () => (
       calculateMetadata={durationFromTema}
       defaultProps={{
         tema: temas.agua,
-        safeZone: { show: true, capture: "safezone/captura-tiktok-iphone.jpg", captureOpacity: 0.5 },
+        franjaBotones: { show: true, capture: "safezone/captura-tiktok-iphone.jpg", captureOpacity: 0.5 },
       }}
     />
     <Composition
-      id="SafeZone-1x1"
-      component={SafeZoneDemo}
-      schema={safeZoneDemoSchema}
+      id="FranjaBotones-1x1"
+      component={FranjaBotonesDemo}
+      schema={franjaDemoSchema}
       width={1080}
       height={1080}
       fps={FPS}
       durationInFrames={1}
       calculateMetadata={durationFromTema}
-      defaultProps={{ tema: temas.aQuienLeImporta, safeZone: { ...safeZoneOff, show: true } }}
+      defaultProps={{ tema: temas.aQuienLeImporta, franjaBotones: { ...franjaOff, show: true } }}
     />
     {ejemplosReproductorApp.map(({ id, props }) => (
       <Composition

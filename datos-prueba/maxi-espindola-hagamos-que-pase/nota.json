@@ -1,5 +1,5 @@
 {
-  "_nota": "Notas de prueba de nota-celular (C7). confesion y lista salen de textos.txt (aprobadas por Cotu). borrador la redacto Code el 2026-10-09 porque la tanda 1 pide 3 piezas y en este molde el fragmento solo cambia el audio: repetir una nota daria dos piezas iguales en pantalla. La ultima linea es cita literal de la letra.",
+  "_nota": "Notas de nota-celular (C7). confesion y lista salen de textos.txt. letra-F1/F2/F3 son PRUEBA del 2026-10-14: en vez de un texto inventado, la letra literal del fragmento, idea de Cotu. Pendiente de aprobacion.",
   "confesion": {
     "titulo": "no enviado",
     "texto": "no sé si es buena idea.\npero hoy tengo ganas de salir\ny de que estés vos.\nsolo hagamos que pase"
@@ -11,5 +11,17 @@
   "borrador": {
     "titulo": "borrador",
     "texto": "no sé si mandártelo.\npero cada vez que suena\nme acuerdo de esa noche.\nperdóname la intensidad"
+  },
+  "letra-F1": {
+    "titulo": "Hagamos que pase",
+    "texto": "La luna nos sacó a bailar\nTú y yo toda la noche\nCalmando la curiosidad\nSi es buena idea, no sé\nSolo sé que contigo quiero terminar.\nBailando toda la noche\nPerdóname la intensidad\nSé que no me conoces\nPero estamos a un solo trago de empezar."
+  },
+  "letra-F2": {
+    "titulo": "Hagamos que pase",
+    "texto": "y ahora\nSomos dos extraños con la mirada perdida de frente\nBuscando callarnos la mente.\nY si terminamos aquí,\nen medio de tanta gente, no es por accidente."
+  },
+  "letra-F3": {
+    "titulo": "Hagamos que pase",
+    "texto": "Y para qué dejar que pase otra canción\nSi se me ve en la cara cuál es mi intención\nYa no hay más que hablar\nSolo hagamos que pase."
   }
 }

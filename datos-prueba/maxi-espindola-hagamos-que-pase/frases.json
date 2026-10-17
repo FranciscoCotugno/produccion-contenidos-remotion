@@ -1,0 +1,15 @@
+{
+  "_nota": "Banco de frases por cuenta, aprobado por Cotu el 2026-10-14. Cada pieza toma una frase distinta por indice, asi no se repiten dentro de la cuenta. Si faltan frases para las piezas que pide el plan, el typecheck falla: no se completa inventando. L08 son citas literales de la letra (lista de frases clave de la bajada); L11 es texto propio de la cuenta, en voseo y minuscula.",
+  "L08": [
+    "Solo hagamos que pase",
+    "La luna nos sacó a bailar",
+    "Pero estamos a un solo trago de empezar",
+    "Perdóname la intensidad"
+  ],
+  "L11": [
+    "cuando la tocan en vivo:",
+    "el momento en que la reconocen:",
+    "la parte que todos esperan:",
+    "esto en vivo es otra cosa"
+  ]
+}

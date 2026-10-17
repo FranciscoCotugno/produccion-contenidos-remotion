@@ -1,0 +1,16 @@
+{
+  "title": "AGUA",
+  "artists": "Maluma, Shakira",
+  "cover": "",
+  "colors": {
+    "primary": "#1B6B8C",
+    "secondary": "#4FC3E8",
+    "text": "#FFFFFF"
+  },
+  "lyrics": [],
+  "fragment": {
+    "src": "media/maluma-aguashakira/vertBailando3.mp4",
+    "start": 0.0,
+    "end": 13.21
+  }
+}

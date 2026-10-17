@@ -1,12 +1,14 @@
 // Datos de ejemplo del molde: con qué tema, piel y opciones se arma cada
 // composición en Studio.
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
 import siSaleElSol1 from "../../datos-prueba/fmk-si-sale-el-sol-1/tema.json";
 import siSaleElSol2 from "../../datos-prueba/fmk-si-sale-el-sol-2/tema.json";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import maxi1a from "../../datos-prueba/maxi-espindola-hagamos-que-pase-1a/tema.json";
+import aguaLyric from "../../datos-prueba/maluma-agua-lyric-1/tema.json";
+import agua from "../../datos-prueba/maluma-agua-estribillo/tema.json";
 import maxi2 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-2/tema.json";
 import maxi3 from "../../datos-prueba/maxi-espindola-hagamos-que-pase-3/tema.json";
 import type { BratPuroProps } from "./BratPuro";
@@ -48,7 +50,7 @@ const base: Omit<BratPuroProps, "tema"> = {
   efectos: EFECTOS_PELICULA.blanca,
   fondo: FONDO_LISO,
   golpeBeat: 0,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 };
 
 const sol1 = temaSchema.parse(siSaleElSol1);
@@ -66,7 +68,25 @@ const maxiL01 = [
 const fmk = { tipografia: "tiktok-sans-angosta" } as const;
 const negra = { piel: "negra", efectos: EFECTOS_PELICULA.negra } as const;
 
+// Campana Maluma "AGUA", estribillo. El fragmento apunta al AUDIO del tema (los
+// loops vienen mudos), y el video va como fondo: dura 7,8 s para una pieza de
+// 11,4, asi que se repite solo (ver shared/VideoEnBucle).
+const aguaTema = temaSchema.parse(agua);
+const LOOP_1 = "media/maluma-aguashakira/loop1.mp4";
+const LOOP_2 = "media/maluma-aguashakira/loop2.mp4";
+const fondoLoop = (src: string, desenfoque: number) =>
+  ({ tipo: "video", src, inicio: 0, desenfoque, velo: desenfoque > 0 ? 0.5 : 0.35 }) as const;
+
 export const ejemplosBratPuro: { id: string; props: BratPuroProps }[] = [
+  // Las variantes que pidio Cotu el 2026-10-15
+  { id: "Maluma-Brat-Desenfoque", props: { ...base, ...negra, tema: aguaTema, fondo: fondoLoop(LOOP_1, 14) } },
+  { id: "Maluma-Brat-Nitido", props: { ...base, ...negra, tema: aguaTema, fondo: fondoLoop(LOOP_1, 0) } },
+  { id: "Maluma-Brat-Nitido-Loop2", props: { ...base, ...negra, tema: aguaTema, fondo: fondoLoop(LOOP_2, 0) } },
+  // fondo blanco liso, con el tratamiento de pelicula (grano, polvo, temblor)
+  { id: "Maluma-Brat-Blanco", props: { ...base, tema: aguaTema } },
+  // el mismo fragmento del lyric, con el video de fondo nitido
+  { id: "Agua-Dinamico-Puro", props: { ...base, ...negra, tema: temaSchema.parse(aguaLyric),
+    fondo: { tipo: "video", src: "media/maluma-aguashakira/lyric1.mp4", inicio: 0, desenfoque: 0, velo: 0.35 } } },
   { id: "BratPuro-Blanca-SiSaleElSol-1", props: { ...base, ...fmk, tema: sol1 } },
   { id: "BratPuro-Blanca-SiSaleElSol-2", props: { ...base, ...fmk, tema: sol2 } },
   { id: "BratPuro-Negra-InstintoLuv", props: { ...base, ...negra, tema: instinto } },

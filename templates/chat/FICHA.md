@@ -1,5 +1,14 @@
 # Chat
 
+> **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
+> segura** quedó como registro de cómo se construyó el molde, **no como regla**.
+> Hoy las composiciones van a sangre completa: la única precaución es la columna
+> de botones de TikTok sobre el borde derecho, y solo en 9:16. La prop que antes
+> se llamaba `safeZone` ahora es `franjaBotones` y solo prende una guía en Studio.
+> Tampoco hay marca de agua en ningún molde, y un molde puede salir en varios
+> formatos. Ver `CLAUDE.md`.
+
+
 ## Identificación
 - **Cuentas:** C3 (chat de a dos, modo oscuro), R1 (chat claro con contador o racha), R3 (mensaje directo estilo Instagram).
 - **Sale como:** video.
@@ -57,7 +66,7 @@ Cada mensaje: `tipo`, `de` (`yo` a la derecha, `otro` a la izquierda), `t` (segu
 
 ## Qué es fijo y qué varía
 - **Fijo:** el diseño de cada piel, las tipografías y la hora de los mensajes.
-- **Varía (props, `chatSchema`):** `tema` (fragmento, letra, título, artistas, portada), `piel`, `mensajes`, `n` (contador), `hora`, `cabecera` (`mostrar`, `nombre`, `estado`), `escala`, `iconoAudio` (`nota` / `portada`), `letraEnVideo`, `palabrasEnVideo` (3), `adelantoLectura` (3 cuadros), `animacion` (`fija` / `en-vivo`), `ladoMio` (`izquierda` / `derecha`), `ancho` (`cuadro` / `zonaSegura`), `barraEscribir`, `safeZone`. (`iconoAudio` queda para si vuelve el reproductor.)
+- **Varía (props, `chatSchema`):** `tema` (fragmento, letra, título, artistas, portada), `piel`, `mensajes`, `n` (contador), `hora`, `cabecera` (`mostrar`, `nombre`, `estado`), `escala`, `iconoAudio` (`nota` / `portada`), `letraEnVideo`, `palabrasEnVideo` (3), `adelantoLectura` (3 cuadros), `animacion` (`fija` / `en-vivo`), `ladoMio` (`izquierda` / `derecha`), `ancho` (`cuadro` / `zonaSegura`), `barraEscribir`, `franjaBotones`. (`iconoAudio` queda para si vuelve el reproductor.)
 
 ## Modos
 - **C3:** con respuesta ("escuchá esto y pensá en mí" → audio → video → "jaja justo la estaba escuchando") o en visto (el último mensaje queda sin respuesta).

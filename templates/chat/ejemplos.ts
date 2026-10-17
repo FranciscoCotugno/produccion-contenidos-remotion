@@ -1,7 +1,7 @@
 // Datos de ejemplo del molde: con qué tema, piel y conversación se arma cada
 // composición en Studio. Las conversaciones salen de datos-prueba/<tema>/chats.json.
 
-import { safeZoneOff } from "../../shared/SafeZone";
+import { franjaOff } from "../../shared/FranjaBotones";
 import { temaSchema, type Tema } from "../../shared/tema";
 import instintoLuv from "../../datos-prueba/instinto-luv/tema.json";
 import chatsInstinto from "../../datos-prueba/instinto-luv/chats.json";
@@ -31,7 +31,7 @@ const base: Omit<ChatProps, "tema" | "mensajes" | "n" | "cabecera"> = {
   barraEscribir: true,
   palabrasEnVideo: 3,
   adelantoLectura: 3,
-  safeZone: safeZoneOff,
+  franjaBotones: franjaOff,
 };
 
 type Conversacion = { contacto: string; n?: number; mensajes: unknown[] };
