@@ -143,19 +143,21 @@ El rótulo de la pieza ("TOP 4 DEL MES") **no sale de los datos**: es texto
 editorial. Los de las dos listas de prueba son **de relleno** y están para que el
 molde tenga algo que mostrar. Mismo caso que los hooks de `letra-sobre-video`.
 
-## Para decidir en Studio
+## Decidido (Cotu, 2026-10-19)
 
-1. **Orden de revelación** (`Comparar-Orden-Al1` / `-Del1`). Hoy va del último al
-   1, como el fotograma de referencia: el 1 queda para el final.
-2. **Con tarjeta de "sonando ahora" o sin ella** (`Comparar-Tarjeta-Con` / `-Sin`).
-3. **De qué lado va el panel** (`Comparar-Panel-Izquierda` / `-Derecha`).
-4. **El contorno** (`Comparar-Contorno-Con` / `-Sin`).
-5. **Color del panel** (`Comparar-Color-Amarillo` / `-Blanco`).
-6. **Fondo:** clip o color liso (`ListaNumerada-FondoColor-9x16`).
-7. **Cantidad de ítems:** las pruebas son de 4 porque hay 4 temas con portada,
-   audio y videoclip en el repo. El esquema acepta de 2 a 10.
-8. **Segundos por tema:** 5 en las pruebas (Cotu los bajó de 7,5 el 2026-10-19).
-   Salen de los datos, no del molde: es `audio.end - audio.start` de cada ítem.
+Aplicando el criterio de que **el molde es la unidad y varias variantes se eligen
+por pieza**, de las ocho preguntas que tenía la ficha quedan cerradas así:
+
+| | Queda |
+|---|---|
+| Orden de revelación | **Del último al 1.** Que el número 1 quede para el final es el motor del formato: el que mira se queda para verlo. La otra opción sigue en `orden` |
+| Contorno del panel | **Con contorno.** No es gusto: los números van sobre un clip y sin contorno se pierden. Ver `Comparar-Contorno-Sin` |
+| Tarjeta de "sonando ahora" | Las dos funcionan, **se elige por pieza** |
+| Lado del panel | Las dos funcionan, **se elige por pieza** |
+| Color del panel | **Por pieza**, según el clip |
+| Fondo clip o color | **Resuelto solo**: desde el 19/10 cada ítem muestra su propio videoclip, así que el fondo general es nada más que el respaldo |
+| Cantidad de ítems | Es dato, no molde. El esquema acepta de 2 a 10 |
+| Segundos por tema | 5. Salen de los datos: `audio.end - audio.start` de cada ítem |
 
 ## Referencias
 

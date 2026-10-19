@@ -19,7 +19,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 12 | ~~`tipografico`~~ | L10 | Video | Desde cero | **De baja** (2026-10-06, decisión de Cotu): no convenció. |
 | 12a | ~~`bloque-palabra`~~ | L10 | Video | Rehizo `tipografico` (pedido 3) | **De baja** (2026-10-18, decisión de Cotu): vio el video y no le gustó el contenido. Segunda vez que se cae este formato. L10 sigue sin molde. |
 | 12b | `panel-letra` | lyrics puras (el panel de letra abierto de una app) | Video | Desde cero (pedido 2) | **Terminado** (9:16, 1:1, 3:4, 4:3). Variantes elegidas por Cotu el 2026-10-17 |
-| 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | En revisión con Cotu (9:16, 4:3, 1:1). **Destrabado el 2026-10-19**: el ranking es de un solo artista, así que no hace falta material de otros sellos |
+| 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | **Terminado** (9:16, 4:3, 1:1). Destrabado el 2026-10-19: el ranking es de un solo artista, así que no hace falta material de otros sellos |
 | 13 | `prensa` | P1, P2 | Video | Desde cero (pedido 5) | En revisión con Cotu (9:16, 1:1, 4:3). Falta la identidad de cada medio y los titulares reales |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
 
