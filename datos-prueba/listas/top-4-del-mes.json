@@ -1,0 +1,29 @@
+{
+  "titulo": "TOP 4 DEL MES",
+  "items": [
+    {
+      "title": "AGUA",
+      "artists": "Maluma, Shakira",
+      "cover": "media/maluma-aguashakira/portada.jpg",
+      "audio": { "src": "media/maluma-aguashakira/audio.mp3", "start": 30, "end": 37.5 }
+    },
+    {
+      "title": "Hagamos que pase",
+      "artists": "Maxi Espindola",
+      "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+      "audio": { "src": "media/maxi-espindola-hagamos-que-pase/audio.mp3", "start": 41.1, "end": 48.6 }
+    },
+    {
+      "title": "Si sale el sol",
+      "artists": "FMK",
+      "cover": "media/fmk-si-sale-el-sol/portada.jpg",
+      "audio": { "src": "media/fmk-si-sale-el-sol/audio.mp3", "start": 27.25, "end": 34.75 }
+    },
+    {
+      "title": "instinto luv",
+      "artists": "Santy P",
+      "cover": "media/santy-p-insintoluv/santy-p-instintoluv.jpg",
+      "audio": { "src": "media/santy-p-insintoluv/santy-p-instintoluv.MP3", "start": 15, "end": 22.5 }
+    }
+  ]
+}

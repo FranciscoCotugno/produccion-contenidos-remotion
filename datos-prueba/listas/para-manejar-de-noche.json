@@ -1,0 +1,29 @@
+{
+  "titulo": "4 TEMAS PARA MANEJAR DE NOCHE",
+  "items": [
+    {
+      "title": "instinto luv",
+      "artists": "Santy P",
+      "cover": "media/santy-p-insintoluv/santy-p-instintoluv.jpg",
+      "audio": { "src": "media/santy-p-insintoluv/santy-p-instintoluv.MP3", "start": 11.33, "end": 17.33 }
+    },
+    {
+      "title": "Si sale el sol",
+      "artists": "FMK",
+      "cover": "media/fmk-si-sale-el-sol/portada.jpg",
+      "audio": { "src": "media/fmk-si-sale-el-sol/audio.mp3", "start": 40, "end": 46 }
+    },
+    {
+      "title": "AGUA",
+      "artists": "Maluma, Shakira",
+      "cover": "media/maluma-aguashakira/portada.jpg",
+      "audio": { "src": "media/maluma-aguashakira/audio.mp3", "start": 45, "end": 51 }
+    },
+    {
+      "title": "Hagamos que pase",
+      "artists": "Maxi Espindola",
+      "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
+      "audio": { "src": "media/maxi-espindola-hagamos-que-pase/audio.mp3", "start": 60, "end": 66 }
+    }
+  ]
+}

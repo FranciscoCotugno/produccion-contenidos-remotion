@@ -19,6 +19,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 12 | ~~`tipografico`~~ | L10 | Video | Desde cero | **De baja** (2026-10-06, decisión de Cotu): no convenció. |
 | 12a | ~~`bloque-palabra`~~ | L10 | Video | Rehizo `tipografico` (pedido 3) | **De baja** (2026-10-18, decisión de Cotu): vio el video y no le gustó el contenido. Segunda vez que se cae este formato. L10 sigue sin molde. |
 | 12b | `panel-letra` | lyrics puras (el panel de letra abierto de una app) | Video | Desde cero (pedido 2) | En revisión con Cotu (9:16, 1:1, 3:4, 4:3) |
+| 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | En revisión con Cotu (9:16, 4:3, 1:1). **Bloqueado por una decisión comercial**: de dónde salen los temas de otros sellos |
 | 13 | `prensa` | P1, P2 | Video | Desde cero | Pendiente |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
 
@@ -52,7 +53,8 @@ Acá se corta el laboratorio por ahora: **con estos 11 moldes se puede empezar a
 | `carrusel` | C1, C2, C8, R2 | Imágenes (2 por posteo) | 3:4 | `Carrusel-*` | un hook por cuenta y **una frase** de la letra (`carrusel.json`) |
 | `nota-celular` | C7 | Video | 1:1 | `Nota-*` | título y texto de la nota (`nota.json`) |
 | `panel-letra` | lyrics puras | Video | 9:16, 1:1, 3:4, 4:3 | `PanelLetra-*` | nada (la letra es toda la pieza) |
-| `bloque-palabra` | L10 y tipografía sobre color | Video | 4:3, 9:16, 1:1 | `BloquePalabra-*` | nada |
+| `bloque-palabra` | L10 y tipografía sobre color | Video | 4:3, 9:16, 1:1 | `BloquePalabra-*` | **de baja** |
+| `lista-numerada` | las 4 de recomendación | Video | 9:16, 4:3, 1:1 | `ListaNumerada-*` | la lista de temas y su rótulo (`datos-prueba/listas/`) |
 | `karaoke` | L09 | Video | 9:16, 1:1 | `Karaoke-*` | nada |
 
 ### Lo que decide una persona antes de producir
