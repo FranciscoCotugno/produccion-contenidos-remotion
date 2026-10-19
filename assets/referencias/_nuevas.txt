@@ -1,0 +1,21 @@
+# Referencias nuevas para bajar.
+#
+# Una línea por video:   carpeta|cuenta|url
+#
+# - "carpeta" es donde se guarda. Usá un nombre nuevo (15-, 16-...) para un
+#   formato que no tengamos, o una de las que ya están si es más material del
+#   mismo formato.
+# - "cuenta" es el @ sin arroba. Si la cuenta es nueva, agregale "-NUEVA" al
+#   final, que es lo que se hizo en octubre.
+# - "url" es el link del video.
+#
+# Las líneas que empiezan con # se ignoran, así que podés dejar notas.
+#
+# Después: powershell -ExecutionPolicy Bypass -File "D:\ESPACIO-REMOTION\assets\referencias\bajar-nuevas.ps1"
+#
+# OJO: los posteos de FOTOS de TikTok (la url dice /photo/ en vez de /video/)
+# no se pueden bajar con esta herramienta. Esos hay que guardarlos a mano
+# desde el navegador. Es lo que dejó a 09-carrusel sin material.
+#
+# ── Ejemplo del formato (borrá estas líneas cuando pongas las tuyas) ──
+# 15-nuevo-formato|alguna_cuenta-NUEVA|https://www.tiktok.com/@alguna_cuenta/video/1234567890123456789
