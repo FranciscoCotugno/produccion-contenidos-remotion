@@ -1,5 +1,17 @@
 # Bloque de letra palabra por palabra
 
+> **DE BAJA (2026-10-18, decisión de Cotu).** Vio el video exportado
+> (`out/BloquePalabra-Violeta-4x3.mp4`) y no le gustó: *"no está bueno el
+> contenido, no lo haría"*. **Es la segunda vez que se cae este formato**, después
+> de `tipografico` el 6 de octubre. L10 sigue sin molde.
+>
+> El molde funciona y está completo: queda acá por si cambia el criterio, y como
+> registro de qué se probó. **No usar en producción.**
+>
+> Para quien lo retome: lo que falta saber es *qué* no funcionó — el mecanismo de
+> encender palabras de a una, la pobreza de la letra sobre color plano, o la letra
+> misma. Cotu no lo precisó.
+
 ## Identificación
 - **Cuentas:** las de tipografía sobre color. Es lo que sostienen `@v.jxnior`,
   `@omarmusicc_` y `@01.91.h`, con **mediana de 219 mil vistas**, el número más
