@@ -51,10 +51,21 @@ En 3:4 TikTok muestra la imagen con bandas (ocupa de y = 240 a 1680 de la pantal
 ## Fotos de fondo (C4)
 En producción salen de los bancos de IA. Para probar se usan las de `assets/media/bancos/` (día para Si sale el sol, noche para instinto luv). Ojo: las de prueba son chicas (unos 675×1200): en 1080×1440 se ven estiradas; las de producción tienen que tener al menos 1080×1440.
 
-## Para decidir en Studio
-- Tamaño de la portada y posición del conjunto.
-- En C9, color automático o el del tema (`Comparar-Tarjeta-ColorTema-InstintoLuv`).
-- En C4, si la foto lleva desenfoque u oscurecido (hoy, sin nada).
+## Decidido en Studio (Cotu, 2026-10-19)
+
+| Decisión | Queda |
+|---|---|
+| Portada | **320** (bajó de 376) |
+| Altura del conjunto | 400, sin cambio |
+| C9, color de fondo | **El del tema**. El automático sacaba un marrón barroso que no se correspondía con la portada. Si un tema no trae colores, vuelve al automático |
+| C4, la foto | **Limpia**: sin desenfoque ni oscurecido |
+
+**Riesgo asumido con la foto limpia:** las fotos de prueba son oscuras y la
+tarjeta se lee bien. **Con una foto clara la tarjeta se pierde**, y a volumen de
+producción nadie va a mirar foto por foto para decidir si hay que oscurecerla. Se
+propuso un piso de oscurecido de 0,15–0,2 (invisible en fotos oscuras, salva las
+claras) y Cotu eligió dejarlo limpio. `fondo.oscurecer` sigue siendo prop: si
+aparece el problema, se sube por pieza o se pone el piso.
 
 ## Referencias
 Ver `referencias/tarjeta-letra/REFERENCIAS.md`: la imagen de mood con la tarjeta del tema al centro es la referencia de este diseño.

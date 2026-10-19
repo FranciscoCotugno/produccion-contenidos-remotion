@@ -15,9 +15,9 @@ export const FORMATO_TARJETA = { ancho: 1080, alto: 1440 } as const;
 
 const base: Omit<TarjetaLetraProps, "tema" | "piel" | "fondo"> = {
   colorFondo: "",
-  // en el tercio de arriba de la imagen (pedido de Cotu): el conjunto va de y ≈ 165 a 635;
-  // portada 376 (dos veces un 15 % menos que 520)
-  tarjeta: { portada: 376, centroY: 400 },
+  // en el tercio de arriba de la imagen (pedido de Cotu).
+  // Portada 320: Cotu la bajó de 376 el 2026-10-19.
+  tarjeta: { portada: 320, centroY: 400 },
   franjaBotones: franjaOff,
 };
 
@@ -28,6 +28,11 @@ const armar = (tema: Tema, t: Tarjeta, piel: TarjetaLetraProps["piel"]): Tarjeta
   ...base,
   tema,
   piel,
+  // C9 va con el color del tema, no con el automático (Cotu, 2026-10-19): el
+  // automático sacaba un marrón barroso que no se correspondía con la portada.
+  // Si un tema no trae colores, vacío = vuelve al automático.
+  colorFondo: piel === "c9-color" ? (tema.colors?.primary ?? "") : "",
+  // la foto de C4 va limpia, sin desenfoque ni oscurecido
   fondo: { foto: t.foto, desenfoque: 0, oscurecer: 0 },
 });
 
@@ -54,5 +59,27 @@ export const ejemplosTarjetaLetra: { id: string; props: TarjetaLetraProps }[] = 
   {
     id: "Comparar-Tarjeta-ColorTema-InstintoLuv",
     props: { ...armar(temas[0].tema, temas[0].tarjetas.una, "c9-color"), colorFondo: temas[0].tema.colors?.primary ?? "" },
+  },
+  { id: "Comparar-Tarjeta-ColorAuto-InstintoLuv", props: armar(temas[0].tema, temas[0].tarjetas.una, "c9-color") },
+
+  // Tamaño de la portada y altura del conjunto (ver FICHA)
+  ...([320, 376, 440] as const).map((portada) => ({
+    id: `Comparar-Tarjeta-Portada-${portada}`,
+    props: { ...armar(temas[0].tema, temas[0].tarjetas.una, "c4-foto"), tarjeta: { portada, centroY: 400 } },
+  })),
+  ...([340, 400, 500] as const).map((centroY) => ({
+    id: `Comparar-Tarjeta-Altura-${centroY}`,
+    props: { ...armar(temas[0].tema, temas[0].tarjetas.una, "c4-foto"), tarjeta: { portada: 376, centroY } },
+  })),
+
+  // C4: si la foto de fondo lleva desenfoque u oscurecido (hoy, sin nada)
+  { id: "Comparar-Tarjeta-Foto-Limpia", props: armar(temas[0].tema, temas[0].tarjetas.una, "c4-foto") },
+  {
+    id: "Comparar-Tarjeta-Foto-Oscurecida",
+    props: { ...armar(temas[0].tema, temas[0].tarjetas.una, "c4-foto"), fondo: { foto: temas[0].tarjetas.una.foto, desenfoque: 0, oscurecer: 0.3 } },
+  },
+  {
+    id: "Comparar-Tarjeta-Foto-Desenfocada",
+    props: { ...armar(temas[0].tema, temas[0].tarjetas.una, "c4-foto"), fondo: { foto: temas[0].tarjetas.una.foto, desenfoque: 10, oscurecer: 0.15 } },
   },
 ];

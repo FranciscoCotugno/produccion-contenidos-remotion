@@ -4,11 +4,11 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 
 | # | Molde | Cuentas que cubre | Sale como | Punto de partida | Estado |
 |---|---|---|---|---|---|
-| 1 | `reproductor-app` | L05, L06, L13 | Video | LyricPlayer del repo original | En iteración (piel Apple oscura) |
+| 1 | `reproductor-app` | L05, L06, L13 | Video | LyricPlayer del repo original | **Terminado** (9:16, piel Apple oscura). Variantes elegidas el 2026-10-19 |
 | 2 | `brat-puro` | L01, L12 | Video | Desde cero | Terminado (1:1) |
 | 2b | `brat-color` | L01, L12 (variante de `brat-puro`, para dar variedad) | Video | La mecánica de `brat-puro` | En iteración |
 | 3 | `chat` | C3, R1, R3 | Video | Desde cero | En iteración (WhatsApp oscuro y R3 tipo Instagram) |
-| 4 | `tarjeta-letra` | C4, C9 | Imagen (3:4) | Desde cero | En iteración |
+| 4 | `tarjeta-letra` | C4, C9 | Imagen (3:4) | Desde cero | **Terminado** (3:4). Variantes elegidas el 2026-10-19 |
 | 5 | `reproductor-widget` | L07, C5, C6 | Video | Desde cero | En revisión con Cotu |
 | 6 | `letra-sobre-video` | L08, L11, POV1 a POV8 | Video | Desde cero | Terminado (9:16, 1:1, 3:4) |
 | 7 | `brat-maximal` | L02, L03 | Video | LyricPunch del repo original | Terminado (1:1) |
