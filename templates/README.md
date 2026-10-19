@@ -9,7 +9,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 2b | `brat-color` | L01, L12 (variante de `brat-puro`, para dar variedad) | Video | La mecánica de `brat-puro` | En iteración |
 | 3 | `chat` | C3, R1, R3 | Video | Desde cero | En iteración (WhatsApp oscuro y R3 tipo Instagram) |
 | 4 | `tarjeta-letra` | C4, C9 | Imagen (3:4) | Desde cero | **Terminado** (3:4). Variantes elegidas el 2026-10-19 |
-| 5 | `reproductor-widget` | L07, C5, C6 | Video | Desde cero | En revisión con Cotu |
+| 5 | `reproductor-widget` | L07, C5, C6 | Video | Desde cero | **Terminado** (9:16, 1:1, 3:4). Las tres pieles quedan, a elección por pieza (2026-10-19) |
 | 6 | `letra-sobre-video` | L08, L11, POV1 a POV8 | Video | Desde cero | Terminado (9:16, 1:1, 3:4) |
 | 7 | `brat-maximal` | L02, L03 | Video | LyricPunch del repo original | Terminado (1:1) |
 | 8 | `brat-minimal` | L04 | Video | LyricFilm del repo original | Terminado (1:1, en B/N y en color) |
@@ -22,6 +22,16 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | En revisión con Cotu (9:16, 4:3, 1:1). **Destrabado el 2026-10-19**: el ranking es de un solo artista, así que no hace falta material de otros sellos |
 | 13 | `prensa` | P1, P2 | Video | Desde cero (pedido 5) | En revisión con Cotu (9:16, 1:1, 4:3). Falta la identidad de cada medio y los titulares reales |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
+
+> **El molde es la unidad, no la cuenta** (Cotu, 2026-10-19). Primero se cierran
+> los templates y sus variantes; el reparto de qué molde y qué piel usa cada
+> cuenta se decide después. Donde una ficha diga "esta piel es de tal cuenta",
+> leerlo como un ejemplo de uso, no como una asignación cerrada.
+>
+> Corolario: **varias variantes no se eligen de una vez para siempre, se eligen
+> por pieza.** Cotu, sobre las pieles del widget: *"me gustan todas, depende
+> 100 % del mood de la canción y la imagen de fondo"*. Lo que tiene que estar
+> cerrado es que la variante exista y funcione, no cuál se usa.
 
 **14 moldes cubren las 36 cuentas.** Las cuentas que comparten molde se diferencian por su piel (colores, tipografía, estética) o por el tipo de fondo.
 

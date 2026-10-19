@@ -65,3 +65,31 @@ export const ejemplosReproductorWidget: { id: string; formato: FormatoWidget; pr
   // L07: el videoclip con la letra
   { id: `Widget-L07-Vidrio-Letra-9x16-${id}`, formato: "9x16" as const, props: conVideo(tema) },
 ]);
+
+/** Comparaciones para cerrar el molde (ver FICHA, "Para decidir en Studio"). */
+const uno = temas[0];
+const item = uno.widgets["c5-frase"];
+export const compararWidget: { id: string; formato: FormatoWidget; props: ReproductorWidgetProps }[] = [
+  // oscurecido de la imagen de fondo
+  ...([0.2, 0.35, 0.55] as const).map((oscurecer) => ({
+    id: `Comparar-Widget-Oscurecer-${String(oscurecer).replace("0.", "")}`,
+    formato: "9x16" as const,
+    props: {
+      ...conImagen(uno.tema, "vidrio", item, "frio"),
+      fondo: { ...conImagen(uno.tema, "vidrio", item, "frio").fondo, oscurecer },
+    },
+  })),
+  // tinte
+  ...(["ninguno", "frio", "calido"] as const).map((tinte) => ({
+    id: `Comparar-Widget-Tinte-${tinte}`,
+    formato: "9x16" as const,
+    props: conImagen(uno.tema, "vidrio", item, tinte),
+  })),
+  // altura: automática contra fija al centro
+  { id: "Comparar-Widget-Altura-Auto", formato: "9x16" as const, props: conImagen(uno.tema, "vidrio", item, "frio") },
+  {
+    id: "Comparar-Widget-Altura-Centro",
+    formato: "9x16" as const,
+    props: { ...conImagen(uno.tema, "vidrio", item, "frio"), posicion: "centro" },
+  },
+];

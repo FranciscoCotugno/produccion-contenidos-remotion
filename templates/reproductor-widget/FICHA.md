@@ -59,10 +59,26 @@ El fondo marca el clima (el videoclip, o una escena vacía con mood) y el widget
 ## Zona segura
 Todo va dentro de la zona libre del formato (`safeArea`), con 40 px de margen. En 1:1 y 3:4, TikTok muestra el cuadro con bandas; la zona libre se calcula sobre cómo se ve en la app.
 
-## Para decidir en Studio
-- Si la altura automática elige bien en las imágenes de producción.
-- Oscurecido y tinte de cada piel; velocidad del zoom.
-- Qué piel va en cada cuenta (hoy: vidrio y negro para C5, negro-simple para C6, vidrio para L07).
+## Decidido en Studio (Cotu, 2026-10-19)
+
+**Las tres pieles quedan, y la elección es por pieza, no por cuenta.** Cotu:
+*"me gustan todas, depende 100 % del mood de la canción y la imagen de fondo"*.
+El molde no asigna una piel a una cuenta: ofrece las tres y quien arma la pieza
+elige según el material.
+
+| Decisión | Queda |
+|---|---|
+| Pieles | Las tres (`vidrio`, `negro`, `negro-simple`), a elección por pieza |
+| Oscurecido de la imagen | 0,35 por omisión. En 0,20 la foto compite con el widget; en 0,55 se aplana y deja de aportar |
+| Tinte y zoom | Sin cambio. También son por pieza, por el mismo criterio |
+| Altura del widget | **Automática** |
+
+**La altura automática no está cerrada del todo, y es honesto decirlo.** La
+pregunta era si elige bien *en las imágenes de producción*, y acá sólo hay dos
+imágenes de prueba. En esas dos elige bien: busca la franja más tranquila y
+esquiva el movimiento. Con fotos de otra composición puede fallar, y eso se ve
+recién con los bancos reales. Si falla seguido, `posicion` ya es prop y se fija
+a mano.
 
 ## Se repite con otros moldes
 - La barra con tiempos desde `track.displayStart` también está en `reproductor-app`.

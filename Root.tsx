@@ -16,7 +16,7 @@ import { FORMATO_CHAT, ejemplosChat } from "./templates/chat/ejemplos";
 import { TarjetaLetra, tarjetaLetraSchema } from "./templates/tarjeta-letra/TarjetaLetra";
 import { FORMATO_TARJETA, ejemplosTarjetaLetra } from "./templates/tarjeta-letra/ejemplos";
 import { ReproductorWidget, duracionWidget, reproductorWidgetSchema } from "./templates/reproductor-widget/ReproductorWidget";
-import { FORMATOS_WIDGET, ejemplosReproductorWidget } from "./templates/reproductor-widget/ejemplos";
+import { FORMATOS_WIDGET, ejemplosReproductorWidget, compararWidget } from "./templates/reproductor-widget/ejemplos";
 import { LetraSobreVideo, duracionLetraSobreVideo, letraSobreVideoSchema } from "./templates/letra-sobre-video/LetraSobreVideo";
 import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo } from "./templates/letra-sobre-video/ejemplos";
 import { BratMaximal, bratMaximalSchema, duracionBratMaximal } from "./templates/brat-maximal/BratMaximal";
@@ -157,7 +157,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={props}
       />
     ))}
-    {ejemplosReproductorWidget.map(({ id, formato, props }) => (
+    {[...ejemplosReproductorWidget, ...compararWidget].map(({ id, formato, props }) => (
       <Composition
         key={id}
         id={id}
