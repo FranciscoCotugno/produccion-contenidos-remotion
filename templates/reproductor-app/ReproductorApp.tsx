@@ -48,6 +48,16 @@ export const reproductorAppSchema = z.object({
   pesoLetra: z.enum(["light", "regular", "medium", "semibold", "bold"]),
   /** centro horizontal del reproductor y la letra: la pantalla o la zona libre de interfaz */
   centrar: z.enum(["pantalla", "zonaSegura"]),
+  /**
+   * Qué fracción del ancho disponible puede ocupar un tramo de letra antes de
+   * partirse. En 1 la línea usa todo el ancho (como estaba). Más chico parte
+   * las líneas largas en tramos cortos que entran uno después del otro: Cotu
+   * eligió la línea corta el 2026-10-19.
+   *
+   * Cada tramo entra **entero**, así que no hay recentrado en cada palabra, que
+   * es lo que hace que un molde se vea automático.
+   */
+  anchoLinea: z.number().min(0.4).max(1).step(0.02),
   desenfoqueFondo: z.number().min(0).max(80).step(1),
   franjaBotones: franjaBotonesSchema,
 });
@@ -224,6 +234,7 @@ export const ReproductorApp: React.FC<ReproductorAppProps> = ({
   revelado,
   pesoLetra,
   centrar,
+  anchoLinea,
   desenfoqueFondo,
   franjaBotones,
 }) => {
@@ -254,10 +265,11 @@ export const ReproductorApp: React.FC<ReproductorAppProps> = ({
     if (!tipografiaLista) return null;
     const medir = crearMedidor(peso);
     return {
-      lineas: tema.lyrics.map((l) => diagramar(l.words, medir, anchoLetra)),
+      // los tramos se cortan contra el ancho objetivo; el texto fijo no se parte
+      lineas: tema.lyrics.map((l) => diagramar(l.words, medir, anchoLetra * anchoLinea)),
       fijo: tamanoQueEntra(texto.fijo, medir, anchoLetra),
     };
-  }, [tipografiaLista, peso, tema.lyrics, texto.fijo, anchoLetra]);
+  }, [tipografiaLista, peso, tema.lyrics, texto.fijo, anchoLetra, anchoLinea]);
 
   const clip = (style: React.CSSProperties, muted: boolean) => (
     <OffthreadVideo

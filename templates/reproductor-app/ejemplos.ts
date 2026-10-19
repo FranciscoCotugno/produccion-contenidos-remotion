@@ -36,6 +36,9 @@ const base: Omit<ReproductorAppProps, "tema"> = {
   revelado: "linea",
   pesoLetra: "bold",
   centrar: "pantalla",
+  // línea corta: las frases largas se parten en tramos que entran uno después
+  // del otro (Cotu, 2026-10-19)
+  anchoLinea: 0.62,
   desenfoqueFondo: 38,
   franjaBotones: franjaOff,
 };
@@ -74,6 +77,13 @@ export const ejemplosReproductorApp: { id: string; props: ReproductorAppProps }[
   // Comparaciones para decidir en Studio
   { id: "Comparar-Peso-Bold", props: { ...base, tema: instinto, pesoLetra: "bold" } },
   { id: "Comparar-Peso-SemiBold", props: { ...base, tema: instinto, pesoLetra: "semibold" } },
+  // Las dos que faltaban cerrar (ver FICHA, "Para decidir en Studio")
+  { id: "Comparar-Linea-Corta", props: { ...base, tema: instinto, anchoLinea: 0.62 } },
+  { id: "Comparar-Linea-Larga", props: { ...base, tema: instinto, anchoLinea: 1 } },
+  { id: "Comparar-Revelado-Palabra", props: { ...base, tema: instinto, revelado: "palabra", anchoLinea: 1 } },
+  { id: "Comparar-Desenfoque-20", props: { ...base, tema: instinto, desenfoqueFondo: 20 } },
+  { id: "Comparar-Desenfoque-38", props: { ...base, tema: instinto, desenfoqueFondo: 38 } },
+  { id: "Comparar-Desenfoque-60", props: { ...base, tema: instinto, desenfoqueFondo: 60 } },
   { id: "ReproductorApp-AppleOscura-Agua", props: { ...base, tema: tema(agua, { reemplazo: true }) } },
   {
     id: "ReproductorApp-AppleOscura-AQuienLeImporta",

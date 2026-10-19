@@ -97,9 +97,23 @@ Reglas con que se eligió la escala: portada, título, barra de progreso y contr
 ## Notas para la implementación final
 - **Se repite con `brat-puro`:** esperar a que cargue la tipografía y medir texto con ella en un canvas (acá, para achicar y partir la línea de letra). En brat-puro apareció que, en el render en paralelo, algunas pestañas miden con la tipografía de reemplazo aunque `document.fonts` la dé por cargada; allá se resolvió esperando a que el canvas mida con la tipografía real. Este molde ya tiene la misma espera (antes de medir, comprueba que el canvas usa TikTok Sans y no la de reemplazo). Los renders exportados antes de este arreglo podrían tener alguna línea partida distinto en algunos cuadros.
 
-## Para decidir en Studio
-- Letra por línea (propuesta) o palabra por palabra, como hacía el LyricPlayer original.
-- Intensidad del desenfoque del fondo. (Tamaño de la tarjeta: decidido, 1,01.)
+## Decidido en Studio (Cotu, 2026-10-19)
+
+| Decisión | Queda |
+|---|---|
+| Revelado de la letra | **Por línea**, no palabra por palabra |
+| Largo de la fila | **Corto**: `anchoLinea` en 0,62, así las frases largas se parten en tramos |
+| Desenfoque del fondo | 38 (sin cambio) |
+| Tamaño de la tarjeta | 1,01 (decidido antes) |
+
+Cotu eligió la línea corta mirando un cuadro del modo palabra por palabra. Lo
+que le gustó fue **el largo**, no el mecanismo, así que se resolvió partiendo
+las frases largas en tramos cortos: cada tramo entra **entero**, con lo cual no
+hay recentrado en cada palabra —que es lo que hace que un molde se vea
+automático— y la fila queda del largo que quería.
+
+El modo palabra por palabra sigue disponible en la prop `revelado`
+(`Comparar-Revelado-Palabra`), pero no es el de producción.
 
 ## Referencias
 Ver `referencias/reproductor-app/REFERENCIAS.md`.
