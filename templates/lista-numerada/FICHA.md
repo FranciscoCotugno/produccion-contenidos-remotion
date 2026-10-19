@@ -12,10 +12,25 @@
 
 ## Qué es
 
-Un fondo (clip o color), un panel numerado pegado a un costado con **los números
-puestos desde el primer cuadro**, y los nombres que **se completan de a uno** a
-medida que suena cada tema. Arriba, una tarjeta de "sonando ahora" con la portada,
-el título y el artista.
+**El videoclip del tema que suena**, un panel numerado pegado a un costado con
+**los números puestos desde el primer cuadro**, y los nombres que **se completan de
+a uno** a medida que suena cada tema. Arriba, una tarjeta de "sonando ahora" con la
+portada, el título y el artista.
+
+## El ranking es de un solo artista
+
+Decisión de Cotu (2026-10-19): **las canciones del ranking son de un mismo
+artista**, salvo que se pida lo contrario. Un top de un artista, no una playlist
+mezclada.
+
+Esto **destraba el molde**. La pregunta comercial que lo bloqueaba —de dónde salen
+los temas de otros sellos para armar una playlist en una campaña paga— deja de
+existir: el catálogo es el del cliente.
+
+Las dos listas de prueba son de **cuatro artistas distintos**, y es a propósito: en
+el repo no hay cuatro temas de un mismo artista. Sirven para probar la mecánica,
+no son el caso de uso. **Para probarlo de verdad hace falta un catálogo con cuatro
+temas de un artista.**
 
 ## Por qué funciona
 
@@ -38,7 +53,29 @@ bloqueada.
 ## El dato que este molde necesita y los demás no
 
 **Es el único que no trabaja sobre un tema.** Recibe una lista: varios temas, cada
-uno con su nombre, su artista, su portada y **su propio recorte de audio**.
+uno con su nombre, su artista, su portada, **su propio recorte de audio** y **su
+propio videoclip**.
+
+## Cada tema muestra su videoclip
+
+Pedido de Cotu (2026-10-19): mientras suena un tema se ve **su** videoclip, no un
+fondo único para toda la pieza. Cada ítem trae su `video` (archivo y segundo de
+inicio); si viene vacío, se usa el fondo general del molde.
+
+### El problema de los cuadros por segundo, y por qué el ranking de un artista lo resuelve
+
+Una pieza es **un solo archivo de video y tiene un solo fps**. Si los clips de la
+lista no coinciden, los que no sean el elegido tienen que repetir o saltear
+cuadros, y esos tramos se ven a tirones. Es el mismo problema que costó un día de
+trabajo en la campaña de Maxi.
+
+El molde elige **el fps que cubre más segundos de la pieza** y renderiza todo a
+ese. No hay forma de evitarlo dentro de un mismo archivo.
+
+En los temas de prueba conviven 25, 23,98 y 30 fps, justamente porque son cuatro
+artistas distintos. **Con un ranking de un solo artista los clips vienen de la
+misma entrega del sello y comparten fps, así que el problema no aparece.** Es otra
+razón a favor de la regla de un solo artista.
 
 ### Cómo se guardan los datos
 
@@ -106,13 +143,6 @@ El rótulo de la pieza ("TOP 4 DEL MES") **no sale de los datos**: es texto
 editorial. Los de las dos listas de prueba son **de relleno** y están para que el
 molde tenga algo que mostrar. Mismo caso que los hooks de `letra-sobre-video`.
 
-## Lo que falta decidir, y no es técnico
-
-**De dónde salen los otros temas.** Una playlist funciona porque pone el tema del
-cliente al lado de temas conocidos de otros sellos. Si eso se puede hacer en una
-campaña paga es una pregunta comercial, y **bloquea las 4 cuentas de
-recomendación** aunque el molde esté terminado.
-
 ## Para decidir en Studio
 
 1. **Orden de revelación** (`Comparar-Orden-Al1` / `-Del1`). Hoy va del último al
@@ -122,8 +152,10 @@ recomendación** aunque el molde esté terminado.
 4. **El contorno** (`Comparar-Contorno-Con` / `-Sin`).
 5. **Color del panel** (`Comparar-Color-Amarillo` / `-Blanco`).
 6. **Fondo:** clip o color liso (`ListaNumerada-FondoColor-9x16`).
-7. **Cantidad de ítems:** las pruebas son de 4 porque hay 4 temas con portada y
-   audio en el repo. El esquema acepta de 2 a 10.
+7. **Cantidad de ítems:** las pruebas son de 4 porque hay 4 temas con portada,
+   audio y videoclip en el repo. El esquema acepta de 2 a 10.
+8. **Segundos por tema:** 5 en las pruebas (Cotu los bajó de 7,5 el 2026-10-19).
+   Salen de los datos, no del molde: es `audio.end - audio.start` de cada ítem.
 
 ## Referencias
 

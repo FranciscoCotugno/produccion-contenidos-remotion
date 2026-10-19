@@ -13,6 +13,18 @@ export const itemListaSchema = z.object({
   cover: z.string(),
   /** el recorte que suena de este tema */
   audio: z.object({ src: z.string(), start: z.number().min(0), end: z.number().min(0) }),
+  /**
+   * El videoclip de este tema, que se ve mientras suena (pedido de Cotu,
+   * 2026-10-19). Vacío = se usa el fondo general del molde.
+   *
+   * OJO con los cuadros por segundo: la pieza es un solo archivo y tiene un
+   * solo fps. Si los clips de la lista no coinciden (25, 23,98 y 30 en los
+   * temas de prueba), los que no sean el elegido repiten o saltean cuadros y
+   * se ven a tirones. Con un ranking **de un solo artista** —que es el caso
+   * normal— los clips vienen de la misma entrega y comparten fps, así que el
+   * problema no aparece.
+   */
+  video: z.object({ src: z.string(), inicio: z.number().min(0) }),
 });
 
 export const listaSchema = z.object({

@@ -33,6 +33,7 @@ import { FranjaBotones, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { VideoEnBucle } from "../../shared/VideoEnBucle";
 import { metadataDeFragmento } from "../../shared/fpsFuente";
 import { PanelLista, panelListaSchema } from "./PanelLista";
+import { fpsDeFuente } from "../../shared/fpsFuente";
 import { duracionLista, listaSchema, tramos } from "./lista";
 
 export const listaNumeradaSchema = z.object({
@@ -75,15 +76,35 @@ export const listaNumeradaSchema = z.object({
 export type ListaNumeradaProps = z.infer<typeof listaNumeradaSchema>;
 
 /**
- * La duración es la suma de los recortes de audio de la lista. Los cuadros por
- * segundo salen del clip de fondo; si el fondo es color, van a 30.
+ * La duración es la suma de los recortes de audio de la lista.
+ *
+ * Los cuadros por segundo salen del material. Como cada ítem puede traer su
+ * propio videoclip, se elige **el fps que cubre más segundos de la pieza**: una
+ * pieza es un solo archivo y tiene un solo fps, así que si los clips no
+ * coinciden, los que no sean el elegido repiten o saltean cuadros. Con un
+ * ranking de un solo artista los clips vienen de la misma entrega y comparten
+ * fps, que es el caso normal; con artistas mezclados puede pasar y no hay forma
+ * de evitarlo dentro de un mismo video.
  */
 export const duracionListaNumerada: CalculateMetadataFunction<ListaNumeradaProps> = async ({ props }) => {
   const segundos = duracionLista(props.lista);
-  if (props.fondo.tipo === "clip" && props.fondo.src !== "") {
-    return metadataDeFragmento(segundos, props.fondo.src);
-  }
-  return { fps: 30, durationInFrames: Math.max(1, Math.round(segundos * 30)) };
+  const partes = tramos(props.lista.items);
+  const peso = new Map<string, number>();
+  props.lista.items.forEach((it, i) => {
+    const src = it.video.src !== "" ? it.video.src : props.fondo.tipo === "clip" ? props.fondo.src : "";
+    if (src !== "") peso.set(src, (peso.get(src) ?? 0) + partes[i].dura);
+  });
+
+  if (peso.size === 0) return { fps: 30, durationInFrames: Math.max(1, Math.round(segundos * 30)) };
+
+  const fpsPorFuente = await Promise.all(
+    [...peso.entries()].map(async ([src, seg]) => ({ fps: await fpsDeFuente(src), seg })),
+  );
+  const acumulado = new Map<number, number>();
+  for (const { fps, seg } of fpsPorFuente) acumulado.set(fps, (acumulado.get(fps) ?? 0) + seg);
+  const elegido = [...acumulado.entries()].sort((a, b) => b[1] - a[1])[0][0];
+
+  return { fps: elegido, durationInFrames: Math.max(1, Math.round(segundos * elegido)) };
 };
 
 /** La tarjeta de "sonando ahora", con los códigos de una app de música. */
@@ -224,13 +245,27 @@ export const ListaNumerada: React.FC<ListaNumeradaProps> = ({
 
   return (
     <AbsoluteFill style={{ backgroundColor: fondo.color }}>
-      {fondo.tipo === "clip" && fondo.src !== "" && (
-        <VideoEnBucle
-          src={fondo.src}
-          inicio={fondo.inicio}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      )}
+      {/* el videoclip del tema que suena; si el ítem no trae clip propio, el
+          fondo general del molde */}
+      {lista.items.map((_, paso) => {
+        const it = lista.items[indiceDe(paso)];
+        const p = partes[paso];
+        const propio = it.video.src !== "";
+        if (!propio && (fondo.tipo !== "clip" || fondo.src === "")) return null;
+        return (
+          <Sequence
+            key={`v${paso}`}
+            from={Math.round(p.desde * fps)}
+            durationInFrames={Math.max(1, Math.round(p.dura * fps))}
+          >
+            <VideoEnBucle
+              src={propio ? it.video.src : fondo.src}
+              inicio={propio ? it.video.inicio : fondo.inicio}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            />
+          </Sequence>
+        );
+      })}
       {fondo.oscurecer > 0 && <AbsoluteFill style={{ background: `rgba(0,0,0,${fondo.oscurecer})` }} />}
 
       {mostrarTitulo && lista.titulo !== "" && (

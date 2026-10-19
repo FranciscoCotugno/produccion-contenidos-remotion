@@ -5,25 +5,57 @@
       "title": "instinto luv",
       "artists": "Santy P",
       "cover": "media/santy-p-insintoluv/santy-p-instintoluv.jpg",
-      "audio": { "src": "media/santy-p-insintoluv/santy-p-instintoluv.MP3", "start": 11.33, "end": 17.33 }
+      "audio": {
+        "src": "media/santy-p-insintoluv/santy-p-instintoluv.MP3",
+        "start": 11.33,
+        "end": 16.33
+      },
+      "video": {
+        "src": "media/santy-p-insintoluv/santy-p-instintoluv.mp4",
+        "inicio": 0
+      }
     },
     {
       "title": "Si sale el sol",
       "artists": "FMK",
       "cover": "media/fmk-si-sale-el-sol/portada.jpg",
-      "audio": { "src": "media/fmk-si-sale-el-sol/audio.mp3", "start": 40, "end": 46 }
+      "audio": {
+        "src": "media/fmk-si-sale-el-sol/audio.mp3",
+        "start": 40,
+        "end": 45
+      },
+      "video": {
+        "src": "media/fmk-si-sale-el-sol/videocompleto-fmk-si-sale-el-sol.mp4",
+        "inicio": 40
+      }
     },
     {
       "title": "AGUA",
       "artists": "Maluma, Shakira",
       "cover": "media/maluma-aguashakira/portada.jpg",
-      "audio": { "src": "media/maluma-aguashakira/audio.mp3", "start": 45, "end": 51 }
+      "audio": {
+        "src": "media/maluma-aguashakira/audio.mp3",
+        "start": 45,
+        "end": 50
+      },
+      "video": {
+        "src": "media/maluma-aguashakira/videoclip.mp4",
+        "inicio": 45
+      }
     },
     {
       "title": "Hagamos que pase",
       "artists": "Maxi Espindola",
       "cover": "media/maxi-espindola-hagamos-que-pase/portada.jpg",
-      "audio": { "src": "media/maxi-espindola-hagamos-que-pase/audio.mp3", "start": 60, "end": 66 }
+      "audio": {
+        "src": "media/maxi-espindola-hagamos-que-pase/audio.mp3",
+        "start": 60,
+        "end": 65
+      },
+      "video": {
+        "src": "media/maxi-espindola-hagamos-que-pase/videoclip.mp4",
+        "inicio": 60
+      }
     }
   ]
 }
