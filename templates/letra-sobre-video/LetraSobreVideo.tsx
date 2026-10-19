@@ -28,7 +28,7 @@ import { TIKTOK_SANS, conEmoji } from "../../shared/fonts";
 import { activeLineIndex, lineStarts } from "../../shared/lyrics";
 import { FranjaBotones, areaDelCuadro, franjaBotonesSchema } from "../../shared/FranjaBotones";
 import { temaSchema } from "../../shared/tema";
-import { metadataDeFragmento } from "../../shared/fpsFuente";
+import { duracionDeFuente, metadataDeFragmento } from "../../shared/fpsFuente";
 
 export const letraSobreVideoSchema = z.object({
   tema: temaSchema,
@@ -113,10 +113,19 @@ export const letraSobreVideoSchema = z.object({
 });
 export type LetraSobreVideoProps = z.infer<typeof letraSobreVideoSchema>;
 
-/** La duración sale del fragmento: inicio y fin. */
-/** La duración sale del fragmento y el fps del video de fondo (ver shared/fpsFuente). */
-export const duracionLetraSobreVideo: CalculateMetadataFunction<LetraSobreVideoProps> = ({ props }) =>
-  metadataDeFragmento(props.tema.fragment.end - props.tema.fragment.start, props.video.src);
+/**
+ * La duración sale del fragmento y el fps del video de fondo (ver
+ * shared/fpsFuente).
+ *
+ * **Si el clip es más corto que el audio, manda el clip**: la pieza llega hasta
+ * donde llegue el video (pedido de Cotu, 2026-10-19). Antes el audio mandaba y
+ * el clip se quedaba congelado en el último cuadro al terminarse.
+ */
+export const duracionLetraSobreVideo: CalculateMetadataFunction<LetraSobreVideoProps> = async ({ props }) => {
+  const delAudio = props.tema.fragment.end - props.tema.fragment.start;
+  const delClip = (await duracionDeFuente(props.video.src)) - props.video.inicio;
+  return metadataDeFragmento(Math.max(0.5, Math.min(delAudio, delClip)), props.video.src);
+};
 
 /** Lo que no cambia por pieza. */
 const TEXTO = {

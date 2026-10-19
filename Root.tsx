@@ -18,9 +18,9 @@ import { FORMATO_TARJETA, ejemplosTarjetaLetra } from "./templates/tarjeta-letra
 import { ReproductorWidget, duracionWidget, reproductorWidgetSchema } from "./templates/reproductor-widget/ReproductorWidget";
 import { FORMATOS_WIDGET, ejemplosReproductorWidget, compararWidget } from "./templates/reproductor-widget/ejemplos";
 import { LetraSobreVideo, duracionLetraSobreVideo, letraSobreVideoSchema } from "./templates/letra-sobre-video/LetraSobreVideo";
-import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo, modosNuevos, piezasFenix } from "./templates/letra-sobre-video/ejemplos";
+import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo, modosNuevos, piezasFenix, opcionesFenix } from "./templates/letra-sobre-video/ejemplos";
 import { BratMaximal, bratMaximalSchema, duracionBratMaximal } from "./templates/brat-maximal/BratMaximal";
-import { FORMATO_BRAT_MAXIMAL, ejemplosBratMaximal } from "./templates/brat-maximal/ejemplos";
+import { FORMATO_BRAT_MAXIMAL, ejemplosBratMaximal, opcionFenix } from "./templates/brat-maximal/ejemplos";
 import { BratMinimal, bratMinimalSchema, duracionBratMinimal } from "./templates/brat-minimal/BratMinimal";
 import { FORMATO_BRAT_MINIMAL, ejemplosBratMinimal } from "./templates/brat-minimal/ejemplos";
 import { Carrusel, carruselSchema } from "./templates/carrusel/Carrusel";
@@ -171,7 +171,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={props}
       />
     ))}
-    {[...ejemplosLetraSobreVideo, ...modosNuevos, ...piezasFenix].map(({ id, formato, props }) => (
+    {[...ejemplosLetraSobreVideo, ...modosNuevos, ...piezasFenix, ...opcionesFenix].map(({ id, formato, props }) => (
       <Composition
         key={id}
         id={id}
@@ -185,7 +185,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={props}
       />
     ))}
-    {ejemplosBratMaximal.map(({ id, props }) => (
+    {[...ejemplosBratMaximal, ...opcionFenix].map(({ id, props }) => (
       <Composition
         key={id}
         id={id}

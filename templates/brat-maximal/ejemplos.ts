@@ -75,3 +75,16 @@ export const ejemplosBratMaximal: { id: string; props: BratMaximalProps }[] = [
   ...temas.map(({ id, tema }) => ({ id: `BratMaximal-${id}`, props: armar(tema) })),
   ...maxiMaximal,
 ];
+
+/** Opción C del pedido Fenix: la mecánica de este molde sobre el clip de Maluma. */
+import cuatroBabies3 from "../../datos-prueba/maluma-cuatro-babies-3/tema.json";
+export const opcionFenix: { id: string; props: BratMaximalProps }[] = [
+  {
+    id: "Fenix-Opcion-C-Maximal",
+    props: {
+      ...armar(temaSchema.parse(cuatroBabies3)),
+      video: { src: "media/maluma-fenix/maluma-04.mp4", inicio: 0, desenfoque: 0, brillo: 0.8 },
+      tamanoLetra: 92,
+    },
+  },
+];

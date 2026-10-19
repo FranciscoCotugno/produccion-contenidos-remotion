@@ -308,3 +308,38 @@ export const piezasFenix: { id: string; formato: FormatoLetraVideo; props: Letra
   { id: "Fenix-Maluma-P3-Clip05", formato: "9x16", props: fenix(cuatroBabies3, "maluma-05.mp4", 0, 0.68) },
   { id: "Fenix-Maluma-P3-Clip06", formato: "9x16", props: fenix(cuatroBabies3, "maluma-06.mp4", 0, 0.66) },
 ];
+
+/**
+ * Opciones de subtítulo GRANDE para el pedido Fenix (Cotu, 2026-10-19: el fino
+ * no era). Las dos van palabra por palabra, que es el "efecto más rápido":
+ * cada palabra aparece cuando se canta, en vez de la línea entera quieta.
+ */
+export const opcionesFenix: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  {
+    id: "Fenix-Opcion-A-Grande",
+    formato: "9x16",
+    props: {
+      ...fenix(cuatroBabies3, "maluma-04.mp4", 0, 0.78),
+      revelado: "palabra",
+      texto: { ...TEXTO_DE_SIEMPRE, tamano: 64, peso: 800, caja: "mayuscula", altura: 0.78, ancho: 860 },
+    },
+  },
+  {
+    id: "Fenix-Opcion-B-Halo",
+    formato: "9x16",
+    props: {
+      ...fenix(cuatroBabies3, "maluma-04.mp4", 0, 0.78),
+      revelado: "palabra",
+      texto: {
+        ...TEXTO_DE_SIEMPRE,
+        tamano: 64,
+        peso: 800,
+        caja: "mayuscula",
+        altura: 0.78,
+        ancho: 860,
+        sombra: "resplandor",
+        colorResplandor: "#FF2E63",
+      },
+    },
+  },
+];
