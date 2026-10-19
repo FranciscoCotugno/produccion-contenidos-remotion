@@ -6,7 +6,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 |---|---|---|---|---|---|
 | 1 | `reproductor-app` | L05, L06, L13 | Video | LyricPlayer del repo original | **Terminado** (9:16, piel Apple oscura). Variantes elegidas el 2026-10-19 |
 | 2 | `brat-puro` | L01, L12 | Video | Desde cero | Terminado (1:1) |
-| 2b | `brat-color` | L01, L12 (variante de `brat-puro`, para dar variedad) | Video | La mecánica de `brat-puro` | En iteración |
+| 2b | `brat-color` | L01, L12 (variante de `brat-puro`, para dar variedad) | Video | La mecánica de `brat-puro` | **Terminado** (1:1). Destello `invertir`, elegido el 2026-10-19 |
 | 3 | `chat` | C3, R1, R3 | Video | Desde cero | En iteración (WhatsApp oscuro y R3 tipo Instagram) |
 | 4 | `tarjeta-letra` | C4, C9 | Imagen (3:4) | Desde cero | **Terminado** (3:4). Variantes elegidas el 2026-10-19 |
 | 5 | `reproductor-widget` | L07, C5, C6 | Video | Desde cero | **Terminado** (9:16, 1:1, 3:4). Las tres pieles quedan, a elección por pieza (2026-10-19) |

@@ -70,11 +70,17 @@ La explosión se nota mucho si cae fuera de tiempo.
 ## Render
 `render/instinto-luv.mp4` se exportó antes de sacar el cierre y de sumar el adelanto de lectura: termina con 2 s de título y artista. Para una versión al día, re-exportar `BratColor-InstintoLuv`.
 
-## Para decidir en Studio
-- Paleta y orden de los colores.
-- Qué hace el destello del fondo: pasar al color de la letra (invertir) o al siguiente de la paleta.
-- Intensidad del golpe del bloque y duración del destello.
-- Si la explosión arranca desde el principio o recién en el estribillo / después de la primera frase.
+## Decidido en Studio (Cotu, 2026-10-19)
+
+| Decisión | Queda |
+|---|---|
+| Destello | **`invertir`**: el fondo salta al color de la letra. Se comparó contra `siguiente` (el próximo color de la paleta) y contra no tenerlo |
+| Golpe del bloque y duración del destello | Sin cambio: 0,08 y 3 cuadros |
+| Paleta y orden de los colores | **Por pieza**, según el mood del tema |
+| Cuándo arranca la explosión | **Por pieza** (`explosionDesde`) |
+
+Se decidió mirando tres videos de 20 segundos y no fotogramas: **el destello
+dura 3 cuadros** y en una imagen fija no se ve.
 
 ## Referencias
 Todavía no hay referencias en `referencias/brat-color/`. Si hay un TikTok con este estilo, sumarlo.
