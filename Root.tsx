@@ -34,6 +34,8 @@ import { BloquePalabra, bloquePalabraSchema, duracionBloquePalabra } from "./tem
 import { FORMATOS_BLOQUE, ejemplosBloquePalabra } from "./templates/bloque-palabra/ejemplos";
 import { ListaNumerada, listaNumeradaSchema, duracionListaNumerada } from "./templates/lista-numerada/ListaNumerada";
 import { FORMATOS_LISTA, ejemplosListaNumerada } from "./templates/lista-numerada/ejemplos";
+import { Prensa, prensaSchema, duracionPrensa } from "./templates/prensa/Prensa";
+import { FORMATOS_PRENSA, ejemplosPrensa } from "./templates/prensa/ejemplos";
 import { FORMATOS_KARAOKE, ejemplosKaraoke } from "./templates/karaoke/ejemplos";
 import agua from "./datos-prueba/agua/tema.json";
 import aQuienLeImporta from "./datos-prueba/a-quien-le-importa/tema.json";
@@ -290,6 +292,20 @@ export const RemotionRoot: React.FC = () => (
         fps={FPS}
         durationInFrames={1}
         calculateMetadata={duracionListaNumerada}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosPrensa.map(({ id, formato, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={Prensa}
+        schema={prensaSchema}
+        width={FORMATOS_PRENSA[formato].ancho}
+        height={FORMATOS_PRENSA[formato].alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionPrensa}
         defaultProps={props}
       />
     ))}

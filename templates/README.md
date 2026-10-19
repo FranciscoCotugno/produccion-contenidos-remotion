@@ -20,7 +20,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 12a | ~~`bloque-palabra`~~ | L10 | Video | Rehizo `tipografico` (pedido 3) | **De baja** (2026-10-18, decisión de Cotu): vio el video y no le gustó el contenido. Segunda vez que se cae este formato. L10 sigue sin molde. |
 | 12b | `panel-letra` | lyrics puras (el panel de letra abierto de una app) | Video | Desde cero (pedido 2) | En revisión con Cotu (9:16, 1:1, 3:4, 4:3) |
 | 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | En revisión con Cotu (9:16, 4:3, 1:1). **Bloqueado por una decisión comercial**: de dónde salen los temas de otros sellos |
-| 13 | `prensa` | P1, P2 | Video | Desde cero | Pendiente |
+| 13 | `prensa` | P1, P2 | Video | Desde cero (pedido 5) | En revisión con Cotu (9:16, 1:1, 4:3). Falta la identidad de cada medio y los titulares reales |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
 
 **14 moldes cubren las 36 cuentas.** Las cuentas que comparten molde se diferencian por su piel (colores, tipografía, estética) o por el tipo de fondo.
@@ -55,6 +55,7 @@ Acá se corta el laboratorio por ahora: **con estos 11 moldes se puede empezar a
 | `panel-letra` | lyrics puras | Video | 9:16, 1:1, 3:4, 4:3 | `PanelLetra-*` | nada (la letra es toda la pieza) |
 | `bloque-palabra` | L10 y tipografía sobre color | Video | 4:3, 9:16, 1:1 | `BloquePalabra-*` | **de baja** |
 | `lista-numerada` | las 4 de recomendación | Video | 9:16, 4:3, 1:1 | `ListaNumerada-*` | la lista de temas y su rótulo (`datos-prueba/listas/`) |
+| `prensa` | P1, P2 | Video | 9:16, 1:1, 4:3 | `Prensa-*` | **el titular**, que lo escribe una persona |
 | `karaoke` | L09 | Video | 9:16, 1:1 | `Karaoke-*` | nada |
 
 ### Lo que decide una persona antes de producir
