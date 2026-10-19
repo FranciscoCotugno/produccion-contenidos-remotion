@@ -16,9 +16,11 @@ import { mensajeSchema, type ChatProps } from "./Chat";
 const base: Omit<ChatProps, "tema" | "mensajes" | "n" | "cabecera"> = {
   piel: "whatsapp-oscuro",
   hora: "6:21 p. m.",
-  // formato horizontal como la referencia (1080 × 912): el ancho del cuadro es el
-  // ancho del iPhone, 2,77 px por punto (texto de 47 px). 2,94 = texto de 50 px.
-  escala: 2.77,
+  // Formato horizontal como la referencia (1080 × 912). 2,77 px por punto es el
+  // ancho real del iPhone y da texto de 47 px; **2,94 da los 50 px** del mínimo
+  // de legibilidad del CLAUDE.md, y es lo que eligió Cotu el 2026-10-19: ahí la
+  // regla de legibilidad le gana a la de reproducir la app con fidelidad.
+  escala: 2.94,
   iconoAudio: "nota",
   letraEnVideo: true,
   // como una captura: solo se mueve el video

@@ -84,15 +84,45 @@ Inter para toda la interfaz (en lugar de la letra del iPhone). La letra sobre el
 ## Zona segura
 En 1080×912 las bandas de TikTok quedan fuera del cuadro: arriba y abajo no tapan nada. A la derecha, la columna de botones tapa desde x = 925: con `ancho: "cuadro"` los mensajes de la derecha (las respuestas en C3) quedan ahí abajo (ver `render/c3-respuesta-instinto-zona-segura.png`). Si en el celular se tapan, pasar a `ancho: "zonaSegura"`.
 
-## Para decidir en Studio
-Composiciones `Chat-<modo>-<tema>` (C3 con respuesta, C3 en visto, R1 contador, R1 racha; instinto-luv y Si sale el sol 1) y `Comparar-Chat-*`:
-- Escala: `Comparar-Chat-Escala-Fiel` (2,77, por defecto) contra `Comparar-Chat-Escala-50px` (2,94).
-- Ancho: `Comparar-Chat-AnchoZonaSegura` (contra los mensajes pegados a los bordes, por defecto).
-- Animación: `Comparar-Chat-EnVivo` (contra la captura fija, por defecto).
-- Cabecera con el nombre del contacto en C3: `Comparar-Chat-ConCabecera`.
-- Letra sobre el video: sí o no, y en qué pieles (`letraEnVideo`).
-- Piel de R1: hoy usa la oscura (como las referencias); la grilla decía clara.
-- Momento de la respuesta en C3 (en `chats.json`).
+## Decidido en Studio (Cotu, 2026-10-19)
+
+| Decisión | Queda |
+|---|---|
+| Animación | **`fija`**: la conversación entera desde el primer cuadro, como una captura. Solo se mueven el video y el audio |
+| Escala | **2,94** (texto de 50 px), no la fiel de 2,77 (47 px) |
+| Ancho | **`cuadro`**: los mensajes pegados a los bordes, como en la app |
+| Cabecera del contacto | Por pieza |
+| Letra sobre el video | Por pieza |
+| Piel de R1 | Reparto de cuentas: se ve después |
+| Momento de la respuesta | Es dato, no molde (`chats.json`) |
+
+**La escala tenía un conflicto real entre dos reglas del `CLAUDE.md`:** "las
+interfaces son idénticas a las de la app que imitan" contra "texto principal de
+50 px o más". La fiel incumple el mínimo, la de 50 px deforma un poco la
+interfaz. Cotu eligió la legibilidad.
+
+## Quién escribe la conversación
+
+**La conversación es texto, así que la escribe una persona**, igual que los
+hooks y los titulares. No sale de la letra ni de los datos del tema.
+
+Vive en `datos-prueba/<tema>/chats.json`, con una entrada por modo
+(`c3-respuesta`, `c3-visto`, `r1-contador`, `r1-racha`, `r3-compartido`,
+`r3-solo-reel`). Cada una tiene el nombre del contacto y una lista de mensajes:
+
+```json
+{ "tipo": "texto", "de": "yo", "t": 0, "texto": "cambiate que paso en veinte" }
+```
+
+- **`tipo`**: `texto`, `audio`, `video` (el clip como sticker), `link` (tarjeta
+  del tema), `reel`, `reaccion` (con `emoji`), `visto`, `escribiendo`.
+- **`de`**: `yo` o `otro`.
+- **`t`**: el segundo del fragmento en que aparece. Los tiempos **se reescalan
+  solos** a la duración de cada fragmento, así que una conversación escrita para
+  20 segundos funciona en uno de 28.
+- **`texto`**: lo que dice. `{n}` se reemplaza por el contador de la racha.
+
+Cambiar lo que dice el chat es editar ese archivo. **No hay que tocar código.**
 
 ## Piel R3: mensaje directo (Instagram claro)
 Idéntica a un mensaje directo de Instagram en modo claro en iPhone, con el mismo criterio que WhatsApp (sin logos, sin el ícono de Reels, sin el @ del artista):
