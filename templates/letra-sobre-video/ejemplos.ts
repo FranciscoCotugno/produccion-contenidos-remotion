@@ -258,3 +258,53 @@ export const modosNuevos: { id: string; formato: FormatoLetraVideo; props: Letra
     }),
   },
 ];
+
+// ───────────────────────────────────────────────────────────────────────────
+// Pedido Fenix: Maluma con "Cuatro Babies". Clips de su TikTok, mudos, con el
+// audio del tema encima y la letra en modo subtítulo fino, que es el
+// minimalista (pedido de Cotu, 2026-10-19).
+//
+// El audio de los clips originales NO es la canción: TikTok los lista como
+// "sonido original" y es él hablando. Por eso el video va mudo, como los de
+// Maxi en vivo.
+//
+// **Cada pieza dura lo que dura su audio**, así que el clip tiene que ser más
+// largo. Por eso la parte 3 (14,5 s) va con los clips de 15 s y las partes 1 y
+// 2 (19,5 y 20 s) sólo con el 01, que es el único de 28 s.
+//
+// La altura del subtítulo cambia por clip: cuatro de los ocho traen el texto
+// de TikTok quemado en la imagen y hay que esquivarlo.
+// ───────────────────────────────────────────────────────────────────────────
+
+import cuatroBabies1 from "../../datos-prueba/maluma-cuatro-babies-1/tema.json";
+import cuatroBabies2 from "../../datos-prueba/maluma-cuatro-babies-2/tema.json";
+import cuatroBabies3 from "../../datos-prueba/maluma-cuatro-babies-3/tema.json";
+
+/** El subtítulo fino, con la altura que cada clip permita. */
+const subFino = (altura: number) => ({ ...TEXTO_SUBTITULO_FINO, tamano: 34, peso: 400, altura });
+
+const fenix = (datos: unknown, clip: string, inicio: number, altura: number): LetraSobreVideoProps => ({
+  ...base,
+  tema: temaSchema.parse(datos),
+  video: { src: `media/maluma-fenix/${clip}`, inicio, oscurecer: 0.12, virado: "ninguno" },
+  modo: "letra",
+  textoFijo: "",
+  posicionHook: "arriba",
+  texto: subFino(altura),
+});
+
+export const piezasFenix: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  // el 01 es el único largo: lleva las dos partes de 20 s, desde segundos
+  // distintos para que no sean la misma toma
+  { id: "Fenix-Maluma-P1-Clip01", formato: "9x16", props: fenix(cuatroBabies1, "maluma-01-sin-marca.mp4", 0, 0.84) },
+  { id: "Fenix-Maluma-P2-Clip01", formato: "9x16", props: fenix(cuatroBabies2, "maluma-01-sin-marca.mp4", 8, 0.84) },
+
+  // la parte 3 (14,5 s) con los clips de 15 s
+  { id: "Fenix-Maluma-P3-Clip04", formato: "9x16", props: fenix(cuatroBabies3, "maluma-04.mp4", 0, 0.84) },
+  { id: "Fenix-Maluma-P3-Clip08", formato: "9x16", props: fenix(cuatroBabies3, "maluma-08.mp4", 0, 0.84) },
+  // el 03 tiene "La saco ?" quemado arriba: el subtítulo abajo no lo toca
+  { id: "Fenix-Maluma-P3-Clip03", formato: "9x16", props: fenix(cuatroBabies3, "maluma-03.mp4", 0, 0.84) },
+  // el 05 y el 06 lo tienen abajo: el subtítulo sube
+  { id: "Fenix-Maluma-P3-Clip05", formato: "9x16", props: fenix(cuatroBabies3, "maluma-05.mp4", 0, 0.68) },
+  { id: "Fenix-Maluma-P3-Clip06", formato: "9x16", props: fenix(cuatroBabies3, "maluma-06.mp4", 0, 0.66) },
+];

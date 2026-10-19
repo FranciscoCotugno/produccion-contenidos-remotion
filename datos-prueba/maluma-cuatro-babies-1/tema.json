@@ -1,0 +1,122 @@
+{
+  "title": "Cuatro Babies",
+  "artists": "Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-fenix/cuatro-babies-1.mp3",
+    "start": 0,
+    "end": 19.49
+  },
+  "lyrics": [
+    {
+      "end": 6.81,
+      "words": [
+        {
+          "t": 4.08,
+          "text": "Cuatro"
+        },
+        {
+          "t": 5.84,
+          "text": "chimbitas"
+        }
+      ]
+    },
+    {
+      "end": 8.94,
+      "words": [
+        {
+          "t": 6.82,
+          "text": "Cuatro"
+        },
+        {
+          "t": 7.56,
+          "text": "personalidades"
+        }
+      ]
+    },
+    {
+      "end": 10.86,
+      "words": [
+        {
+          "t": 9,
+          "text": "Dos"
+        },
+        {
+          "t": 9.18,
+          "text": "me"
+        },
+        {
+          "t": 9.34,
+          "text": "hablan"
+        },
+        {
+          "t": 10.16,
+          "text": "bonito"
+        }
+      ]
+    },
+    {
+      "end": 12.82,
+      "words": [
+        {
+          "t": 10.86,
+          "text": "Dos"
+        },
+        {
+          "t": 11.28,
+          "text": "dicen"
+        },
+        {
+          "t": 11.64,
+          "text": "maldades"
+        }
+      ]
+    },
+    {
+      "end": 16.4,
+      "words": [
+        {
+          "t": 13.62,
+          "text": "Diferentes"
+        },
+        {
+          "t": 14.9,
+          "text": "nacionalidades"
+        }
+      ]
+    },
+    {
+      "end": 19.49,
+      "words": [
+        {
+          "t": 16.56,
+          "text": "Pero"
+        },
+        {
+          "t": 17.02,
+          "text": "cuando"
+        },
+        {
+          "t": 17.3,
+          "text": "chingan"
+        },
+        {
+          "t": 17.74,
+          "text": "gritan"
+        },
+        {
+          "t": 18.36,
+          "text": "todas"
+        },
+        {
+          "t": 18.74,
+          "text": "por"
+        },
+        {
+          "t": 19.18,
+          "text": "iguales"
+        }
+      ]
+    }
+  ]
+}

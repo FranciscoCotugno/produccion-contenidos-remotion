@@ -1,0 +1,319 @@
+{
+  "title": "Cuatro Babies",
+  "artists": "Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-fenix/parte-2/cuatro-babies-2.mp3",
+    "start": 0,
+    "end": 19.96
+  },
+  "lyrics": [
+    {
+      "end": 1.86,
+      "words": [
+        {
+          "t": 0.26,
+          "text": "Cuatro"
+        },
+        {
+          "t": 0.88,
+          "text": "chimbitas"
+        }
+      ]
+    },
+    {
+      "end": 3.72,
+      "words": [
+        {
+          "t": 1.86,
+          "text": "Cuatro"
+        },
+        {
+          "t": 2.58,
+          "text": "personalidades"
+        }
+      ]
+    },
+    {
+      "end": 5.56,
+      "words": [
+        {
+          "t": 3.72,
+          "text": "La"
+        },
+        {
+          "t": 4.24,
+          "text": "primera"
+        },
+        {
+          "t": 4.52,
+          "text": "se"
+        },
+        {
+          "t": 4.68,
+          "text": "desespera"
+        }
+      ]
+    },
+    {
+      "end": 7.44,
+      "words": [
+        {
+          "t": 5.56,
+          "text": "Se"
+        },
+        {
+          "t": 5.66,
+          "text": "encojona"
+        },
+        {
+          "t": 6.16,
+          "text": "si"
+        },
+        {
+          "t": 6.32,
+          "text": "se"
+        },
+        {
+          "t": 6.42,
+          "text": "lo"
+        },
+        {
+          "t": 6.56,
+          "text": "echo"
+        },
+        {
+          "t": 6.8,
+          "text": "afuera"
+        }
+      ]
+    },
+    {
+      "end": 9.26,
+      "words": [
+        {
+          "t": 7.44,
+          "text": "La"
+        },
+        {
+          "t": 7.92,
+          "text": "segunda"
+        },
+        {
+          "t": 8.26,
+          "text": "tiene"
+        },
+        {
+          "t": 8.46,
+          "text": "la"
+        },
+        {
+          "t": 8.82,
+          "text": "funda"
+        }
+      ]
+    },
+    {
+      "end": 11.12,
+      "words": [
+        {
+          "t": 9.26,
+          "text": "Y"
+        },
+        {
+          "t": 9.4,
+          "text": "me"
+        },
+        {
+          "t": 9.56,
+          "text": "paga"
+        },
+        {
+          "t": 9.84,
+          "text": "pa'"
+        },
+        {
+          "t": 9.98,
+          "text": "que"
+        },
+        {
+          "t": 10.16,
+          "text": "se"
+        },
+        {
+          "t": 10.34,
+          "text": "lo"
+        },
+        {
+          "t": 10.54,
+          "text": "hunda"
+        }
+      ]
+    },
+    {
+      "end": 12.38,
+      "words": [
+        {
+          "t": 11.12,
+          "text": "La"
+        },
+        {
+          "t": 11.3,
+          "text": "tercera"
+        },
+        {
+          "t": 11.72,
+          "text": "me"
+        },
+        {
+          "t": 11.84,
+          "text": "quita"
+        },
+        {
+          "t": 12.1,
+          "text": "el"
+        },
+        {
+          "t": 12.28,
+          "text": "estres"
+        }
+      ]
+    },
+    {
+      "end": 14.34,
+      "words": [
+        {
+          "t": 12.38,
+          "text": "Polvos"
+        },
+        {
+          "t": 13.16,
+          "text": "corridos"
+        },
+        {
+          "t": 13.58,
+          "text": "siempre"
+        },
+        {
+          "t": 13.78,
+          "text": "echamos"
+        },
+        {
+          "t": 14.16,
+          "text": "tres"
+        }
+      ]
+    },
+    {
+      "end": 16.36,
+      "words": [
+        {
+          "t": 14.34,
+          "text": "A"
+        },
+        {
+          "t": 14.44,
+          "text": "la"
+        },
+        {
+          "t": 14.58,
+          "text": "cuenta"
+        },
+        {
+          "t": 14.94,
+          "text": "de"
+        },
+        {
+          "t": 15.18,
+          "text": "una"
+        },
+        {
+          "t": 15.36,
+          "text": "le"
+        },
+        {
+          "t": 15.62,
+          "text": "bajo"
+        },
+        {
+          "t": 15.84,
+          "text": "la"
+        },
+        {
+          "t": 15.98,
+          "text": "luna"
+        }
+      ]
+    },
+    {
+      "end": 18.66,
+      "words": [
+        {
+          "t": 16.36,
+          "text": "Pero"
+        },
+        {
+          "t": 16.56,
+          "text": "ella"
+        },
+        {
+          "t": 16.88,
+          "text": "quiere"
+        },
+        {
+          "t": 17.12,
+          "text": "con"
+        },
+        {
+          "t": 17.34,
+          "text": "Maluma"
+        },
+        {
+          "t": 17.56,
+          "text": "y"
+        },
+        {
+          "t": 17.72,
+          "text": "conmigo"
+        },
+        {
+          "t": 18.04,
+          "text": "a"
+        },
+        {
+          "t": 18.14,
+          "text": "la"
+        },
+        {
+          "t": 18.32,
+          "text": "vez"
+        }
+      ]
+    },
+    {
+      "end": 19.96,
+      "words": [
+        {
+          "t": 18.66,
+          "text": "Estoy"
+        },
+        {
+          "t": 18.94,
+          "text": "enamorao"
+        },
+        {
+          "t": 19.38,
+          "text": "de"
+        },
+        {
+          "t": 19.54,
+          "text": "las"
+        },
+        {
+          "t": 19.88,
+          "text": "cuatro"
+        }
+      ]
+    }
+  ]
+}
