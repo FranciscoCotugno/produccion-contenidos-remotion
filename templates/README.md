@@ -10,7 +10,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 3 | `chat` | C3, R1, R3 | Video | Desde cero | **Terminado** (WhatsApp oscuro y R3 tipo Instagram). Variantes elegidas el 2026-10-19 |
 | 4 | `tarjeta-letra` | C4, C9 | Imagen (3:4) | Desde cero | **Terminado** (3:4). Variantes elegidas el 2026-10-19 |
 | 5 | `reproductor-widget` | L07, C5, C6 | Video | Desde cero | **Terminado** (9:16, 1:1, 3:4). Las tres pieles quedan, a elección por pieza (2026-10-19) |
-| 6 | `letra-sobre-video` | L08, L11, POV1 a POV8 | Video | Desde cero | Terminado (9:16, 1:1, 3:4) |
+| 6 | `letra-sobre-video` | L08, L11, POV1 a POV8 | Video | Desde cero | **Terminado** (9:16, 1:1, 3:4, 4:3). Con **seis modos más** del relevamiento (2026-10-19): placa con fecha, halo de color, fila de emojis, palabra por vez, partículas, virado y subtítulo abajo |
 | 7 | `brat-maximal` | L02, L03 | Video | LyricPunch del repo original | Terminado (1:1) |
 | 8 | `brat-minimal` | L04 | Video | LyricFilm del repo original | Terminado (1:1, en B/N y en color) |
 | 9 | `carrusel` | C1, C2, C8, R2 | Imágenes (3:4) | Desde cero | Terminado (3:4) |

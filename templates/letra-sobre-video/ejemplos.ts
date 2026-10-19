@@ -19,7 +19,7 @@ import aguaB1 from "../../datos-prueba/maluma-agua-bailando-1/tema.json";
 import aguaB2 from "../../datos-prueba/maluma-agua-bailando-2/tema.json";
 import aguaB3 from "../../datos-prueba/maluma-agua-bailando-3/tema.json";
 import frasesAgua from "../../datos-prueba/maluma-agua-bailando-1/frases.json";
-import { TEXTO_DE_SIEMPRE, TEXTO_SUBTITULO_FINO, type LetraSobreVideoProps } from "./LetraSobreVideo";
+import { TEXTO_DE_SIEMPRE, TEXTO_SUBTITULO_FINO, SIN_EXTRAS, type LetraSobreVideoProps } from "./LetraSobreVideo";
 
 /** El molde sale en tres formatos (pedido de Cotu). */
 export const FORMATOS_LETRA_VIDEO = {
@@ -35,13 +35,13 @@ export type FormatoLetraVideo = keyof typeof FORMATOS_LETRA_VIDEO;
 
 type Videos = { "l08-fija": string; "l11-hook": string; "hook-letra": string; pov: { texto: string; video: string; inicio: number } };
 
-const base = { adelantoLectura: 3, texto: TEXTO_DE_SIEMPRE, franjaBotones: franjaOff } as const;
+const base = { adelantoLectura: 3, texto: TEXTO_DE_SIEMPRE, ...SIN_EXTRAS, franjaBotones: franjaOff } as const;
 
 /** L08 y L11: el videoclip del fragmento de fondo (L11, en producción, material en vivo) */
 const sobreClip = (tema: Tema, modo: LetraSobreVideoProps["modo"], textoFijo: string, posicionHook: LetraSobreVideoProps["posicionHook"]): LetraSobreVideoProps => ({
   ...base,
   tema,
-  video: { src: tema.fragment.src, inicio: tema.fragment.start, oscurecer: 0.15 },
+  video: { src: tema.fragment.src, inicio: tema.fragment.start, oscurecer: 0.15 , virado: "ninguno" },
   modo,
   textoFijo,
   posicionHook,
@@ -51,7 +51,7 @@ const sobreClip = (tema: Tema, modo: LetraSobreVideoProps["modo"], textoFijo: st
 const pov = (tema: Tema, v: Videos["pov"]): LetraSobreVideoProps => ({
   ...base,
   tema,
-  video: { src: v.video, inicio: v.inicio, oscurecer: 0 },
+  video: { src: v.video, inicio: v.inicio, oscurecer: 0 , virado: "ninguno" },
   modo: "hook",
   textoFijo: v.texto,
   posicionHook: "arriba",
@@ -78,7 +78,7 @@ const enVivoMaxi = (datos: unknown, idVideo: string, textoFijo: string): LetraSo
   return {
     ...base,
     tema: temaSchema.parse(datos),
-    video: { src: v.src, inicio: v.inicio, oscurecer: 0.15 },
+    video: { src: v.src, inicio: v.inicio, oscurecer: 0.15 , virado: "ninguno" },
     modo: "hook" as const,
     textoFijo,
     posicionHook: "arriba" as const,
@@ -96,7 +96,7 @@ const sobreSiMismo = (
   posicionHook: LetraSobreVideoProps["posicionHook"],
 ): LetraSobreVideoProps => {
   const tema = temaSchema.parse(datos);
-  return { ...base, tema, video: { src: tema.fragment.src, inicio: tema.fragment.start, oscurecer: 0.15 }, modo, textoFijo, posicionHook };
+  return { ...base, tema, video: { src: tema.fragment.src, inicio: tema.fragment.start, oscurecer: 0.15 , virado: "ninguno" }, modo, textoFijo, posicionHook };
 };
 
 const ejemplosAgua: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
@@ -169,3 +169,92 @@ export const ejemplosLetraSobreVideo: { id: string; formato: FormatoLetraVideo; 
   ...comparaciones,
 ];
 
+// ───────────────────────────────────────────────────────────────────────────
+// Los seis modos que salieron del relevamiento de octubre y no tenían molde.
+// Todos son props sobre este molde, no formatos nuevos: cada uno da un look
+// distinto con el mismo motor, que es lo que hace falta para que una cuenta no
+// se sature publicando siempre lo mismo.
+//
+// OJO con los textos: la dedicatoria de la placa y la fila de emojis son
+// **propuestas sin aprobar**. Ese texto lo escribe una persona.
+// ───────────────────────────────────────────────────────────────────────────
+
+const CLIP_NOCHE = "media/bancos/nicho-driving-night/nicho-driving-night-001.mp4";
+const CLIP_MAXI = "media/maxi-espindola-hagamos-que-pase/videoclip.mp4";
+
+const sobre = (datos: unknown, src: string, extra: Partial<LetraSobreVideoProps>): LetraSobreVideoProps => {
+  const tema = temaSchema.parse(datos);
+  return {
+    ...base,
+    tema,
+    video: { src, inicio: 0, oscurecer: 0.3, virado: "ninguno" },
+    modo: "letra",
+    textoFijo: "",
+    posicionHook: "arriba",
+    ...extra,
+  };
+};
+
+export const modosNuevos: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+  // 04-dron-fecha: la placa con la fecha del día y el halo de color.
+  // La fecha es el truco del molde: hace que un tema viejo parezca de hoy.
+  {
+    id: "LetraVideo-Modo-PlacaFecha",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_NOCHE, {
+      texto: { ...TEXTO_DE_SIEMPRE, caja: "mayuscula", peso: 800, sombra: "resplandor", colorResplandor: "#2BE08A" },
+      placa: { mostrar: true, texto: "TE LA DEDICO\nHOY 19 DE OCTUBRE", hasta: 4, altura: 0.44 },
+    }),
+  },
+  // el mismo halo, en otro color y sin placa
+  {
+    id: "LetraVideo-Modo-Resplandor",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_NOCHE, {
+      texto: { ...TEXTO_DE_SIEMPRE, caja: "mayuscula", peso: 800, sombra: "resplandor", colorResplandor: "#7FB2FF" },
+    }),
+  },
+
+  // 05-clip-nocturno A: la fila de dos emojis entre comillas arriba del texto.
+  // No necesitó código: es el hook del modo hook-letra.
+  {
+    id: "LetraVideo-Modo-FilaEmojis",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_NOCHE, {
+      modo: "hook-letra",
+      textoFijo: '"\u{1F319}" "\u{1F5A4}"',
+      posicionHook: "arriba",
+      texto: { ...TEXTO_DE_SIEMPRE, peso: 700, altura: 0.55 },
+    }),
+  },
+
+  // 05-clip-nocturno B: una palabra por vez
+  {
+    id: "LetraVideo-Modo-PalabraPorVez",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_NOCHE, {
+      revelado: "palabra",
+      texto: { ...TEXTO_DE_SIEMPRE, peso: 700, caja: "mayuscula" },
+    }),
+  },
+
+  // 06-ilustracion: la capa de partículas
+  { id: "LetraVideo-Modo-Particulas", formato: "9x16", props: sobre(maxi1, CLIP_NOCHE, { particulas: 0.55 }) },
+
+  // 07-fotos-artista: el virado sepia sobre material de recital
+  {
+    id: "LetraVideo-Modo-Sepia",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_MAXI, { video: { src: CLIP_MAXI, inicio: 41.1, oscurecer: 0.2, virado: "sepia" } }),
+  },
+
+  // 10-en-vivo: el subtítulo abajo. Tampoco necesitó código: es `texto.altura`.
+  {
+    id: "LetraVideo-Modo-SubtituloAbajo",
+    formato: "9x16",
+    props: sobre(maxi1, CLIP_MAXI, {
+      video: { src: CLIP_MAXI, inicio: 41.1, oscurecer: 0.15, virado: "ninguno" },
+      texto: { ...TEXTO_SUBTITULO_FINO, altura: 0.84, tamano: 36 },
+    }),
+  },
+];

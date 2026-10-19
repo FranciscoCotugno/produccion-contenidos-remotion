@@ -18,7 +18,7 @@ import { FORMATO_TARJETA, ejemplosTarjetaLetra } from "./templates/tarjeta-letra
 import { ReproductorWidget, duracionWidget, reproductorWidgetSchema } from "./templates/reproductor-widget/ReproductorWidget";
 import { FORMATOS_WIDGET, ejemplosReproductorWidget, compararWidget } from "./templates/reproductor-widget/ejemplos";
 import { LetraSobreVideo, duracionLetraSobreVideo, letraSobreVideoSchema } from "./templates/letra-sobre-video/LetraSobreVideo";
-import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo } from "./templates/letra-sobre-video/ejemplos";
+import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo, modosNuevos } from "./templates/letra-sobre-video/ejemplos";
 import { BratMaximal, bratMaximalSchema, duracionBratMaximal } from "./templates/brat-maximal/BratMaximal";
 import { FORMATO_BRAT_MAXIMAL, ejemplosBratMaximal } from "./templates/brat-maximal/ejemplos";
 import { BratMinimal, bratMinimalSchema, duracionBratMinimal } from "./templates/brat-minimal/BratMinimal";
@@ -171,7 +171,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={props}
       />
     ))}
-    {ejemplosLetraSobreVideo.map(({ id, formato, props }) => (
+    {[...ejemplosLetraSobreVideo, ...modosNuevos].map(({ id, formato, props }) => (
       <Composition
         key={id}
         id={id}

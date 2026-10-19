@@ -114,5 +114,43 @@ La sombra quedó en `media`, un escalón más que `suave`, por pedido de Cotu.
 Las comparaciones para elegir en Studio están en `ejemplos.ts` como
 `Sub-Tamano-*`, `Sub-Altura-*` y `Sub-Sombra-*`, todas en 4:3 sobre el videoclip.
 
+
+## Seis modos más, del relevamiento de octubre (2026-10-19)
+
+Al revisar qué quedaba sin usar del relevamiento apareció que **todo lo que era
+un molde nuevo ya estaba construido**, y que lo que sobraba eran seis variantes
+sobre este molde. Son props, no formatos nuevos: el mismo motor con seis caras
+distintas, que es lo que hace falta para que una cuenta no se sature.
+
+| Modo | De dónde | Qué es | Composición |
+|---|---|---|---|
+| Placa con fecha | `04-dron-fecha` | Dos renglones de apertura: una dedicatoria y **la fecha del día escrita con letras** | `LetraVideo-Modo-PlacaFecha` |
+| Halo de color | `04-dron-fecha` | `sombra: "resplandor"`: el texto no lleva contorno ni caja, lleva un halo luminoso del color que se le pida | `LetraVideo-Modo-Resplandor` |
+| Fila de emojis | `05-clip-nocturno` | Dos emojis entre comillas, fijos arriba del texto. **No necesitó código**: es el hook del modo `hook-letra` | `LetraVideo-Modo-FilaEmojis` |
+| Palabra por vez | `05-clip-nocturno` | `revelado: "palabra"`: se ven sólo las palabras ya cantadas de la línea que corre | `LetraVideo-Modo-PalabraPorVez` |
+| Partículas | `06-ilustracion` | Capa de puntos claros sobre el clip, dibujada en código | `LetraVideo-Modo-Particulas` |
+| Virado | `07-fotos-artista` | `video.virado`: sepia, frío o cálido | `LetraVideo-Modo-Sepia` |
+| Subtítulo abajo | `10-en-vivo` | **Tampoco necesitó código**: es `texto.altura` en 0,84 | `LetraVideo-Modo-SubtituloAbajo` |
+
+Se suma `texto.caja` (minúscula, original o mayúscula). El molde forzaba minúscula
+en el código; ahora es prop y el valor por omisión sigue siendo minúscula, así que
+nada de lo anterior cambia.
+
+### Por qué la fecha entra como texto y no la calcula el molde
+
+**La fecha es el truco comercial del formato, no un detalle:** escribir "hoy 19 de
+octubre" hace que una pieza de un tema viejo parezca de hoy, y por eso la cuenta de
+referencia (`@rolitas_gold1`, 585 mil seguidores) publica todos los días con el
+mismo material.
+
+Igual **no la calcula el componente**. Si la sacara del reloj, la misma pieza
+renderizada dos veces daría dos resultados distintos y dejaría de ser reproducible.
+Entra como texto, y quien genera la tanda escribe la fecha de ese día.
+
+### La placa es una apertura
+
+Mientras la placa está en pantalla, la letra no entra. Si se dibujaran las dos a la
+vez se pisan, porque viven a la misma altura.
+
 ## Referencias
 Ver `referencias/letra-sobre-video/REFERENCIAS.md`.
