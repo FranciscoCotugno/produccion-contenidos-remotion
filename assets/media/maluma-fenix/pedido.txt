@@ -1,0 +1,34 @@
+# PEDIDO FENIX / MALUMA — una línea por pieza
+#
+# Yo relleno este archivo después de mirar todo el material, con una propuesta
+# ya escrita. Vos cambiás lo que no te guste y listo. No hace falta que lo
+# escribas de cero.
+#
+# ───────────────────────────────────────────────────────────────────────────
+# FORMATO
+#
+#   video | audio | tipo | texto
+#
+# video   el archivo del clip (maluma-04.mp4)
+# audio   qué suena (cuatro-babies-3). Vacío = el mismo de la línea de arriba
+# tipo    lyrics  → la letra del tema, sincronizada
+#         frase   → una sola frase fija todo el video
+#         nada    → sin texto: solo el clip con la música
+# texto   solo si el tipo es "frase". Lo escribís vos
+#
+# Una línea vacía o que empieza con # se ignora: usalas para separar bloques.
+#
+# Si un campo queda vacío, se repite el de la línea de arriba. Así se puede
+# escribir un bloque entero cambiando solo lo que cambia.
+# ───────────────────────────────────────────────────────────────────────────
+#
+# REGLA POR AHORA: un video, una pieza. Si querés repetir un video con otro
+# tema, ponelo dos veces y yo lo hago; pero por omisión no se repite.
+#
+# ───────────────────────────────────────────────────────────────────────────
+# EJEMPLO (borrar cuando esté el pedido real)
+#
+# maluma-04.mp4 | cuatro-babies-3 | lyrics  |
+# maluma-08.mp4 |                 | lyrics  |
+# maluma-03.mp4 | otro-tema-1     | frase   | la frase que escribas vos
+# maluma-05.mp4 |                 | nada    |
