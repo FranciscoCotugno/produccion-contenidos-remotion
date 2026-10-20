@@ -341,12 +341,41 @@ const venteDelVideo = audioDel20;
 
 const CLIP = (n: string) => `media/maluma-beboteo/beboteo-${n}.mp4`;
 
-/** Opción A: mayúscula grande, blanca, palabra por palabra. */
-const TEXTO_A = { ...TEXTO_DE_SIEMPRE, tamano: 64, peso: 800, caja: "mayuscula" as const, altura: 0.78, ancho: 860 };
+/**
+ * Los cuatro estilos de subtítulo de la campaña (Cotu, 2026-10-20). Reemplazan
+ * a la vieja "opción A": se va variando entre los cuatro, y **todos van arriba**
+ * en vez de abajo.
+ */
+const ARRIBA = 0.2;
+const E1_MAYUSCULA = { ...TEXTO_DE_SIEMPRE, tamano: 64, peso: 800, caja: "mayuscula" as const, altura: ARRIBA, ancho: 860 };
+const E2_CONTORNO = { ...E1_MAYUSCULA, sombra: "contorno" as const, grosorContorno: 6 };
+const E3_CAJANORMAL = { ...E1_MAYUSCULA, caja: "original" as const, tamano: 58 };
+const E4_FINO = { ...TEXTO_SUBTITULO_FINO, tamano: 36, peso: 400, altura: ARRIBA, ancho: 860 };
+
+/** El nombre viejo sigue para las piezas del primer lote (Fenix). */
+const TEXTO_A = E1_MAYUSCULA;
 /** Las frases van más arriba cuando el clip ya trae texto quemado de TikTok. */
 const TEXTO_FRASE = (altura: number) => ({ ...TEXTO_DE_SIEMPRE, tamano: 58, peso: 800, caja: "original" as const, altura, ancho: 880 });
 
 type PiezaBeb = { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps };
+
+const conLetra = (
+  clip: string,
+  datos: unknown,
+  estilo: LetraSobreVideoProps["texto"],
+  formato: FormatoLetraVideo = "9x16",
+  inicio = 0,
+  revelado: LetraSobreVideoProps["revelado"] = "palabra",
+): PiezaBeb["props"] => ({
+  ...base,
+  tema: temaSchema.parse(datos),
+  video: { src: CLIP(clip), inicio, oscurecer: 0.18, virado: "ninguno" },
+  modo: "letra",
+  textoFijo: "",
+  posicionHook: "arriba",
+  revelado,
+  texto: estilo,
+});
 
 const conLetraA = (clip: string, datos: unknown, formato: FormatoLetraVideo = "9x16", inicio = 0): PiezaBeb["props"] => ({
   ...base,
@@ -371,13 +400,14 @@ const conFrase = (clip: string, datos: unknown, texto: string, altura: number, f
 
 export const beboteo: PiezaBeb[] = [
   // ── Con letra (opción A). Las de la opción C están en brat-maximal ──
-  { id: "Beb-06-CuatroBabies3", formato: "9x16", props: conLetraA("06", cuatroBabiesNuevo3) },
-  { id: "Beb-08-Hawaii", formato: "9x16", props: conLetraA("08", hawaii) },
-  { id: "Beb-10-CuatroBabies3", formato: "9x16", props: conLetraA("10", cuatroBabiesNuevo3) },
-  { id: "Beb-17-FelicesLos4", formato: "9x16", props: conLetraA("17", felicesLos4) },
-  { id: "Beb-19-Chantaje", formato: "9x16", props: conLetraA("19", chantaje) },
+  // se va variando entre los cuatro estilos, todos arriba
+  { id: "Beb-06-CuatroBabies3", formato: "9x16", props: conLetra("06", cuatroBabiesNuevo3, E1_MAYUSCULA) },
+  { id: "Beb-08-Hawaii", formato: "9x16", props: conLetra("08", hawaii, E2_CONTORNO) },
+  { id: "Beb-10-CuatroBabies3", formato: "9x16", props: conLetra("10", cuatroBabiesNuevo3, E3_CAJANORMAL) },
+  { id: "Beb-17-FelicesLos4", formato: "9x16", props: conLetra("17", felicesLos4, E4_FINO, "9x16", 0, "linea") },
+  { id: "Beb-19-Chantaje", formato: "9x16", props: conLetra("19", chantaje, E1_MAYUSCULA) },
   // apaisado: sale en 4:3
-  { id: "Beb-01-CuatroBabies1", formato: "4x3", props: conLetraA("01", cuatroBabiesNuevo1, "4x3") },
+  { id: "Beb-01-CuatroBabies1", formato: "4x3", props: conLetra("01", cuatroBabiesNuevo1, E2_CONTORNO, "4x3") },
 
   // ── Con frase. Los textos los escribió Cotu ──
   { id: "Beb-05-Frase", formato: "9x16", props: conFrase("05", aguaEstribillo, "ESTOY HECHA 💦💦💦", 0.22) },
