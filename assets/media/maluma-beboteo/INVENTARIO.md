@@ -44,6 +44,26 @@ conviene saberlo.
 
 **Los más limpios y aprovechables:** 08, 10, 03, 06 y 07.
 
+## Los de ayer, sumados acá (2026-10-20)
+
+Los 8 clips del primer lote (carpeta `maluma-fenix`) se copiaron acá para tener
+una sola campaña. Los originales quedan allá sin tocar.
+
+| Acá | Era | Qué es |
+|---|---|---|
+| `beboteo-15` | `maluma-01-sin-marca` | Gimnasio, 28 s. Ya recortado para sacarle la marca de `portalshakira` |
+| `beboteo-16` | `maluma-02` | Garage, 576 px: muy baja resolución |
+| `beboteo-17` | `maluma-04` | Sentado, campera clara. **Limpio** |
+| `beboteo-18` | `maluma-05` | Pileta. Trae "TEMAAAAA" quemado |
+| `beboteo-19` | `maluma-06` | Escritorio. Trae "Como no" quemado |
+| `beboteo-20` | `maluma-07` | Gorra. Trae "Indirecta - directa." quemado |
+| `beboteo-21` | `maluma-08` | Hablando a cámara. **Limpio** |
+
+**`maluma-03` no se copió: es el mismo video que `beboteo-05`** (la sauna).
+Mismo momento, mismos 15 segundos. El de ayer está en 1080 pero con "La saco ?"
+quemado; el de hoy está limpio pero en 720. Para la pieza que lleva copy
+arriba conviene el limpio, así no se pelean dos textos.
+
 ## Qué falta
 
 Los audios y las letras de los temas nuevos. Cuando estén, lleno `pedido.txt`

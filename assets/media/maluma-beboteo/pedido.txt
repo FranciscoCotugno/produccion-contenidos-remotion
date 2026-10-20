@@ -1,34 +1,53 @@
-# PEDIDO FENIX / MALUMA — una línea por pieza
+# PEDIDO — MALUMA BEBOTEO (los 14 de hoy + los 7 de ayer)
 #
-# Yo relleno este archivo después de mirar todo el material, con una propuesta
-# ya escrita. Vos cambiás lo que no te guste y listo. No hace falta que lo
-# escribas de cero.
+# Una línea por pieza:   video | audio | tipo | texto
 #
-# ───────────────────────────────────────────────────────────────────────────
-# FORMATO
-#
-#   video | audio | tipo | texto
-#
-# video   el archivo del clip (beboteo-08.mp4)
-# audio   qué suena (cuatro-babies-3). Vacío = el mismo de la línea de arriba
 # tipo    lyrics  → la letra del tema, sincronizada
-#         frase   → una sola frase fija todo el video
+#         frase   → una sola frase fija todo el video (el texto lo escribís vos)
 #         nada    → sin texto: solo el clip con la música
-# texto   solo si el tipo es "frase". Lo escribís vos
 #
-# Una línea vacía o que empieza con # se ignora: usalas para separar bloques.
+# Si un campo queda vacío, se repite el de la línea de arriba.
+# Las líneas con # se ignoran: borrá el # para activar una, agregalo para sacarla.
 #
-# Si un campo queda vacío, se repite el de la línea de arriba. Así se puede
-# escribir un bloque entero cambiando solo lo que cambia.
+# REGLA: un video, una pieza. Ningún clip se repite con dos temas.
+# Los temas sí se repiten entre clips distintos, eso está bien.
+#
+# Los clips 15 a 21 son los de ayer. El maluma-03 de ayer no entró: era el
+# mismo video que el beboteo-05 (sauna), pero con "La saco ?" quemado.
+#
 # ───────────────────────────────────────────────────────────────────────────
-#
-# REGLA POR AHORA: un video, una pieza. Si querés repetir un video con otro
-# tema, ponelo dos veces y yo lo hago; pero por omisión no se repite.
-#
+# PROPUESTA (hecha por Claude, corregí lo que no te guste)
 # ───────────────────────────────────────────────────────────────────────────
-# EJEMPLO (borrar cuando esté el pedido real)
+
+# ── Con letra, clips largos: entra el tema completo ──
+beboteo-06.mp4 | hawaii          | lyrics |     en vivo, 69 s
+beboteo-07.mp4 | felices-los-4   | lyrics |     en vivo, 69 s
+beboteo-08.mp4 | cuatro-babies-2 | lyrics |     micrófono vintage, 30 s
+beboteo-04.mp4 | cuatro-babies-1 | lyrics |     escenario, 25 s
+beboteo-09.mp4 | chantaje        | lyrics |     en vivo, 24 s
+beboteo-15.mp4 | borro-cassette  | lyrics |     gimnasio, 28 s (ayer, recortado)
+beboteo-14.mp4 | hawaii          | lyrics |     4:3, 19 s
+
+# ── Con letra, clips cortos: la pieza dura lo que dura el clip ──
+beboteo-10.mp4 | cuatro-babies-3 | lyrics |     10,7 s
+beboteo-03.mp4 | chantaje        | lyrics |     11,6 s
+beboteo-17.mp4 | felices-los-4   | lyrics |     15 s (ayer, limpio)
+beboteo-21.mp4 | borro-cassette  | lyrics |     15 s (ayer, limpio)
+beboteo-01.mp4 | cuatro-babies-1 | lyrics |     4:3, 13,5 s
+
+# ── El que marcaste para copy arriba ──
+beboteo-05.mp4 | cuatro-babies-3 | frase  | FALTA: escribí vos el copy
+
+# ── Sin texto: solo clip y música. Son los que traen texto quemado ──
+beboteo-11.mp4 | hawaii          | nada   |     "Besos pa' las baby top"
+beboteo-18.mp4 | felices-los-4   | nada   |     "TEMAAAAA"
+beboteo-19.mp4 | chantaje        | nada   |     "Como no"
+beboteo-20.mp4 | cuatro-babies-2 | nada   |     "Indirecta - directa."
+beboteo-13.mp4 | borro-cassette  | nada   |     4:3, 960 px
+
+# ───────────────────────────────────────────────────────────────────────────
+# AFUERA (borrá el # si los querés igual)
 #
-# beboteo-08.mp4 | cuatro-babies-3 | lyrics  |
-# beboteo-10.mp4 |                 | lyrics  |
-# beboteo-05.mp4 | otro-tema-1     | frase   | la frase que escribas vos
-# beboteo-03.mp4 |                 | nada    |
+# beboteo-02.mp4 | | nada |   7,3 s y 576 px: muy corto y muy baja resolución
+# beboteo-12.mp4 | | nada |   entrevista de TV con la placa del canal quemada
+# beboteo-16.mp4 | | nada |   576 px (el maluma-02 de ayer)
