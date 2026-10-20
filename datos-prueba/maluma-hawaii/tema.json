@@ -1,0 +1,205 @@
+{
+  "title": "Hawái",
+  "artists": "Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-beboteo/temas/hawaii/hawaii.mp3",
+    "start": 0,
+    "end": 24.22
+  },
+  "lyrics": [
+    {
+      "end": 7.04,
+      "words": [
+        {
+          "t": 0.68,
+          "text": "Puede"
+        },
+        {
+          "t": 1.36,
+          "text": "que"
+        },
+        {
+          "t": 1.7,
+          "text": "no"
+        },
+        {
+          "t": 1.96,
+          "text": "te"
+        },
+        {
+          "t": 2.34,
+          "text": "haga"
+        },
+        {
+          "t": 3.14,
+          "text": "falta"
+        },
+        {
+          "t": 3.54,
+          "text": "na',"
+        },
+        {
+          "t": 4.3,
+          "text": "aparentemente"
+        },
+        {
+          "t": 6.28,
+          "text": "na'"
+        }
+      ]
+    },
+    {
+      "end": 12.44,
+      "words": [
+        {
+          "t": 7.44,
+          "text": "Hawái"
+        },
+        {
+          "t": 7.74,
+          "text": "de"
+        },
+        {
+          "t": 8.4,
+          "text": "vacaciones,"
+        },
+        {
+          "t": 9.76,
+          "text": "mis"
+        },
+        {
+          "t": 10.24,
+          "text": "felicitaciones"
+        }
+      ]
+    },
+    {
+      "end": 16.56,
+      "words": [
+        {
+          "t": 12.44,
+          "text": "Muy"
+        },
+        {
+          "t": 12.92,
+          "text": "lindo"
+        },
+        {
+          "t": 13.22,
+          "text": "en"
+        },
+        {
+          "t": 14.1,
+          "text": "Instagram"
+        },
+        {
+          "t": 14.54,
+          "text": "lo"
+        },
+        {
+          "t": 14.78,
+          "text": "que"
+        },
+        {
+          "t": 15.26,
+          "text": "posteas"
+        }
+      ]
+    },
+    {
+      "end": 22.16,
+      "words": [
+        {
+          "t": 17.18,
+          "text": "Pa'"
+        },
+        {
+          "t": 17.44,
+          "text": "que"
+        },
+        {
+          "t": 17.72,
+          "text": "yo"
+        },
+        {
+          "t": 18.1,
+          "text": "vea"
+        },
+        {
+          "t": 18.92,
+          "text": "cómo"
+        },
+        {
+          "t": 19.16,
+          "text": "te"
+        },
+        {
+          "t": 19.4,
+          "text": "va"
+        },
+        {
+          "t": 19.72,
+          "text": "de"
+        },
+        {
+          "t": 20.04,
+          "text": "bien,"
+        },
+        {
+          "t": 20.42,
+          "text": "pero"
+        },
+        {
+          "t": 20.66,
+          "text": "te"
+        },
+        {
+          "t": 20.9,
+          "text": "haces"
+        },
+        {
+          "t": 21.52,
+          "text": "mal"
+        }
+      ]
+    },
+    {
+      "end": 24.22,
+      "words": [
+        {
+          "t": 22.24,
+          "text": "Porque"
+        },
+        {
+          "t": 22.42,
+          "text": "el"
+        },
+        {
+          "t": 22.62,
+          "text": "amor"
+        },
+        {
+          "t": 22.78,
+          "text": "no"
+        },
+        {
+          "t": 22.94,
+          "text": "se"
+        },
+        {
+          "t": 23.4,
+          "text": "compra"
+        },
+        {
+          "t": 23.8,
+          "text": "con"
+        },
+        {
+          "t": 24.12,
+          "text": "na'"
+        }
+      ]
+    }
+  ]
+}

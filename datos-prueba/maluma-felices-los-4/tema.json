@@ -1,0 +1,206 @@
+{
+  "title": "Felices los 4",
+  "artists": "Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-beboteo/temas/felices-los-4/felices-los-4.mp3",
+    "start": 0,
+    "end": 19.36
+  },
+  "lyrics": [
+    {
+      "end": 2.7,
+      "words": [
+        {
+          "t": 0.18,
+          "text": "Si"
+        },
+        {
+          "t": 0.4,
+          "text": "conmigo"
+        },
+        {
+          "t": 0.84,
+          "text": "te"
+        },
+        {
+          "t": 1.36,
+          "text": "quedas"
+        }
+      ]
+    },
+    {
+      "end": 4.94,
+      "words": [
+        {
+          "t": 2.7,
+          "text": "O"
+        },
+        {
+          "t": 2.92,
+          "text": "con"
+        },
+        {
+          "t": 3.14,
+          "text": "otro"
+        },
+        {
+          "t": 3.38,
+          "text": "tú"
+        },
+        {
+          "t": 3.72,
+          "text": "te"
+        },
+        {
+          "t": 4.32,
+          "text": "vas"
+        }
+      ]
+    },
+    {
+      "end": 9.56,
+      "words": [
+        {
+          "t": 5.24,
+          "text": "No"
+        },
+        {
+          "t": 5.4,
+          "text": "me"
+        },
+        {
+          "t": 5.66,
+          "text": "importa"
+        },
+        {
+          "t": 5.8,
+          "text": "un"
+        },
+        {
+          "t": 6.12,
+          "text": "carajo"
+        },
+        {
+          "t": 6.96,
+          "text": "porque"
+        },
+        {
+          "t": 7.44,
+          "text": "sé"
+        },
+        {
+          "t": 8,
+          "text": "que"
+        },
+        {
+          "t": 8.62,
+          "text": "volverás"
+        }
+      ]
+    },
+    {
+      "end": 12.48,
+      "words": [
+        {
+          "t": 9.56,
+          "text": "Y"
+        },
+        {
+          "t": 9.76,
+          "text": "si"
+        },
+        {
+          "t": 9.96,
+          "text": "con"
+        },
+        {
+          "t": 10.22,
+          "text": "otro"
+        },
+        {
+          "t": 10.66,
+          "text": "pasas"
+        },
+        {
+          "t": 11.22,
+          "text": "el"
+        },
+        {
+          "t": 11.42,
+          "text": "rato"
+        }
+      ]
+    },
+    {
+      "end": 17.78,
+      "words": [
+        {
+          "t": 12.98,
+          "text": "Vamo'"
+        },
+        {
+          "t": 13.16,
+          "text": "a"
+        },
+        {
+          "t": 13.38,
+          "text": "ser"
+        },
+        {
+          "t": 13.76,
+          "text": "feliz,"
+        },
+        {
+          "t": 14.22,
+          "text": "vamo'"
+        },
+        {
+          "t": 14.42,
+          "text": "a"
+        },
+        {
+          "t": 14.64,
+          "text": "ser"
+        },
+        {
+          "t": 15,
+          "text": "feliz,"
+        },
+        {
+          "t": 15.58,
+          "text": "felices"
+        },
+        {
+          "t": 16.2,
+          "text": "los"
+        },
+        {
+          "t": 16.96,
+          "text": "cuatro"
+        }
+      ]
+    },
+    {
+      "end": 19.36,
+      "words": [
+        {
+          "t": 17.88,
+          "text": "Te"
+        },
+        {
+          "t": 18.12,
+          "text": "agrandamo'"
+        },
+        {
+          "t": 18.88,
+          "text": "el"
+        },
+        {
+          "t": 19.1,
+          "text": "cuarto"
+        }
+      ]
+    }
+  ]
+}

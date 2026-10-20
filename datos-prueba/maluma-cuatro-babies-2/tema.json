@@ -1,15 +1,15 @@
 {
-  "title": "Cuatro Babies",
+  "title": "Cuatro Babys",
   "artists": "Maluma",
   "cover": "",
   "fragment": {
-    "src": "media/maluma-fenix/parte-2/cuatro-babies-2.mp3",
+    "src": "media/maluma-beboteo/temas/cuatro-babies-2/cuatro-babies-2.mp3",
     "start": 0,
     "end": 19.96
   },
   "lyrics": [
     {
-      "end": 1.86,
+      "end": 3.72,
       "words": [
         {
           "t": 0.26,
@@ -17,16 +17,11 @@
         },
         {
           "t": 0.88,
-          "text": "chimbitas"
-        }
-      ]
-    },
-    {
-      "end": 3.72,
-      "words": [
+          "text": "chimbitas,"
+        },
         {
           "t": 1.86,
-          "text": "Cuatro"
+          "text": "cuatro"
         },
         {
           "t": 2.58,
@@ -151,7 +146,7 @@
       ]
     },
     {
-      "end": 12.38,
+      "end": 12.76,
       "words": [
         {
           "t": 11.12,
@@ -175,7 +170,7 @@
         },
         {
           "t": 12.28,
-          "text": "estres"
+          "text": "estrés"
         }
       ]
     },
@@ -183,8 +178,8 @@
       "end": 14.34,
       "words": [
         {
-          "t": 12.38,
-          "text": "Polvos"
+          "t": 12.76,
+          "text": "Polvo"
         },
         {
           "t": 13.16,
@@ -217,7 +212,7 @@
         },
         {
           "t": 14.58,
-          "text": "cuenta"
+          "text": "cuarta"
         },
         {
           "t": 14.94,
@@ -225,7 +220,7 @@
         },
         {
           "t": 15.18,
-          "text": "una"
+          "text": "una,"
         },
         {
           "t": 15.36,
@@ -299,7 +294,7 @@
         },
         {
           "t": 18.94,
-          "text": "enamorao"
+          "text": "enamorado"
         },
         {
           "t": 19.38,

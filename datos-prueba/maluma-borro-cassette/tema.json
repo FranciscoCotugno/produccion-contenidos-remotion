@@ -1,0 +1,208 @@
+{
+  "title": "Borro Cassette",
+  "artists": "Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-beboteo/temas/borro-cassette/borro-cassette.mp3",
+    "start": 0,
+    "end": 16.95
+  },
+  "lyrics": [
+    {
+      "end": 5.34,
+      "words": [
+        {
+          "t": 0.42,
+          "text": "Dice"
+        },
+        {
+          "t": 1.14,
+          "text": "que"
+        },
+        {
+          "t": 1.52,
+          "text": "no"
+        },
+        {
+          "t": 1.88,
+          "text": "me"
+        },
+        {
+          "t": 2.44,
+          "text": "conoce"
+        },
+        {
+          "t": 3.74,
+          "text": "y"
+        },
+        {
+          "t": 4.08,
+          "text": "quiero"
+        },
+        {
+          "t": 4.58,
+          "text": "volverla"
+        },
+        {
+          "t": 4.94,
+          "text": "a"
+        },
+        {
+          "t": 5.18,
+          "text": "ver"
+        }
+      ]
+    },
+    {
+      "end": 8.82,
+      "words": [
+        {
+          "t": 5.34,
+          "text": "Y"
+        },
+        {
+          "t": 5.44,
+          "text": "que"
+        },
+        {
+          "t": 5.66,
+          "text": "los"
+        },
+        {
+          "t": 5.92,
+          "text": "tragos,"
+        },
+        {
+          "t": 6.56,
+          "text": "hicieron"
+        },
+        {
+          "t": 7.14,
+          "text": "estrago'"
+        },
+        {
+          "t": 7.38,
+          "text": "en"
+        },
+        {
+          "t": 7.54,
+          "text": "su"
+        },
+        {
+          "t": 8.14,
+          "text": "cabeza"
+        }
+      ]
+    },
+    {
+      "end": 13.54,
+      "words": [
+        {
+          "t": 9.34,
+          "text": "Ella"
+        },
+        {
+          "t": 9.64,
+          "text": "con"
+        },
+        {
+          "t": 9.84,
+          "text": "cualquiera"
+        },
+        {
+          "t": 10.26,
+          "text": "no"
+        },
+        {
+          "t": 10.5,
+          "text": "se"
+        },
+        {
+          "t": 10.88,
+          "text": "besa,"
+        },
+        {
+          "t": 11.92,
+          "text": "quiero"
+        },
+        {
+          "t": 12.28,
+          "text": "que"
+        },
+        {
+          "t": 12.46,
+          "text": "sepa"
+        },
+        {
+          "t": 12.8,
+          "text": "que"
+        },
+        {
+          "t": 12.98,
+          "text": "me"
+        },
+        {
+          "t": 13.24,
+          "text": "interesa"
+        }
+      ]
+    },
+    {
+      "end": 16.95,
+      "words": [
+        {
+          "t": 13.54,
+          "text": "Y"
+        },
+        {
+          "t": 13.66,
+          "text": "no"
+        },
+        {
+          "t": 13.78,
+          "text": "hay"
+        },
+        {
+          "t": 13.94,
+          "text": "un"
+        },
+        {
+          "t": 14.12,
+          "text": "día"
+        },
+        {
+          "t": 14.34,
+          "text": "que"
+        },
+        {
+          "t": 14.52,
+          "text": "no"
+        },
+        {
+          "t": 14.82,
+          "text": "pare"
+        },
+        {
+          "t": 15,
+          "text": "de"
+        },
+        {
+          "t": 15.36,
+          "text": "pensar"
+        },
+        {
+          "t": 15.56,
+          "text": "en"
+        },
+        {
+          "t": 15.74,
+          "text": "su"
+        },
+        {
+          "t": 16.08,
+          "text": "belleza"
+        }
+      ]
+    }
+  ]
+}

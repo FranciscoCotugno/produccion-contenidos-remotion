@@ -1,32 +1,76 @@
 {
-  "title": "Cuatro Babies",
+  "title": "Cuatro Babys",
   "artists": "Maluma",
   "cover": "",
   "fragment": {
-    "src": "media/maluma-fenix/cuatro-babies-1.mp3",
+    "src": "media/maluma-beboteo/temas/cuatro-babies-1/cuatro-babies-1.mp3",
     "start": 0,
     "end": 19.49
   },
   "lyrics": [
     {
-      "end": 6.81,
+      "end": 4.1,
       "words": [
         {
-          "t": 4.08,
-          "text": "Cuatro"
+          "t": 0.48,
+          "text": "Dos"
         },
         {
-          "t": 5.84,
-          "text": "chimbitas"
+          "t": 0.76,
+          "text": "tienen"
+        },
+        {
+          "t": 1.06,
+          "text": "maridos"
+        },
+        {
+          "t": 1.42,
+          "text": "y"
+        },
+        {
+          "t": 1.66,
+          "text": "ninguna"
+        },
+        {
+          "t": 1.86,
+          "text": "de"
+        },
+        {
+          "t": 1.92,
+          "text": "las"
+        },
+        {
+          "t": 2.06,
+          "text": "dos"
+        },
+        {
+          "t": 2.24,
+          "text": "al"
+        },
+        {
+          "t": 2.4,
+          "text": "marido"
+        },
+        {
+          "t": 2.96,
+          "text": "respetan"
         }
       ]
     },
     {
-      "end": 8.94,
+      "end": 9,
       "words": [
         {
-          "t": 6.82,
+          "t": 5.2,
           "text": "Cuatro"
+        },
+        {
+          "t": 5.96,
+          "text": "chimbitas,"
+        },
+        {
+          "t": 6.84,
+          "text": "cuatro"
         },
         {
           "t": 7.56,
@@ -35,14 +79,14 @@
       ]
     },
     {
-      "end": 10.86,
+      "end": 12.92,
       "words": [
         {
           "t": 9,
           "text": "Dos"
         },
         {
-          "t": 9.18,
+          "t": 9.2,
           "text": "me"
         },
         {
@@ -51,16 +95,11 @@
         },
         {
           "t": 10.16,
-          "text": "bonito"
-        }
-      ]
-    },
-    {
-      "end": 12.82,
-      "words": [
+          "text": "bonito,"
+        },
         {
           "t": 10.86,
-          "text": "Dos"
+          "text": "dos"
         },
         {
           "t": 11.28,
@@ -73,14 +112,14 @@
       ]
     },
     {
-      "end": 16.4,
+      "end": 15.65,
       "words": [
         {
-          "t": 13.62,
+          "t": 13.6,
           "text": "Diferentes"
         },
         {
-          "t": 14.9,
+          "t": 14.92,
           "text": "nacionalidades"
         }
       ]
@@ -89,7 +128,7 @@
       "end": 19.49,
       "words": [
         {
-          "t": 16.56,
+          "t": 16.54,
           "text": "Pero"
         },
         {
@@ -97,7 +136,7 @@
           "text": "cuando"
         },
         {
-          "t": 17.3,
+          "t": 17.34,
           "text": "chingan"
         },
         {

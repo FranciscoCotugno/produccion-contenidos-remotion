@@ -1,0 +1,175 @@
+{
+  "title": "Chantaje",
+  "artists": "Shakira, Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-beboteo/temas/chantaje/chantaje.mp3",
+    "start": 0,
+    "end": 16.54
+  },
+  "lyrics": [
+    {
+      "end": 2.6,
+      "words": [
+        {
+          "t": 0.3,
+          "text": "Yo"
+        },
+        {
+          "t": 0.7,
+          "text": "soy"
+        },
+        {
+          "t": 1.22,
+          "text": "masoquista"
+        }
+      ]
+    },
+    {
+      "end": 4,
+      "words": [
+        {
+          "t": 2.6,
+          "text": "Con"
+        },
+        {
+          "t": 2.76,
+          "text": "mi"
+        },
+        {
+          "t": 3.02,
+          "text": "cuerpo,"
+        },
+        {
+          "t": 3.22,
+          "text": "un"
+        },
+        {
+          "t": 3.52,
+          "text": "egoísta"
+        }
+      ]
+    },
+    {
+      "end": 6.76,
+      "words": [
+        {
+          "t": 4,
+          "text": "Tú"
+        },
+        {
+          "t": 4.2,
+          "text": "eres"
+        },
+        {
+          "t": 4.58,
+          "text": "puro,"
+        },
+        {
+          "t": 5.38,
+          "text": "puro"
+        },
+        {
+          "t": 5.88,
+          "text": "chantaje"
+        }
+      ]
+    },
+    {
+      "end": 9.42,
+      "words": [
+        {
+          "t": 6.76,
+          "text": "Puro,"
+        },
+        {
+          "t": 7.7,
+          "text": "puro"
+        },
+        {
+          "t": 8.26,
+          "text": "chantaje"
+        }
+      ]
+    },
+    {
+      "end": 11.78,
+      "words": [
+        {
+          "t": 9.64,
+          "text": "Siempre"
+        },
+        {
+          "t": 10.1,
+          "text": "es"
+        },
+        {
+          "t": 10.18,
+          "text": "a"
+        },
+        {
+          "t": 10.4,
+          "text": "tu"
+        },
+        {
+          "t": 11.14,
+          "text": "manera"
+        }
+      ]
+    },
+    {
+      "end": 13.74,
+      "words": [
+        {
+          "t": 12,
+          "text": "Yo"
+        },
+        {
+          "t": 12.14,
+          "text": "te"
+        },
+        {
+          "t": 12.42,
+          "text": "quiero"
+        },
+        {
+          "t": 12.58,
+          "text": "aunque"
+        },
+        {
+          "t": 12.94,
+          "text": "no"
+        },
+        {
+          "t": 13.42,
+          "text": "quiera"
+        }
+      ]
+    },
+    {
+      "end": 16.54,
+      "words": [
+        {
+          "t": 13.74,
+          "text": "Tú"
+        },
+        {
+          "t": 13.68,
+          "text": "eres"
+        },
+        {
+          "t": 16.18,
+          "text": "puro,"
+        },
+        {
+          "t": 16.44,
+          "text": "puro"
+        },
+        {
+          "t": 16.44,
+          "text": "chantaje"
+        }
+      ]
+    }
+  ]
+}

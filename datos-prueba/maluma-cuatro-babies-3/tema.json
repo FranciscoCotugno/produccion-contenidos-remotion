@@ -1,120 +1,170 @@
 {
-  "title": "Cuatro Babies",
+  "title": "Cuatro Babys",
   "artists": "Maluma",
   "cover": "",
   "fragment": {
-    "src": "media/maluma-fenix/cuatro-babies-3.mp3",
+    "src": "media/maluma-beboteo/temas/cuatro-babies-3/cuatro-babies-3.mp3",
     "start": 0,
-    "end": 14.47
+    "end": 14.94
   },
   "lyrics": [
     {
-      "end": 1.78,
+      "end": 5.48,
       "words": [
         {
-          "t": 0.18,
-          "text": "Cuatro"
+          "t": 0.92,
+          "text": "Estoy"
         },
         {
-          "t": 0.8,
-          "text": "chimbitas"
-        }
-      ]
-    },
-    {
-      "end": 3.92,
-      "words": [
-        {
-          "t": 1.78,
-          "text": "Cuatro"
+          "t": 1.46,
+          "text": "enamorado"
         },
         {
-          "t": 2.52,
-          "text": "personalidades"
-        }
-      ]
-    },
-    {
-      "end": 5.82,
-      "words": [
+          "t": 2.04,
+          "text": "de"
+        },
         {
-          "t": 3.96,
-          "text": "Dos"
+          "t": 2.46,
+          "text": "cuatro"
+        },
+        {
+          "t": 3.1,
+          "text": "babies,"
+        },
+        {
+          "t": 3.68,
+          "text": "siempre"
         },
         {
           "t": 4.14,
           "text": "me"
         },
         {
-          "t": 4.3,
-          "text": "hablan"
+          "t": 4.36,
+          "text": "dan"
         },
         {
-          "t": 5.12,
-          "text": "bonito"
+          "t": 4.62,
+          "text": "lo"
+        },
+        {
+          "t": 4.8,
+          "text": "que"
+        },
+        {
+          "t": 5.22,
+          "text": "quiero"
         }
       ]
     },
     {
-      "end": 7.76,
+      "end": 9.44,
       "words": [
         {
-          "t": 5.82,
-          "text": "Dos"
+          "t": 5.48,
+          "text": "Chingan"
         },
         {
-          "t": 6.24,
-          "text": "dicen"
-        },
-        {
-          "t": 6.62,
-          "text": "maldades"
-        }
-      ]
-    },
-    {
-      "end": 11.36,
-      "words": [
-        {
-          "t": 8.56,
-          "text": "Diferentes"
-        },
-        {
-          "t": 9.84,
-          "text": "nacionalidades"
-        }
-      ]
-    },
-    {
-      "end": 14.47,
-      "words": [
-        {
-          "t": 11.52,
-          "text": "Pero"
-        },
-        {
-          "t": 11.98,
+          "t": 6.14,
           "text": "cuando"
         },
         {
-          "t": 12.26,
-          "text": "chingan"
+          "t": 6.42,
+          "text": "yo"
         },
         {
-          "t": 12.7,
-          "text": "gritan"
+          "t": 6.72,
+          "text": "les"
         },
         {
-          "t": 13.3,
-          "text": "todas"
+          "t": 7.08,
+          "text": "digo,"
         },
         {
-          "t": 13.7,
-          "text": "por"
+          "t": 7.4,
+          "text": "ninguna"
         },
         {
-          "t": 14.12,
-          "text": "iguales"
+          "t": 8,
+          "text": "me"
+        },
+        {
+          "t": 8.48,
+          "text": "pone"
+        },
+        {
+          "t": 9.06,
+          "text": "pero"
+        }
+      ]
+    },
+    {
+      "end": 13.12,
+      "words": [
+        {
+          "t": 9.44,
+          "text": "Dos"
+        },
+        {
+          "t": 9.76,
+          "text": "son"
+        },
+        {
+          "t": 10.1,
+          "text": "casadas,"
+        },
+        {
+          "t": 11.38,
+          "text": "hay"
+        },
+        {
+          "t": 11.6,
+          "text": "una"
+        },
+        {
+          "t": 11.82,
+          "text": "soltera"
+        }
+      ]
+    },
+    {
+      "end": 14.94,
+      "words": [
+        {
+          "t": 13.12,
+          "text": "La"
+        },
+        {
+          "t": 13.16,
+          "text": "otra"
+        },
+        {
+          "t": 13.5,
+          "text": "medio"
+        },
+        {
+          "t": 13.96,
+          "text": "psycho"
+        },
+        {
+          "t": 14.08,
+          "text": "y"
+        },
+        {
+          "t": 14.24,
+          "text": "si"
+        },
+        {
+          "t": 14.38,
+          "text": "no"
+        },
+        {
+          "t": 14.56,
+          "text": "la"
+        },
+        {
+          "t": 14.76,
+          "text": "llamo"
         }
       ]
     }
