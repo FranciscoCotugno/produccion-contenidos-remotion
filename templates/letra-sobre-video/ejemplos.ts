@@ -309,37 +309,93 @@ export const piezasFenix: { id: string; formato: FormatoLetraVideo; props: Letra
   { id: "Fenix-Maluma-P3-Clip06", formato: "9x16", props: fenix(cuatroBabies3, "maluma-06.mp4", 0, 0.66) },
 ];
 
+// ───────────────────────────────────────────────────────────────────────────
+// CAMPAÑA MALUMA BEBOTEO (Fenix). El reparto lo armó Cotu en
+// assets/media/maluma-beboteo/pedido.txt; acá está pasado a props.
+//
+// Estilo elegido el 2026-10-20: **se va alternando entre la A (este molde,
+// mayúscula grande palabra por palabra) y la C (brat-maximal)**. Las piezas de
+// la C están en templates/brat-maximal/ejemplos.ts.
+//
+// Los clips apaisados (01, 12, 13, 14) salen en 4:3 y no en 9:16: en vertical
+// habría que recortarles el 58 % del ancho y se pierde el encuadre.
+//
+// Los textos de las frases los escribió Cotu.
+// ───────────────────────────────────────────────────────────────────────────
+
+import audioDel20 from "../../datos-prueba/maluma-audio-del-20/tema.json";
+import cuatroBabiesNuevo1 from "../../datos-prueba/maluma-cuatro-babies-1/tema.json";
+import cuatroBabiesNuevo3 from "../../datos-prueba/maluma-cuatro-babies-3/tema.json";
+import hawaii from "../../datos-prueba/maluma-hawaii/tema.json";
+import chantaje from "../../datos-prueba/maluma-chantaje/tema.json";
+import felicesLos4 from "../../datos-prueba/maluma-felices-los-4/tema.json";
+import borroCassette from "../../datos-prueba/maluma-borro-cassette/tema.json";
+import aguaEstribillo from "../../datos-prueba/maluma-agua-estribillo/tema.json";
+
 /**
- * Opciones de subtítulo GRANDE para el pedido Fenix (Cotu, 2026-10-19: el fino
- * no era). Las dos van palabra por palabra, que es el "efecto más rápido":
- * cada palabra aparece cuando se canta, en vez de la línea entera quieta.
+ * El 20 lleva **el audio del propio clip** (pedido de Cotu). Como el molde
+ * siempre muda el video y reproduce el audio del tema, se le extrajo la pista
+ * al clip y se la carga como si fuera el tema: suena exactamente igual.
  */
-export const opcionesFenix: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }[] = [
+const venteDelVideo = audioDel20;
+
+const CLIP = (n: string) => `media/maluma-beboteo/beboteo-${n}.mp4`;
+
+/** Opción A: mayúscula grande, blanca, palabra por palabra. */
+const TEXTO_A = { ...TEXTO_DE_SIEMPRE, tamano: 64, peso: 800, caja: "mayuscula" as const, altura: 0.78, ancho: 860 };
+/** Las frases van más arriba cuando el clip ya trae texto quemado de TikTok. */
+const TEXTO_FRASE = (altura: number) => ({ ...TEXTO_DE_SIEMPRE, tamano: 58, peso: 800, caja: "original" as const, altura, ancho: 880 });
+
+type PiezaBeb = { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps };
+
+const conLetraA = (clip: string, datos: unknown, formato: FormatoLetraVideo = "9x16", inicio = 0): PiezaBeb["props"] => ({
+  ...base,
+  tema: temaSchema.parse(datos),
+  video: { src: CLIP(clip), inicio, oscurecer: 0.18, virado: "ninguno" },
+  modo: "letra",
+  textoFijo: "",
+  posicionHook: "arriba",
+  revelado: "palabra",
+  texto: TEXTO_A,
+});
+
+const conFrase = (clip: string, datos: unknown, texto: string, altura: number, formato: FormatoLetraVideo = "9x16"): PiezaBeb["props"] => ({
+  ...base,
+  tema: temaSchema.parse(datos),
+  video: { src: CLIP(clip), inicio: 0, oscurecer: 0.18, virado: "ninguno" },
+  modo: "hook",
+  textoFijo: texto,
+  posicionHook: "arriba",
+  texto: TEXTO_FRASE(altura),
+});
+
+export const beboteo: PiezaBeb[] = [
+  // ── Con letra (opción A). Las de la opción C están en brat-maximal ──
+  { id: "Beb-06-CuatroBabies3", formato: "9x16", props: conLetraA("06", cuatroBabiesNuevo3) },
+  { id: "Beb-08-Hawaii", formato: "9x16", props: conLetraA("08", hawaii) },
+  { id: "Beb-10-CuatroBabies3", formato: "9x16", props: conLetraA("10", cuatroBabiesNuevo3) },
+  { id: "Beb-17-FelicesLos4", formato: "9x16", props: conLetraA("17", felicesLos4) },
+  { id: "Beb-19-Chantaje", formato: "9x16", props: conLetraA("19", chantaje) },
+  // apaisado: sale en 4:3
+  { id: "Beb-01-CuatroBabies1", formato: "4x3", props: conLetraA("01", cuatroBabiesNuevo1, "4x3") },
+
+  // ── Con frase. Los textos los escribió Cotu ──
+  { id: "Beb-05-Frase", formato: "9x16", props: conFrase("05", aguaEstribillo, "ESTOY HECHA 💦💦💦", 0.22) },
+  { id: "Beb-09-Frase", formato: "9x16", props: conFrase("09", chantaje, "JUAN ERES TAN PERFECTO", 0.22) },
+  { id: "Beb-02-Frase", formato: "9x16", props: conFrase("02", aguaEstribillo, "DIOS BAJO DEL CIELO Y:", 0.22) },
+  { id: "Beb-16-Frase", formato: "9x16", props: conFrase("16", aguaEstribillo, "💦💦💦", 0.22) },
+  { id: "Beb-04-Frase", formato: "9x16", props: conFrase("04", cuatroBabiesNuevo1, "😍😍😍😍", 0.22) },
+  // estos tres ya traen texto quemado de TikTok: la frase va bien arriba para
+  // que al menos los dos textos no se toquen
+  { id: "Beb-18-Frase", formato: "9x16", props: conFrase("18", felicesLos4, "HOTTTT🔥", 0.14) },
+  { id: "Beb-20-Frase", formato: "9x16", props: conFrase("20", venteDelVideo, "solo mandale este video a tu amiga", 0.14) },
+  { id: "Beb-12-Frase", formato: "4x3", props: conFrase("12", aguaEstribillo, "😍😍😍😍", 0.14, "4x3") },
+  { id: "Beb-14-Frase", formato: "4x3", props: conFrase("14", borroCassette, "POV: sos la elegida de dios", 0.18, "4x3") },
+
+  // ── Sin texto ──
   {
-    id: "Fenix-Opcion-A-Grande",
+    id: "Beb-11-SinTexto",
     formato: "9x16",
-    props: {
-      ...fenix(cuatroBabies3, "maluma-04.mp4", 0, 0.78),
-      revelado: "palabra",
-      texto: { ...TEXTO_DE_SIEMPRE, tamano: 64, peso: 800, caja: "mayuscula", altura: 0.78, ancho: 860 },
-    },
-  },
-  {
-    id: "Fenix-Opcion-B-Halo",
-    formato: "9x16",
-    props: {
-      ...fenix(cuatroBabies3, "maluma-04.mp4", 0, 0.78),
-      revelado: "palabra",
-      texto: {
-        ...TEXTO_DE_SIEMPRE,
-        tamano: 64,
-        peso: 800,
-        caja: "mayuscula",
-        altura: 0.78,
-        ancho: 860,
-        sombra: "resplandor",
-        colorResplandor: "#FF2E63",
-      },
-    },
+    props: { ...conLetraA("11", hawaii), modo: "fija", textoFijo: "" },
   },
 ];

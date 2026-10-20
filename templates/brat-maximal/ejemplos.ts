@@ -16,6 +16,18 @@ import type { BratMaximalProps } from "./BratMaximal";
 export const FORMATO_BRAT_MAXIMAL = { ancho: 1080, alto: 1080 } as const;
 
 /**
+ * El molde nacio en 1:1, como su referencia. Se le suman 9:16 y 4:3 el
+ * 2026-10-20 para la campana de Maluma: los clips son verticales y apaisados,
+ * y en 1:1 se recortaban feo. Las piezas que no declaran formato siguen en 1:1.
+ */
+export const FORMATOS_BRAT_MAXIMAL = {
+  "1x1": { ancho: 1080, alto: 1080 },
+  "9x16": { ancho: 1080, alto: 1920 },
+  "4x3": { ancho: 1440, alto: 1080 },
+} as const;
+export type FormatoBratMaximal = keyof typeof FORMATOS_BRAT_MAXIMAL;
+
+/**
  * El fondo es el videoclip del fragmento (L03). En L02 va material en vivo, con
  * el mismo tratamiento: no hay de prueba, así que hay un solo ejemplo por tema.
  */
@@ -76,15 +88,33 @@ export const ejemplosBratMaximal: { id: string; props: BratMaximalProps }[] = [
   ...maxiMaximal,
 ];
 
-/** Opción C del pedido Fenix: la mecánica de este molde sobre el clip de Maluma. */
-import cuatroBabies3 from "../../datos-prueba/maluma-cuatro-babies-3/tema.json";
-export const opcionFenix: { id: string; props: BratMaximalProps }[] = [
-  {
-    id: "Fenix-Opcion-C-Maximal",
-    props: {
-      ...armar(temaSchema.parse(cuatroBabies3)),
-      video: { src: "media/maluma-fenix/maluma-04.mp4", inicio: 0, desenfoque: 0, brillo: 0.8 },
-      tamanoLetra: 92,
-    },
-  },
+// ───────────────────────────────────────────────────────────────────────────
+// CAMPAÑA MALUMA BEBOTEO (Fenix): las piezas que van con la opción C.
+// Las de la opción A están en templates/letra-sobre-video/ejemplos.ts.
+// El reparto lo armó Cotu; el estilo se va alternando entre las dos.
+// ───────────────────────────────────────────────────────────────────────────
+
+import felicesLos4 from "../../datos-prueba/maluma-felices-los-4/tema.json";
+import borroCassette from "../../datos-prueba/maluma-borro-cassette/tema.json";
+import cuatroBabies1 from "../../datos-prueba/maluma-cuatro-babies-1/tema.json";
+import aguaEstribillo from "../../datos-prueba/maluma-agua-estribillo/tema.json";
+
+const bebC = (
+  clip: string,
+  datos: unknown,
+  formato: FormatoBratMaximal = "9x16",
+  inicio = 0,
+): BratMaximalProps => ({
+  ...armar(temaSchema.parse(datos)),
+  video: { src: `media/maluma-beboteo/beboteo-${clip}.mp4`, inicio, desenfoque: 0, brillo: 0.78 },
+  tamanoLetra: formato === "4x3" ? 96 : 88,
+});
+
+export const beboteoC: { id: string; formato: FormatoBratMaximal; props: BratMaximalProps }[] = [
+  { id: "Beb-07-FelicesLos4", formato: "9x16", props: bebC("07", felicesLos4) },
+  { id: "Beb-15-BorroCassette", formato: "9x16", props: bebC("15", borroCassette) },
+  { id: "Beb-03-Agua", formato: "9x16", props: bebC("03", aguaEstribillo) },
+  { id: "Beb-21-BorroCassette", formato: "9x16", props: bebC("21", borroCassette) },
+  // apaisado: sale en 4:3. Arranca en el segundo 3 (pedido de Cotu)
+  { id: "Beb-13-CuatroBabies1", formato: "4x3", props: bebC("13", cuatroBabies1, "4x3", 3) },
 ];

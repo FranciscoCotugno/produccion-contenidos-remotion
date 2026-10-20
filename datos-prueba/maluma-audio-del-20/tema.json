@@ -1,0 +1,21 @@
+{
+  "title": "Vente Pa' Ca",
+  "artists": "Ricky Martin, Maluma",
+  "cover": "",
+  "fragment": {
+    "src": "media/maluma-beboteo/temas/audio-del-20/audio-del-20.mp3",
+    "start": 0,
+    "end": 13.14
+  },
+  "lyrics": [
+    {
+      "end": 13.14,
+      "words": [
+        {
+          "t": 0,
+          "text": "-"
+        }
+      ]
+    }
+  ]
+}
