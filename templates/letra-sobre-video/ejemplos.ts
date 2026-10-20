@@ -399,3 +399,38 @@ export const beboteo: PiezaBeb[] = [
     props: { ...conLetraA("11", hawaii), modo: "fija", textoFijo: "" },
   },
 ];
+
+/**
+ * Muestrario de subtítulos: el mismo clip y la misma letra con los tratamientos
+ * que da el molde, para elegir mirando. Son todos props, no formatos nuevos.
+ */
+const muestra = (texto: Partial<LetraSobreVideoProps["texto"]>, extra: Partial<LetraSobreVideoProps> = {}): LetraSobreVideoProps => ({
+  ...base,
+  tema: temaSchema.parse(felicesLos4),
+  video: { src: CLIP("17"), inicio: 0, oscurecer: 0.18, virado: "ninguno" },
+  modo: "letra",
+  textoFijo: "",
+  posicionHook: "arriba",
+  revelado: "palabra",
+  texto: { ...TEXTO_A, ...texto },
+  ...extra,
+});
+
+export const muestrarioSubs: PiezaBeb[] = [
+  // 1. lo que ya viste
+  { id: "Sub-1-MayusculaBlanca", formato: "9x16", props: muestra({}) },
+  // 2. contorno duro: el recurso más nativo de TikTok
+  { id: "Sub-2-ContornoDuro", formato: "9x16", props: muestra({ sombra: "contorno", grosorContorno: 6 }) },
+  // 3. contorno, la letra en ámbar (como las referencias de tipografía)
+  { id: "Sub-3-ContornoAmbar", formato: "9x16", props: muestra({ sombra: "contorno", color: "#FFD93D", grosorContorno: 6 }) },
+  // 4. halo de color, sin contorno ni caja
+  { id: "Sub-4-HaloRosa", formato: "9x16", props: muestra({ sombra: "resplandor", colorResplandor: "#FF2E63" }) },
+  // 5. línea entera de golpe, en vez de palabra por palabra
+  { id: "Sub-5-LineaEntera", formato: "9x16", props: muestra({}, { revelado: "linea" }) },
+  // 6. caja normal, no mayúscula
+  { id: "Sub-6-CajaNormal", formato: "9x16", props: muestra({ caja: "original", tamano: 58 }) },
+  // 7. chico y fino, el minimalista
+  { id: "Sub-7-Fino", formato: "9x16", props: muestra({ ...TEXTO_SUBTITULO_FINO, tamano: 36, altura: 0.82 }, { revelado: "linea" }) },
+  // 8. arriba en vez de abajo
+  { id: "Sub-8-Arriba", formato: "9x16", props: muestra({ sombra: "contorno", grosorContorno: 6, altura: 0.2 }) },
+];

@@ -97,9 +97,14 @@ export const letraSobreVideoSchema = z.object({
      * referencia 04-dron-fecha: el texto no lleva contorno ni caja, lleva un
      * halo luminoso que lo despega del paisaje sin ensuciar la imagen.
      */
-    sombra: z.enum(["ninguna", "suave", "media", "normal", "resplandor"]),
+    sombra: z.enum(["ninguna", "suave", "media", "normal", "resplandor", "contorno"]),
     /** color del halo, cuando la sombra es `resplandor` */
     colorResplandor: zColor(),
+    /** color del texto */
+    color: zColor(),
+    /** color y grosor del contorno, cuando la sombra es `contorno` */
+    colorContorno: zColor(),
+    grosorContorno: z.number().min(1).max(14).step(0.5),
     /** caja del texto de la letra */
     caja: z.enum(["minuscula", "original", "mayuscula"]),
     /** ancho de la caja donde el texto corta en renglones */
@@ -141,6 +146,9 @@ export const TEXTO_DE_SIEMPRE = {
   altura: 0.5,
   sombra: "normal" as const,
   colorResplandor: "#FFFFFF",
+  color: "#FFFFFF",
+  colorContorno: "#000000",
+  grosorContorno: 5,
   caja: "minuscula" as const,
   ancho: 640,
 };
@@ -152,6 +160,9 @@ export const TEXTO_SUBTITULO_FINO = {
   altura: 0.5,
   sombra: "media" as const,
   colorResplandor: "#FFFFFF",
+  color: "#FFFFFF",
+  colorContorno: "#000000",
+  grosorContorno: 5,
   caja: "minuscula" as const,
   ancho: 760,
 };
@@ -180,8 +191,21 @@ const SOMBRAS = {
 const resplandorDe = (color: string, px: number) =>
   `0 0 ${px * 0.12}px ${color}, 0 0 ${px * 0.3}px ${color}, 0 0 ${px * 0.6}px ${color}, 0 2px 4px rgba(0,0,0,0.55)`;
 
+/**
+ * Contorno duro, en ocho direcciones. Es el recurso más nativo de TikTok: la
+ * app despega así su propio texto del video. Se repite con `lista-numerada`.
+ */
+const contornoDe = (color: string, grosor: number) =>
+  [[1, 0], [-1, 0], [0, 1], [0, -1], [0.7, 0.7], [-0.7, 0.7], [0.7, -0.7], [-0.7, -0.7]]
+    .map(([x, y]) => `${(x * grosor).toFixed(1)}px ${(y * grosor).toFixed(1)}px 0 ${color}`)
+    .join(", ");
+
 const sombraDe = (estilo: EstiloTexto, px: number) =>
-  estilo.sombra === "resplandor" ? resplandorDe(estilo.colorResplandor, px) : SOMBRAS[estilo.sombra];
+  estilo.sombra === "resplandor"
+    ? resplandorDe(estilo.colorResplandor, px)
+    : estilo.sombra === "contorno"
+      ? contornoDe(estilo.colorContorno, estilo.grosorContorno * (px / 60))
+      : SOMBRAS[estilo.sombra];
 
 /** Virado del material. */
 const VIRADOS = {
@@ -238,7 +262,7 @@ const Texto: React.FC<{ texto: string; centroY: number; estilo: EstiloTexto; opa
         fontWeight: estilo.peso,
         fontSize: estilo.tamano * escala,
         lineHeight: TEXTO.interlineado,
-        color: "#FFFFFF",
+        color: estilo.color,
         textShadow: sombraDe(estilo, estilo.tamano * escala),
         textWrap: "balance",
         whiteSpace: "pre-line",

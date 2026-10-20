@@ -18,7 +18,7 @@ import { FORMATO_TARJETA, ejemplosTarjetaLetra } from "./templates/tarjeta-letra
 import { ReproductorWidget, duracionWidget, reproductorWidgetSchema } from "./templates/reproductor-widget/ReproductorWidget";
 import { FORMATOS_WIDGET, ejemplosReproductorWidget, compararWidget } from "./templates/reproductor-widget/ejemplos";
 import { LetraSobreVideo, duracionLetraSobreVideo, letraSobreVideoSchema, type LetraSobreVideoProps } from "./templates/letra-sobre-video/LetraSobreVideo";
-import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo, modosNuevos, piezasFenix, beboteo, type FormatoLetraVideo } from "./templates/letra-sobre-video/ejemplos";
+import { FORMATOS_LETRA_VIDEO, ejemplosLetraSobreVideo, modosNuevos, piezasFenix, beboteo, muestrarioSubs, type FormatoLetraVideo } from "./templates/letra-sobre-video/ejemplos";
 import { BratMaximal, bratMaximalSchema, duracionBratMaximal, type BratMaximalProps } from "./templates/brat-maximal/BratMaximal";
 import { FORMATOS_BRAT_MAXIMAL, ejemplosBratMaximal, beboteoC, type FormatoBratMaximal } from "./templates/brat-maximal/ejemplos";
 import { BratMinimal, bratMinimalSchema, duracionBratMinimal } from "./templates/brat-minimal/BratMinimal";
@@ -171,7 +171,7 @@ export const RemotionRoot: React.FC = () => (
         defaultProps={props}
       />
     ))}
-    {[...ejemplosLetraSobreVideo, ...modosNuevos, ...piezasFenix, ...beboteo].map(({ id, formato, props }: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }) => (
+    {[...ejemplosLetraSobreVideo, ...modosNuevos, ...piezasFenix, ...beboteo, ...muestrarioSubs].map(({ id, formato, props }: { id: string; formato: FormatoLetraVideo; props: LetraSobreVideoProps }) => (
       <Composition
         key={id}
         id={id}
