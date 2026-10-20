@@ -15,7 +15,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 8 | `brat-minimal` | L04 | Video | LyricFilm del repo original | Terminado (1:1, en B/N y en color) |
 | 9 | `carrusel` | C1, C2, C8, R2 | Imágenes (3:4) | Desde cero | Terminado (3:4) |
 | 10 | `nota-celular` | C7 | Video | Desde cero | Terminado (1:1) |
-| 11 | `karaoke` | L09 | Video | Desde cero | Terminado (9:16, 1:1) |
+| 11 | ~~`karaoke`~~ | L09 | Video | Desde cero | **De baja** (2026-10-17, decisión de Cotu): *"el template de karaoke no va más"*; no le gustó el efecto de los subtítulos. L09 queda sin molde |
 | 12 | ~~`tipografico`~~ | L10 | Video | Desde cero | **De baja** (2026-10-06, decisión de Cotu): no convenció. |
 | 12a | ~~`bloque-palabra`~~ | L10 | Video | Rehizo `tipografico` (pedido 3) | **De baja** (2026-10-18, decisión de Cotu): vio el video y no le gustó el contenido. Segunda vez que se cae este formato. L10 sigue sin molde. |
 | 12b | `panel-letra` | lyrics puras (el panel de letra abierto de una app) | Video | Desde cero (pedido 2) | **Terminado** (9:16, 1:1, 3:4, 4:3). Variantes elegidas por Cotu el 2026-10-17 |
@@ -66,7 +66,7 @@ Acá se corta el laboratorio por ahora: **con estos 11 moldes se puede empezar a
 | `bloque-palabra` | L10 y tipografía sobre color | Video | 4:3, 9:16, 1:1 | `BloquePalabra-*` | **de baja** |
 | `lista-numerada` | las 4 de recomendación | Video | 9:16, 4:3, 1:1 | `ListaNumerada-*` | la lista de temas y su rótulo (`datos-prueba/listas/`) |
 | `prensa` | P1, P2 | Video | 9:16, 1:1, 4:3 | `Prensa-*` | **el titular**, que lo escribe una persona |
-| `karaoke` | L09 | Video | 9:16, 1:1 | `Karaoke-*` | nada |
+| `karaoke` | L09 | Video | 9:16, 1:1 | `Karaoke-*` | **de baja** |
 
 ### Lo que decide una persona antes de producir
 La bajada de cada tema define el fragmento (inicio y fin) y **los textos exactos de cada molde**: hooks, la frase que va en una slide, las palabras destacadas. El molde recibe el texto ya elegido, no la letra entera para recortar. Están todos juntos en `datos-prueba/<tema>/textos.txt`.

@@ -1,5 +1,13 @@
 # Karaoke
 
+> **DE BAJA (2026-10-17, decisión de Cotu).** *"El template de karaoke no va
+> más."* No le gustó el efecto de los subtítulos rellenándose. **L09 queda sin
+> molde.** El código queda completo por si cambia el criterio; no usar en
+> producción.
+>
+> Es la misma objeción que después hundió a `bloque-palabra`: el revelado
+> palabra por palabra. Vale tenerlo presente antes de proponer un tercero.
+
 > **Nota del 2026-10-17 (reglas generales).** Lo que esta ficha diga sobre **zona
 > segura** quedó como registro de cómo se construyó el molde, **no como regla**.
 > Hoy las composiciones van a sangre completa: la única precaución es la columna
