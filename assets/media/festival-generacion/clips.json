@@ -1,0 +1,200 @@
+{
+  "_nota": "Festival Generación. El hook es el texto que va arriba del video final; lo escribió Cotu. grupo A = sin marca de agua ajena; grupo B = cuenta @clipsnhu, con marca propia quemada. watermarkBox se llena en la etapa 2. watermarkBox va en fracciones del video original (cx y cy son el centro).",
+  "clips": [
+    {
+      "archivo": "clip-01.mp4",
+      "hook": "nunca te vas a esperar la respuesta de Lit Killah",
+      "grupo": "A",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1244,
+        "fps": 60,
+        "duracion": 34.78,
+        "orientacion": "vertical"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-02.mp4",
+      "hook": "NAPOLETANO CAMPEONEE",
+      "grupo": "A",
+      "fuente": {
+        "ancho": 764,
+        "alto": 576,
+        "fps": 30,
+        "duracion": 38.7,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-03.mp4",
+      "hook": "Subiendo clips legendarios hasta que se vuelvan virales PT 349",
+      "grupo": "A",
+      "fuente": {
+        "ancho": 732,
+        "alto": 576,
+        "fps": 30,
+        "duracion": 28.87,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-04.mp4",
+      "hook": "Hay finales inesperados y este",
+      "grupo": "A",
+      "fuente": {
+        "ancho": 700,
+        "alto": 576,
+        "fps": 30,
+        "duracion": 37.9,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-05.mp4",
+      "hook": "Subiendo clips legendarios hasta que se vuelvan virales PT 92",
+      "grupo": "A",
+      "fuente": {
+        "ancho": 576,
+        "alto": 750,
+        "fps": 30,
+        "duracion": 11.97,
+        "orientacion": "vertical"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-06.mp4",
+      "hook": "El mejor clip de la historia?",
+      "grupo": "B",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 54.93,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tapar",
+        "archivo": "generacion-cuadrada.png"
+      },
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.7875,
+        "ancho": 0.272,
+        "alto": 0.0375
+      }
+    },
+    {
+      "archivo": "clip-07.mp4",
+      "hook": "",
+      "grupo": "B",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 25.1,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tapar",
+        "archivo": "generacion-cuadrada.png"
+      },
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.725,
+        "ancho": 0.236,
+        "alto": 0.021
+      }
+    },
+    {
+      "archivo": "clip-08.mp4",
+      "hook": "el mejor dúo de la historia",
+      "grupo": "B",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 30,
+        "duracion": 32.03,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tapar",
+        "archivo": "generacion-cuadrada.png"
+      },
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.465,
+        "ancho": 0.264,
+        "alto": 0.023
+      }
+    },
+    {
+      "archivo": "clip-09.mp4",
+      "hook": "Subiendo clips legendarios hasta que se vuelvan virales PT 67",
+      "grupo": "B",
+      "fuente": {
+        "ancho": 576,
+        "alto": 1024,
+        "fps": 30,
+        "duracion": 19.73,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tapar",
+        "archivo": "generacion-cuadrada.png"
+      },
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.864,
+        "ancho": 0.269,
+        "alto": 0.033
+      }
+    },
+    {
+      "archivo": "clip-10.mp4",
+      "hook": "Subiendo clips legendarios hasta que se vuelvan virales PT 89",
+      "grupo": "B",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 10.1,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tapar",
+        "archivo": "generacion-cuadrada.png"
+      },
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.68,
+        "ancho": 0.253,
+        "alto": 0.028
+      }
+    }
+  ]
+}

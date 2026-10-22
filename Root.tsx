@@ -37,6 +37,8 @@ import { FORMATOS_LISTA, ejemplosListaNumerada } from "./templates/lista-numerad
 import { Prensa, prensaSchema, duracionPrensa } from "./templates/prensa/Prensa";
 import { FORMATOS_PRENSA, ejemplosPrensa } from "./templates/prensa/ejemplos";
 import { FORMATOS_KARAOKE, ejemplosKaraoke } from "./templates/karaoke/ejemplos";
+import { FestivalClip, festivalSchema, duracionFestival } from "./templates/festival/FestivalClip";
+import { FORMATO_FESTIVAL, ejemplosFestival } from "./templates/festival/ejemplos";
 import agua from "./datos-prueba/agua/tema.json";
 import aQuienLeImporta from "./datos-prueba/a-quien-le-importa/tema.json";
 
@@ -306,6 +308,20 @@ export const RemotionRoot: React.FC = () => (
         fps={FPS}
         durationInFrames={1}
         calculateMetadata={duracionPrensa}
+        defaultProps={props}
+      />
+    ))}
+    {ejemplosFestival.map(({ id, props }) => (
+      <Composition
+        key={id}
+        id={id}
+        component={FestivalClip}
+        schema={festivalSchema}
+        width={FORMATO_FESTIVAL.ancho}
+        height={FORMATO_FESTIVAL.alto}
+        fps={FPS}
+        durationInFrames={1}
+        calculateMetadata={duracionFestival}
         defaultProps={props}
       />
     ))}

@@ -22,6 +22,7 @@ Cada molde es un template que sirve a una o más cuentas de la grilla. Se constr
 | 12c | `lista-numerada` | las 4 de recomendación | Video | Desde cero (pedido 4) | **Terminado** (9:16, 4:3, 1:1). Destrabado el 2026-10-19: el ranking es de un solo artista, así que no hace falta material de otros sellos |
 | 13 | `prensa` | P1, P2 | Video | Desde cero (pedido 5) | En revisión con Cotu (9:16, 1:1, 4:3). Falta la identidad de cada medio y los titulares reales |
 | 14 | `memes` | M1 | Imagen y video | Desde cero | Pendiente |
+| — | `festival` | Festival Generación (pedido propio, fuera de la grilla) | Video | Desde cero | **Terminado** (9:16). Clip tal cual + hook + mosca |
 
 > **El molde es la unidad, no la cuenta** (Cotu, 2026-10-19). Primero se cierran
 > los templates y sus variantes; el reparto de qué molde y qué piel usa cada
