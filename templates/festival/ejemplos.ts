@@ -17,7 +17,10 @@ const MOSCA = {
   cuadrada: `${MEDIA}/mosca/generacion-cuadrada.png`,
 };
 
-const HOOK = { tamano: 46, peso: 400, ancho: 820, fundido: 12 };
+// Cotu, 2026-10-23: un poco más grande y unos píxeles más abajo.
+// `altura` 0,165 son 317 px: bien por debajo de los 120 que tapa TikTok.
+// `enBanda` 0,62 lo corre hacia el borde del video en vez de centrarlo.
+const HOOK = { tamano: 54, peso: 400, ancho: 820, fundido: 12, altura: 0.165, enBanda: 0.62 };
 
 type Clip = {
   archivo: string;

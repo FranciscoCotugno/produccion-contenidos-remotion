@@ -50,6 +50,16 @@ export const festivalSchema = z.object({
     ancho: z.number().min(400).max(1000).step(10),
     /** cuadros del fundido de entrada */
     fundido: z.number().int().min(0).max(60),
+    /**
+     * Altura del hook cuando el video llena el cuadro, como fracción del alto.
+     * Tiene que quedar por debajo de los 120 px que tapa TikTok arriba.
+     */
+    altura: z.number().min(0.06).max(0.4).step(0.005),
+    /**
+     * Altura del hook cuando el video es apaisado y deja banda, como fracción
+     * de esa banda. 0,5 lo centra; más lo baja hacia el borde del video.
+     */
+    enBanda: z.number().min(0.3).max(0.95).step(0.05),
   }),
 
   mosca: z.object({
@@ -109,7 +119,7 @@ export const FestivalClip: React.FC<FestivalProps> = ({ clip, hook, hookEstilo, 
   // apaisado y deja una banda grande, se centra en la banda; si llena el cuadro,
   // va a una altura fija cerca del borde.
   const bandaArriba = caja.top;
-  const yHook = bandaArriba > 320 ? bandaArriba / 2 : TAPA_TIKTOK.arriba + 120;
+  const yHook = bandaArriba > 320 ? bandaArriba * hookEstilo.enBanda : hookEstilo.altura * height;
 
   const opacidadHook =
     hookEstilo.fundido === 0

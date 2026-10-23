@@ -25,10 +25,14 @@ sobre el cuadro final.
 ## El hook
 
 - Arriba, TikTok Sans, peso fino, blanco con sombra para que se lea sobre
-  cualquier fondo. Entra con un fundido de 12 cuadros.
-- **Si el video es apaisado y deja una banda de más de 320 px, el hook se centra
-  en la banda.** Si el video llena el cuadro, va a una altura fija cerca del
-  borde, debajo de lo que tapa TikTok.
+  cualquier fondo. **54 px** (Cotu lo subió de 46 el 2026-10-23). Entra con un
+  fundido de 12 cuadros.
+- **Si el video es apaisado y deja una banda de más de 320 px, el hook va dentro
+  de la banda**, a la fracción que diga `enBanda` (0,62: corrido hacia el borde
+  del video, no centrado). Si el video llena el cuadro, va a `altura` (0,165 del
+  alto = 317 px), bien por debajo de los 120 px que tapa TikTok.
+- Las dos alturas son props, así que moverlo unos píxeles no necesita tocar
+  código.
 - Lo escribe una persona. Un clip puede no tener hook: entonces no se dibuja nada.
 
 ## La mosca
