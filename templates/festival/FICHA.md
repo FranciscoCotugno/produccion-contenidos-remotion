@@ -56,11 +56,19 @@ La placa mide `ancho de la marca × holgura` (1,55) y alto suficiente para que e
 logotipo entre con aire. Esquinas redondeadas, para que lea como un elemento de
 diseño y no como un parche.
 
-### Por qué el logotipo apaisado en los dos modos
+### Qué logotipo va
 
-La marca ajena es **un renglón de texto ancho**. Una placa ancha la cubre con
-mucha menos superficie que una cuadrada, que tendría que crecer para los costados
-sin necesidad. La versión cuadrada queda en `assets/` por si hiciera falta.
+**El apilado cuadrado, en los dos modos** (Cotu, 2026-10-23). Se probó primero
+con el apaisado, que para tapar rendía mejor porque la marca ajena es un renglón
+de texto ancho; Cotu prefirió el cuadrado y va en las 28.
+
+Como la mosca es cuadrada, el tamaño se da por **el lado** (`anchoTercio`, 340
+px) y vale para los dos modos. En `tapar`, la placa se arma alrededor de ese
+tamaño pero **nunca más angosta que la marca que tiene que cubrir**: el lado es
+el mayor entre la mosca con aire, el ancho de la marca por la holgura, y tres
+veces su alto.
+
+El apaisado queda en `assets/` por si hiciera falta.
 
 ## Dónde está la marca ajena
 

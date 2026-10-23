@@ -40,17 +40,14 @@ export const ejemplosFestival: { id: string; props: FestivalProps }[] = (clips.c
       hook: c.hook,
       hookEstilo: HOOK,
       mosca: {
-        // el logotipo apaisado en los dos modos: la marca ajena es un renglón
-        // de texto ancho, así que una placa ancha la cubre con menos superficie
-        // que una cuadrada. La cuadrada queda disponible si hiciera falta.
-        archivo: MOSCA.horizontal,
+        // el apilado cuadrado en todas (Cotu, 2026-10-23)
+        archivo: MOSCA.cuadrada,
         modo: c.mosca.modo,
-        // 440 px de ancho: entra holgado y no se mete en los 180 px que tapa
-        // TikTok a la derecha
-        anchoTercio: 440,
-        // 0,745 del alto deja la mosca en el tercio de abajo y por encima de
-        // los 320 px donde TikTok pone el usuario y el epígrafe
-        alturaTercio: 0.745,
+        // 340 px de lado. La mosca es cuadrada, así que el lado manda: a 340
+        // centrada en 0,73 va de y=1232 a 1572, o sea dentro del tercio de
+        // abajo y por encima de los 320 px que tapa TikTok.
+        anchoTercio: 340,
+        alturaTercio: 0.73,
         // 1,55 veces el ancho de la marca ajena: la cubre con aire de sobra
         holgura: 1.55,
         colorPlaca: "#000000",

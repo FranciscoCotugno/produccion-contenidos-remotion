@@ -69,7 +69,11 @@ export const festivalSchema = z.object({
      * `tapar`: centrada sobre la marca ajena, opaca y más grande que ella.
      */
     modo: z.enum(["tercio", "tapar"]),
-    /** ancho de la mosca en modo tercio, en px del cuadro final */
+    /**
+     * Lado de la mosca, en px del cuadro final. La mosca es cuadrada, así que
+     * vale para los dos modos: en `tapar` la placa se arma alrededor de este
+     * tamaño, comprobando que igual cubra la marca ajena.
+     */
     anchoTercio: z.number().min(120).max(900).step(10),
     /** altura del centro en modo tercio, como fracción del alto */
     alturaTercio: z.number().min(0.5).max(0.95).step(0.01),
@@ -132,13 +136,16 @@ export const FestivalClip: React.FC<FestivalProps> = ({ clip, hook, hookEstilo, 
   const tapando = mosca.modo === "tapar" && watermarkBox !== null;
   const placa = tapando
     ? (() => {
-        const w = watermarkBox!.ancho * caja.ancho * mosca.holgura;
-        // la caja de la marca es un renglón de texto bajo: la placa necesita
-        // alto propio para que el logotipo entre con aire
-        const h = Math.max(watermarkBox!.alto * caja.alto * 2.6, w * 0.26);
+        // la placa se arma alrededor de la mosca, pero nunca más angosta que
+        // la marca que tiene que tapar
+        const lado = Math.max(
+          mosca.anchoTercio * 1.14,
+          watermarkBox!.ancho * caja.ancho * mosca.holgura,
+          watermarkBox!.alto * caja.alto * 3,
+        );
         return {
-          w,
-          h,
+          w: lado,
+          h: lado,
           cx: caja.left + watermarkBox!.cx * caja.ancho,
           cy: caja.top + watermarkBox!.cy * caja.alto,
         };
