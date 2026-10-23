@@ -195,6 +195,348 @@
         "ancho": 0.253,
         "alto": 0.028
       }
+    },
+    {
+      "archivo": "clip-11.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "caption arriba: 'Chef italiano se enoja por que le revuelven los Ñoquis'",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 20.85,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-12.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "limpio",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 576,
+        "alto": 1024,
+        "fps": 30,
+        "duracion": 100.43,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-13.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "limpio",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 60,
+        "duracion": 17.18,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-14.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "caption 'los streamers de futbol' + barra de Twitch abajo",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 29.88,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-15.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "subtítulo quemado + logo del programa arriba izq",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 30,
+        "duracion": 36.22,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-16.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "#FERNECON arriba der (aparece y desaparece) + logo KICK al centro",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 576,
+        "alto": 1024,
+        "fps": 30,
+        "duracion": 28.93,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-17.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "texto quemado arriba: 'HEY HERMANOS LOS SALUDA EL ROBROB'",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 34,
+        "duracion": 14.96,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-18.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "'el mejor clip de PLM' abajo + zócalos del programa",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 26.38,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-19.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "subtítulos chicos + overlay de Twitch arriba",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1282,
+        "fps": 30,
+        "duracion": 27.98,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-20.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "limpio",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 39,
+        "duracion": 13.84,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-21.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "APAISADO. overlay de stream arriba izq",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1020,
+        "alto": 576,
+        "fps": 25,
+        "duracion": 11.17,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-22.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "APAISADO. chat de Twitch a la izq + 'RTERIX' al fondo",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1906,
+        "alto": 1080,
+        "fps": 26,
+        "duracion": 7.19,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-23.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "limpio",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 82.87,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-24.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "subtítulos quemados",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 60,
+        "duracion": 29.28,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-25.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "limpio",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 720,
+        "alto": 1280,
+        "fps": 30,
+        "duracion": 37.8,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-26.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "APAISADO. gráfico arriba izq",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1060,
+        "alto": 576,
+        "fps": 30,
+        "duracion": 62.3,
+        "orientacion": "apaisado"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-27.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "logo KICK al centro",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 60,
+        "duracion": 15.35,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
+    },
+    {
+      "archivo": "clip-28.mp4",
+      "hook": "",
+      "_hookPendiente": true,
+      "_loQueYaTrae": "zócalo 'MARIANO ANDUJAR Y PABL...' abajo",
+      "grupo": "C",
+      "fuente": {
+        "ancho": 1080,
+        "alto": 1920,
+        "fps": 60,
+        "duracion": 21.55,
+        "orientacion": "9x16"
+      },
+      "mosca": {
+        "modo": "tercio",
+        "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
+      },
+      "watermarkBox": null
     }
   ]
 }
