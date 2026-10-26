@@ -17,10 +17,17 @@ const MOSCA = {
   cuadrada: `${MEDIA}/mosca/generacion-cuadrada.png`,
 };
 
-// Cotu, 2026-10-23: un poco más grande y unos píxeles más abajo.
-// `altura` 0,165 son 317 px: bien por debajo de los 120 que tapa TikTok.
-// `enBanda` 0,62 lo corre hacia el borde del video en vez de centrarlo.
-const HOOK = { tamano: 54, peso: 400, ancho: 820, fundido: 12, altura: 0.165, enBanda: 0.62 };
+// Cotu, 2026-10-26: "no tan alto como en los otros, con sombra y en negrita
+// para que se lea bien".
+//   peso 700    negrita
+//   sombra 1    la sombra al máximo
+//   altura 0,20 son 384 px (antes 317), o sea más abajo
+//   enBanda 0,74 lo corre más hacia el borde del video dentro de la banda
+//   ancho 960   en negrita el texto crece: con 820 la primera línea se partía
+//               igual y el hook salía en tres renglones en vez de dos. A esta
+//               altura (384 px) la columna de botones de TikTok todavía no
+//               está: arranca bastante más abajo.
+const HOOK = { tamano: 54, peso: 700, ancho: 960, fundido: 12, altura: 0.2, enBanda: 0.74, sombra: 1 };
 
 type Clip = {
   archivo: string;

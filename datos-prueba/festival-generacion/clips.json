@@ -349,7 +349,7 @@
     {
       "archivo": "clip-19.mp4",
       "hook": "",
-      "_loQueYaTrae": "subtítulos chicos + overlay de Twitch arriba",
+      "_loQueYaTrae": "ya tiene copy propio quemado (pedido de Cotu: sin hook nuestro)",
       "grupo": "C",
       "fuente": {
         "ancho": 720,
@@ -367,7 +367,7 @@
     },
     {
       "archivo": "clip-20.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos de\nPLM día 33",
       "_loQueYaTrae": "limpio",
       "grupo": "C",
       "fuente": {
@@ -381,12 +381,11 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-21.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos de\nPLM día 777",
       "_loQueYaTrae": "APAISADO. overlay de stream arriba izq",
       "grupo": "C",
       "fuente": {
@@ -400,12 +399,11 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-22.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 233",
       "_loQueYaTrae": "APAISADO. chat de Twitch a la izq + 'RTERIX' al fondo",
       "grupo": "C",
       "fuente": {
@@ -419,8 +417,7 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-23.mp4",
@@ -443,7 +440,7 @@
     },
     {
       "archivo": "clip-24.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 233",
       "_loQueYaTrae": "subtítulos quemados",
       "grupo": "C",
       "fuente": {
@@ -457,12 +454,11 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-25.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 989",
       "_loQueYaTrae": "limpio",
       "grupo": "C",
       "fuente": {
@@ -476,12 +472,11 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-26.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 21",
       "_loQueYaTrae": "APAISADO. gráfico arriba izq",
       "grupo": "C",
       "fuente": {
@@ -495,13 +490,12 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     },
     {
       "archivo": "clip-27.mp4",
-      "hook": "",
-      "_loQueYaTrae": "logo KICK al centro",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 219",
+      "_loQueYaTrae": "marca de agua KICK, centrada y estática (verificado a los 3 y a los 12 s)",
       "grupo": "C",
       "fuente": {
         "ancho": 1080,
@@ -511,15 +505,19 @@
         "orientacion": "9x16"
       },
       "mosca": {
-        "modo": "tercio",
+        "modo": "tapar",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": {
+        "cx": 0.5,
+        "cy": 0.716,
+        "ancho": 0.222,
+        "alto": 0.042
+      }
     },
     {
       "archivo": "clip-28.mp4",
-      "hook": "",
+      "hook": "subiendo los mejores momentos del\nTRIBUNERO día 567",
       "_loQueYaTrae": "zócalo 'MARIANO ANDUJAR Y PABL...' abajo",
       "grupo": "C",
       "fuente": {
@@ -533,8 +531,7 @@
         "modo": "tercio",
         "archivo": "media/festival-generacion/mosca/generacion-horizontal.webp"
       },
-      "watermarkBox": null,
-      "_sinHook": true
+      "watermarkBox": null
     }
   ]
 }

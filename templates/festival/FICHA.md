@@ -24,9 +24,16 @@ sobre el cuadro final.
 
 ## El hook
 
-- Arriba, TikTok Sans, peso fino, blanco con sombra para que se lea sobre
-  cualquier fondo. **54 px** (Cotu lo subió de 46 el 2026-10-23). Entra con un
-  fundido de 12 cuadros.
+- Arriba, TikTok Sans **negrita (700)**, blanco con la sombra al máximo, para
+  que se lea sobre cualquier fondo. **54 px**. Entra con un fundido de 12
+  cuadros. (Cotu, 2026-10-26: más abajo, con sombra y en negrita.)
+- **La caja es de 960 px y no de 820.** En negrita el texto crece: con 820 la
+  primera línea de los hooks largos se partía igual y el hook salía en tres
+  renglones en vez de los dos que escribió quien lo redactó. A la altura del
+  hook (384 px) la columna de botones de TikTok todavía no está: arranca
+  bastante más abajo.
+- **Los saltos de línea del hook se respetan.** Si quien lo escribe pone un
+  salto, el hook sale partido ahí.
 - **Si el video es apaisado y deja una banda de más de 320 px, el hook va dentro
   de la banda**, a la fracción que diga `enBanda` (0,62: corrido hacia el borde
   del video, no centrado). Si el video llena el cuadro, va a `altura` (0,165 del

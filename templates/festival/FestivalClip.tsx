@@ -60,6 +60,8 @@ export const festivalSchema = z.object({
      * de esa banda. 0,5 lo centra; más lo baja hacia el borde del video.
      */
     enBanda: z.number().min(0.3).max(0.95).step(0.05),
+    /** cuánto se marca la sombra del hook (0 = sin sombra) */
+    sombra: z.number().min(0).max(1).step(0.05),
   }),
 
   mosca: z.object({
@@ -174,7 +176,12 @@ export const FestivalClip: React.FC<FestivalProps> = ({ clip, hook, hookEstilo, 
             fontSize: hookEstilo.tamano,
             lineHeight: 1.22,
             color: "#FFFFFF",
-            textShadow: "0 2px 6px rgba(0,0,0,0.75), 0 0 20px rgba(0,0,0,0.45)",
+            textShadow:
+              hookEstilo.sombra === 0
+                ? undefined
+                : `0 ${3 * hookEstilo.sombra}px ${8 * hookEstilo.sombra}px rgba(0,0,0,${0.95 * hookEstilo.sombra}), 0 0 ${26 * hookEstilo.sombra}px rgba(0,0,0,${0.7 * hookEstilo.sombra})`,
+            // respeta los saltos de línea que escribió quien redactó el hook
+            whiteSpace: "pre-line",
             textWrap: "balance",
             opacity: opacidadHook,
           }}
