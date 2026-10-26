@@ -1,5 +1,5 @@
 {
-  "_nota": "Festival Generación. El hook es el texto que va arriba del video final; lo escribió Cotu. grupo A = sin marca de agua ajena; grupo B = cuenta @clipsnhu, con marca propia quemada. watermarkBox se llena en la etapa 2. watermarkBox va en fracciones del video original (cx y cy son el centro).",
+  "_nota": "Festival Generación. El hook es el texto que va arriba del video final; lo escribió Cotu. grupo A = sin marca de agua ajena; grupo B = cuenta @clipsnhu, con marca propia quemada. watermarkBox se llena en la etapa 2. watermarkBox va en fracciones del video original (cx y cy son el centro). Los renders salen a out/festival/; los de la tanda del 26/10 a out/festival/tanda-2/.",
   "clips": [
     {
       "archivo": "clip-01.mp4",

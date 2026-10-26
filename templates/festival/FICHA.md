@@ -103,6 +103,13 @@ zona: la alternativa es publicar con la marca de otra cuenta a la vista.
   ancho de caja y fundido; archivo de la mosca, modo, ancho y altura en modo
   tercio, holgura y color de la placa en modo tapar; y la caja de la marca ajena.
 
+## Dónde salen los renders
+
+`out/festival/` para la tanda del 20/10 y `out/festival/tanda-2/` para la del
+26/10, separadas a pedido de Cotu para poder diferenciarlas. Cada carpeta tiene
+adentro un `chicas/` con copias comprimidas, que son sólo para mirar por chat:
+lo que se sube son los `.mp4` de la carpeta principal.
+
 ## Los datos
 
 `assets/media/festival-generacion/clips.json` (copiado a
